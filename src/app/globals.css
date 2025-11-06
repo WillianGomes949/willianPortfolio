@@ -1,21 +1,14 @@
 @import "tailwindcss";
 
 @theme {
-  /* Font families */
-  --font-family-poppins: "Poppins", sans-serif;
-  --font-family-inter: "Inter", sans-serif;
-
   /* Cores personalizadas */
   --color-will-primary: #fb2c36;
   --color-will-p-light: #f20519;
-  --color-will-secondary: #E6A52E;
-  --color-will-accent: #5C64F2;
+  --color-will-secondary: #e6a52e;
+  --color-will-accent: #5c64f2;
   --color-will-light: #d1d5dc;
   --color-will-bg-dark: #101828;
   --color-will-text-light: #828282;
-
-  
-  
 
   /* Box shadow personalizado */
   --shadow-card-soft: 0px 4px 20px rgba(0, 0, 0, 0.05);
