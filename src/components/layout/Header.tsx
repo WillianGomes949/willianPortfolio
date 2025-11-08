@@ -4,11 +4,18 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { HiOutlineX } from "react-icons/hi";
 import { IoMdMenu } from "react-icons/io";
+import { FaWhatsapp } from "react-icons/fa";
 
-const Header: React.FC = () => {
+export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const icon = <FaWhatsapp size={24} />;
 
   const navLinks = [
+    {
+      name: "whatsapp",
+      href: "https://wa.me/5585988954195?text=Quero%20saber%20mais%20sobre%20seus%20servi%C3%A7os...",
+      icon: icon,
+    },
     { name: "Sobre", href: "#about" },
     { name: "Projetos", href: "#projects" },
     { name: "Contato", href: "#contact" },
@@ -33,8 +40,14 @@ const Header: React.FC = () => {
             <Link
               key={link.name}
               href={link.href}
-              className="font-medium text-gray-300 transition-colors hover:text-red-500"
+              className={`flex justify-center items-center font-medium text-gray-300 transition-colors gap-2
+              ${
+                link.name === "whatsapp"
+                  ? "hover:text-lime-500"
+                  : "hover:text-red-500"
+              }`}
             >
+              {link.icon}
               {link.name}
             </Link>
           ))}
@@ -55,7 +68,9 @@ const Header: React.FC = () => {
       {/* Overlay do Menu Mobile */}
       <div
         className={`h-50 fixed inset-0 z-50 transform border border-gray-700 rounded-2xl bg-gray-800 transition-transform duration-300 ease-in-out mt-5 md:hidden ${
-          isMenuOpen ? "translate-x-0 w-11/12 mx-auto" : "translate-x-full hidden"
+          isMenuOpen
+            ? "translate-x-0 w-11/12 mx-auto"
+            : "translate-x-full hidden"
         }`}
       >
         {/* Botão de Fechar */}
@@ -70,14 +85,19 @@ const Header: React.FC = () => {
         </div>
 
         {/* Links do Menu Mobile */}
-        <div className="flex h-10 flex-col items-center justify-center space-y-6">
+        <div className="flex h-10 flex-col items-center justify-center space-y-4 p-5">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               href={link.href}
               onClick={handleLinkClick}
-              className="text-2xl font-semibold text-white transition-colors hover:text-red-500"
+              className={`text-2xl font-semibold text-white transition-colors  flex items-center gap-2 ${
+                link.name === "whatsapp"
+                  ? "hover:text-lime-500"
+                  : "hover:text-red-500"
+              }`}
             >
+              {link.icon}
               {link.name}
             </Link>
           ))}
@@ -85,6 +105,4 @@ const Header: React.FC = () => {
       </div>
     </header>
   );
-};
-
-export default Header;
+}

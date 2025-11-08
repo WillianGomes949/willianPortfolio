@@ -1,5 +1,5 @@
 // src/components/layout/Hero.tsx
-import { FaGithub, FaLinkedin } from "react-icons/fa"; // Para os ícones
+import { FaGithub, FaLinkedin, FaWhatsapp} from "react-icons/fa"; // Para os ícones
 import MyButton from "@/components/UI/MyButton";
 
 export default function Hero() {
@@ -28,6 +28,14 @@ export default function Hero() {
         </MyButton>
       </div>
       <div className="flex space-x-6 text-3xl">
+        <a
+          href="https://wa.me/5585988954195?text=Quero%20saber%20mais%20sobre%20seus%20servi%C3%A7os..."
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-lime-500 transition-colors"
+        >
+          <FaWhatsapp />
+        </a>
         <a
           href="https://github.com/williangomes949"
           target="_blank"

@@ -2,7 +2,7 @@
 
 // MODIFICADO: Adicionado useEffect
 import { useState, useEffect } from "react";
-import { FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaEnvelope, FaLinkedin, FaGithub, FaWhatsapp } from "react-icons/fa";
 import MyButton from "../UI/MyButton";
 import emailjs from 'emailjs-com';
 
@@ -101,6 +101,20 @@ export default function Contact() {
           {/* Informações de Contato (sem alteração) */}
           <div className="flex flex-col gap-8">
             {/* ... (Seu código de ícones de contato aqui) ... */}
+            <div className="flex items-center gap-4">
+              <div className="bg-gray-800 p-4 rounded-full">
+                <FaWhatsapp className="text-lime-500 text-2xl" />
+              </div>
+              <div>
+                <h4 className="text-xl font-semibold">WhatsApp</h4>
+                <a
+                  href="https://wa.me/5585988954195?text=Quero%20saber%20mais%20sobre%20seus%20servi%C3%A7os..."
+                  className="text-gray-300 hover:text-lime-500 transition-colors"
+                >
+                  (85) 988954195
+                </a>
+              </div>
+            </div>
             <div className="flex items-center gap-4">
               <div className="bg-gray-800 p-4 rounded-full">
                 <FaEnvelope className="text-lime-500 text-2xl" />
