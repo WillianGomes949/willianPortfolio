@@ -46,9 +46,9 @@ export default function Contact() {
     // NOVO: Limpa qualquer mensagem de status antiga antes de enviar
     setStatusMessage({ type: "", message: "" });
     
-    const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
-    const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
-    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+    const serviceId = process.env.NEXT_EMAILJS_SERVICE_ID;
+    const templateId = process.env.NEXT_EMAILJS_TEMPLATE_ID;
+    const publicKey = process.env.NEXT_EMAILJS_PUBLIC_KEY;
 
     if (!serviceId || !templateId || !publicKey) {
       console.error('Variáveis de ambiente do EmailJS não configuradas');

@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import React from 'react';
-import { RiLoader2Fill } from 'react-icons/ri';
 import LoadingSpinner from './LoadingSpinner';
 
 interface BaseProps {
