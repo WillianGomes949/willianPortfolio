@@ -21,10 +21,10 @@ export default function Hero() {
         <MyButton variant="secondary" className='w-50'><Link href="#contact">Entrar em Contato</Link></MyButton>
       </div>
       <div className="flex space-x-6 text-3xl">
-        <a href="https://github.com/seu-usuario" target="_blank" rel="noopener noreferrer" className="hover:text-will-primary transition-colors">
+        <a href="https://github.com/williangomes949" target="_blank" rel="noopener noreferrer" className="hover:text-will-primary transition-colors">
           <FaGithub />
         </a>
-        <a href="https://linkedin.com/in/seu-usuario" target="_blank" rel="noopener noreferrer" className="hover:text-will-primary transition-colors">
+        <a href="https://linkedin.com/in/williangomes949" target="_blank" rel="noopener noreferrer" className="hover:text-will-primary transition-colors">
           <FaLinkedin />
         </a>
       </div>
