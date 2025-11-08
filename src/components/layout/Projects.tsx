@@ -1,30 +1,29 @@
-'use client'; // Necessário para usar o useState
+"use client";
 
-import mockProjects from '@/lib/db';
-import Image from 'next/image';
-import Link from 'next/link';
-import { useState } from 'react';
+import mockProjects from "@/lib/db";
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
 import {
   FaLink,
   FaGithub,
   FaChevronLeft,
   FaChevronRight,
-} from 'react-icons/fa'; // Importei os ícones de paginação
+} from "react-icons/fa";
 
 // Pega todas as tags únicas
-const allTags = ['Todos', ...new Set(mockProjects.flatMap((p) => p.tags))];
+const allTags = ["Todos", ...new Set(mockProjects.flatMap((p) => p.tags))];
 
 // Define quantos projetos serão exibidos por página
 const PROJECTS_PER_PAGE = 6;
-// ---------------------------------------------
 
 export default function Projects() {
-  const [activeFilter, setActiveFilter] = useState('Todos');
-  const [currentPage, setCurrentPage] = useState(1); 
+  const [activeFilter, setActiveFilter] = useState("Todos");
+  const [currentPage, setCurrentPage] = useState(1);
 
   // Filtra os projetos com base na tag ativa
   const filteredProjects =
-    activeFilter === 'Todos'
+    activeFilter === "Todos"
       ? mockProjects
       : mockProjects.filter((p) => p.tags.includes(activeFilter));
 
@@ -39,15 +38,19 @@ export default function Projects() {
   // "Fatia" o array para pegar apenas os projetos da página atual
   const currentProjects = filteredProjects.slice(
     indexOfFirstProject,
-    indexOfLastProject,
+    indexOfLastProject
   );
 
-  // Função para mudar de página
   const paginate = (pageNumber: number) => {
     if (pageNumber < 1 || pageNumber > totalPages) return;
     setCurrentPage(pageNumber);
-    // Opcional: rolar para o topo da seção de projetos
-    document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+
+    // Rola para o topo da seção de projetos
+    setTimeout(() => {
+      document.getElementById("projects")?.scrollIntoView({
+        block: "start",
+      });
+    }, 1);
   };
 
   // Função para lidar com clique no filtro
@@ -74,8 +77,8 @@ export default function Projects() {
                 className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-300
                 ${
                   activeFilter === tag
-                    ? 'bg-red-600 text-white shadow-lg'
-                    : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
+                    ? "bg-red-600 text-white shadow-lg"
+                    : "bg-gray-700 text-gray-300 hover:bg-gray-600"
                 }
               `}
               >
@@ -86,7 +89,7 @@ export default function Projects() {
 
           {/* Grid de Projetos - Agora usa 'currentProjects' */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 min-h-[500px]">
-            {' '}
+            {" "}
             {/* Adicionado min-h para evitar "pulo" ao trocar de página */}
             {currentProjects.map((project) => (
               <div
@@ -108,7 +111,7 @@ export default function Projects() {
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="inline-block bg-lime-500 text-gray-900 text-xs font-semibold px-3 py-1 rounded-full mr-2 mb-2" 
+                        className="inline-block bg-lime-500 text-gray-900 text-xs font-semibold px-3 py-1 rounded-full mr-2 mb-2"
                       >
                         {tag}
                       </span>

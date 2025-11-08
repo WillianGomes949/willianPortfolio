@@ -27,7 +27,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-14 bg-gray-900 text-white">
+    <section id="contact" className="py-24 md:p-14 bg-gray-900 text-white">
       <div className="container mx-auto max-w-6xl px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-4">
           Vamos Conversar

@@ -1,8 +1,7 @@
-"use client"; // Necessário para o estado do menu mobile (useState)
+"use client";
 
 import React, { useState } from "react";
 import Link from "next/link";
-// Importando ícones (lembre-se de instalar: npm install react-icons)
 import { HiOutlineX } from "react-icons/hi";
 import { IoMdMenu } from "react-icons/io";
 
@@ -13,10 +12,8 @@ const Header: React.FC = () => {
     { name: "Sobre", href: "#about" },
     { name: "Projetos", href: "#projects" },
     { name: "Contato", href: "#contact" },
-    // { name: 'Blog', href: '/blog' }, // Exemplo se tivesse uma página de blog
   ];
 
-  // Função para fechar o menu ao clicar em um link (útil no mobile)
   const handleLinkClick = () => {
     setIsMenuOpen(false);
   };
@@ -57,8 +54,8 @@ const Header: React.FC = () => {
 
       {/* Overlay do Menu Mobile */}
       <div
-        className={`h-50 fixed inset-0 z-50 transform bg-gray-900 transition-transform duration-300 ease-in-out mt-5 roundend-lg md:hidden p-5 ${
-          isMenuOpen ? "translate-x-0" : "translate-x-full"
+        className={`h-50 fixed inset-0 z-50 transform border border-gray-700 rounded-2xl bg-gray-800 transition-transform duration-300 ease-in-out mt-5 md:hidden ${
+          isMenuOpen ? "translate-x-0 w-11/12 mx-auto" : "translate-x-full hidden"
         }`}
       >
         {/* Botão de Fechar */}
@@ -78,7 +75,7 @@ const Header: React.FC = () => {
             <Link
               key={link.name}
               href={link.href}
-              onClick={handleLinkClick} // Fecha o menu ao clicar
+              onClick={handleLinkClick}
               className="text-2xl font-semibold text-white transition-colors hover:text-red-500"
             >
               {link.name}

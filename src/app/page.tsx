@@ -3,6 +3,7 @@ import Hero from '@/components/layout/Hero';
 import About from '@/components/layout/About';
 import Projects from '@/components/layout/Projects'; // Vamos criar este
 import Contact from '@/components/layout/Contact';
+import TopButton from '@/components/UI/TopButton';
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <About />
       <Projects />
       <Contact />
+      <TopButton />
     </main>
   );
 }
