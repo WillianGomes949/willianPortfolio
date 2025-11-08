@@ -14,8 +14,8 @@ export default function Hero() {
         Dominando HTML5, CSS3, JavaScript (TypeScript), React, Next.js, Tailwind CSS, AWS, WordPress e Photoshop.
       </p>
       <div className="flex flex-col gap-4 w-full md:flex-row items-center justify-center mb-8">
-        <MyButton variant="primary" className='w-50'><Link href="/projetos">Ver Projetos</Link></MyButton>
-        <MyButton variant="secondary" className='w-50'><Link href="/contato">Entrar em Contato</Link></MyButton>
+        <MyButton variant="primary" className='w-50'><Link href="#projects">Ver Projetos</Link></MyButton>
+        <MyButton variant="secondary" className='w-50'><Link href="#contact">Entrar em Contato</Link></MyButton>
       </div>
       <div className="flex space-x-6 text-3xl">
         <a href="https://github.com/seu-usuario" target="_blank" rel="noopener noreferrer" className="hover:text-will-primary transition-colors">
