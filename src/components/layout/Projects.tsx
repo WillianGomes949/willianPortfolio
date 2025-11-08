@@ -69,12 +69,12 @@ export default function Projects() {
           </h2>
 
           {/* Filtros */}
-          <div className="flex justify-center flex-wrap gap-3 mb-12">
+          <div className="flex justify-center flex-wrap gap-2 mb-12">
             {allTags.map((tag) => (
               <button
                 key={tag}
                 onClick={() => handleFilterClick(tag)} // Atualizado para usar a nova função
-                className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-300
+                className={`px-4 py-2 rounded-2xl text-sm transition-all duration-300
                 ${
                   activeFilter === tag
                     ? "bg-red-600 text-white shadow-lg"
@@ -183,8 +183,8 @@ export default function Projects() {
         {/* Efeitos de blur (mantidos) */}
         <div>
           <div className="absolute inset-0.5 -z-1 flex flex-col items-start justify-evenly gap-6 rounded-lg bg-gray-800 "></div>
-          <div className="absolute transition-all duration-500 -top-5 -bg-conic-60 left-5 group-hover:top-20 group-hover:-left-10 h-70 w-90 -z-10 bg-will-p-light blur-[50px]"></div>
-          <div className="absolute transition-all duration-500 -bottom-5 -bg-conic-60 right-5 group-hover:bottom-20 group-hover:-right-10 h-70 w-90 -z-10 bg-will-p-light blur-[50px]"></div>
+          <div className="absolute transition-all duration-500 -top-5 -bg-conic-60 left-5 group-hover:top-20 group-hover:-left-10 h-70 w-90 -z-10 bg-lime-500 blur-[50px]"></div>
+          <div className="absolute transition-all duration-500 -bottom-5 -bg-conic-60 right-5 group-hover:bottom-20 group-hover:-right-10 h-70 w-90 -z-10 bg-lime-500 blur-[50px]"></div>
         </div>
       </div>
     </section>
