@@ -183,7 +183,7 @@ export default function Projects() {
         </div>
         {/* Efeitos de blur (mantidos) */}
         <div>
-          <div className="absolute inset-0.5 -z-1 flex flex-col items-start justify-evenly gap-6 rounded-lg bg-gray-800 "></div>
+          <div className="absolute inset-0.5 -z-1 flex flex-col items-start justify-evenly gap-6 rounded-2xl bg-gray-800 "></div>
           <div className="absolute transition-all duration-500 -top-5 -bg-conic-60 left-5 group-hover:top-20 group-hover:-left-10 h-70 w-90 -z-10 bg-lime-500 blur-[50px]"></div>
           <div className="absolute transition-all duration-500 -bottom-5 -bg-conic-60 right-5 group-hover:bottom-20 group-hover:-right-10 h-70 w-90 -z-10 bg-lime-500 blur-[50px]"></div>
         </div>

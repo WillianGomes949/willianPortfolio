@@ -1,20 +1,25 @@
 import React from "react";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 
-const Footer: React.FC = () => {
+export default function Footer(){
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
     {
+      name: "WhatsApp",
+      href: "https://wa.me/5585988954195?text=Quero%20saber%20mais%20sobre%20seus%20servi%C3%A7os...",
+      icon: FaWhatsapp,
+    },
+    {
       name: "GitHub",
-      href: "https://github.com/williangomes949", // ATUALIZE
+      href: "https://github.com/williangomes949",
       icon: FaGithub,
     },
     {
       name: "LinkedIn",
-      href: "https://linkedin.com/in/williangomes949", // ATUALIZE
+      href: "https://linkedin.com/in/williangomes949",
       icon: FaLinkedin,
-    }
+    },
   ];
 
   return (
@@ -23,7 +28,9 @@ const Footer: React.FC = () => {
         <div className="flex flex-col items-center justify-between md:flex-row">
           {/* Copyright */}
           <div className="mb-6 text-center text-sm md:mb-0 md:text-left">
-            <p>&copy; {currentYear} Willian Gomes. Todos os direitos reservados</p>
+            <p>
+              &copy; {currentYear} Willian Gomes. Todos os direitos reservados
+            </p>
             <p className="mt-1">
               Construído com{" "}
               <a
@@ -56,9 +63,13 @@ const Footer: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={social.name}
-                className="text-3xl transition-colors hover:text-red-500"
+                className={`text-3xl transition-colors  ${
+                  social.name === "WhatsApp"
+                    ? "hover:text-lime-500"
+                    : "hover:text-red-500"
+                }`}
               >
-                <social.icon />
+                <social.icon/>
               </a>
             ))}
           </div>
@@ -67,5 +78,3 @@ const Footer: React.FC = () => {
     </footer>
   );
 };
-
-export default Footer;
