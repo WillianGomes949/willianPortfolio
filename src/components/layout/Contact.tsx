@@ -53,7 +53,7 @@ export default function Contact() {
     if (!serviceId || !templateId || !publicKey) {
       console.error('Variáveis de ambiente do EmailJS não configuradas');
       // MODIFICADO: Substitui o 'alert' pelo 'setStatusMessage'
-      setStatusMessage({ type: "error", message: "Erro de configuração. Contate o administrador." });
+      setStatusMessage({ type: "error", message: "Erro de configuração. Contate um administrador." });
       return;
     }
 
