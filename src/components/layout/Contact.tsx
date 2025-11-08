@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
+import MyButton from "../UI/MyButton";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -141,12 +142,13 @@ export default function Contact() {
                 className="w-full px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 text-gray-200 focus:outline-none focus:ring-2 focus:ring-will-primary"
               />
             </div>
-            <button
+            <MyButton
               type="submit"
-              className="w-full md:w-auto bg-will-primary text-white font-bold py-3 px-8 rounded-lg hover:bg-will-p-light transition-colors duration-300 shadow-lg"
+              variant="primary"
+              className="w-full"
             >
               Enviar Mensagem
-            </button>
+            </MyButton>
           </form>
         </div>
       </div>

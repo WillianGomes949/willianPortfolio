@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 // Definindo as propriedades do botão
@@ -13,21 +14,23 @@ interface MyButtonProps
    * Classes adicionais do Tailwind para customização
    */
   className?: string;
+  href?: string;
 }
 
 /**
  * Um componente de botão reutilizável com estilos pré-definidos.
  * Aceita todas as props de um <button> HTML padrão.
  */
-const MyButton: React.FC<MyButtonProps> = ({
+export default function  MyButton({
   children,
   variant = 'primary',
   className = '',
+  href='',
   ...rest
-}) => {
+}: MyButtonProps){
   // Estilos base, aplicados a todas as variantes
   const baseStyle =
-    'py-3 px-6 rounded-lg font-semibold transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 disabled:opacity-50 disabled:cursor-not-allowed transform hover:scale-105';
+    'py-3 px-6 rounded-lg font-bold transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 disabled:opacity-50 disabled:cursor-not-allowed transform hover:scale-102 w-70';
 
   // Estilos específicos da variante
   // Usei 'red' para combinar com a inspiração que você mandou
@@ -39,11 +42,17 @@ const MyButton: React.FC<MyButtonProps> = ({
   // Combina todas as classes
   const combinedClassName = `${baseStyle} ${variantStyles} ${className}`;
 
+
+  const buttonContent = typeof children === 'string'
+    ? children.toUpperCase() // Se for, converte
+    : children;             // Se não for (um ícone, etc), usa como está
+
   return (
-    <button className={combinedClassName} {...rest}>
-      {children}
-    </button>
+    <Link  href={href}>
+      <button className={combinedClassName} {...rest}>
+        {buttonContent}
+      </button>
+    </Link>
+
   );
 };
-
-export default MyButton;
