@@ -1,4 +1,5 @@
 // --- Definição de Tipos e Dados Mockados ---
+
 // Defina a estrutura de um projeto
 interface Project {
   id: number;
@@ -17,7 +18,7 @@ const mockProjects: Project[] = [
     description:
       "Um conceito de e-commerce com carrinho de compras, utilizando React e Context API para gerenciamento de estado.",
     imageUrl: "/images/loja-ifantil.webp",
-    tags: ["Next.js","Tailwind CSS","Context API","AWS","PWA","Vercel",],
+    tags: ["Next.js","Tailwind CSS","Context API","AWS","PWA","Vercel", "React"],
     liveUrl: "https://loja-infantil-phi.vercel.app/",
     repoUrl: "",
   },
@@ -27,7 +28,7 @@ const mockProjects: Project[] = [
     description:
       "Um site para uma oficina de ar-automotivo, criada com react.js e next.js.",
     imageUrl: "/images/ar-veicular.webp",
-    tags: ["Next.js", "React", "Tailwind", "Photoshop", "Vercel"],
+    tags: ["Next.js", "Tailwind", "Photoshop", "Vercel", "React"],
     liveUrl: "https://projeto-oficina-pi.vercel.app/",
     repoUrl: "https://github.com/WillianGomes949/projeto-Oficina",
   },
@@ -37,7 +38,7 @@ const mockProjects: Project[] = [
     description:
       "Site para Empresa de Construção, Totalmente responsivo e leve.",
     imageUrl: "/images/construcao.webp",
-    tags: ["HTML", "CSS", "Javascript", "Node.js", "Vercel"],
+    tags: ["HTML", "CSS", "JavaScript", "Node.js", "Vercel"],
     liveUrl: "https://responsive-construction-website-chi.vercel.app/",
     repoUrl: "https://github.com/WillianGomes949/responsive_construction_website",
   },
@@ -47,7 +48,7 @@ const mockProjects: Project[] = [
     description:
       "Um mini App para consulta gratuita de CEPs com direcionamento para google Maps",
     imageUrl: "/images/consulta-cep.webp",
-    tags: ["API Rest", "Javascript", "CSS", "Vercel"],
+    tags: ["API Rest", "JavaScript", "CSS", "Vercel", "React"],
     liveUrl: "https://bucador-de-ceps.vercel.app/",
     repoUrl: "https://github.com/WillianGomes949/Buscador-de-Ceps",
   },
@@ -57,7 +58,7 @@ const mockProjects: Project[] = [
     description:
       "Um mini App utilizando react.js e next.js para consulta gratuita dos Horários de Ônibus de Fortaleza, atualizados.",
     imageUrl: "/images/onibusfortaleza.webp",
-    tags: ["API Rest", "Next.js", "Tailwind", "PWA", "Vercel"],
+    tags: ["API Rest", "Next.js", "Tailwind", "PWA", "Vercel", "React"],
     liveUrl: "https://horarios-onibus-fortaleza.vercel.app/",
     repoUrl: "https://github.com/WillianGomes949/horarios-onibus-fortaleza",
   },
@@ -74,6 +75,7 @@ const mockProjects: Project[] = [
       "PWA",
       "Google Scripts",
       "Vercel",
+       "React"
     ],
     liveUrl: "https://horarios-onibus-fortaleza.vercel.app/",
     repoUrl: "https://github.com/WillianGomes949/horarios-onibus-fortaleza",
@@ -84,7 +86,7 @@ const mockProjects: Project[] = [
     description:
       "Um agregador de noticias espaciais, feito com next.js e tailwind.",
     imageUrl: "/images/space-news.webp",
-    tags: ["API Rest", "Next.js", "Tailwind CSS", "Vercel"],
+    tags: ["API Rest", "Next.js", "Tailwind CSS", "Vercel", "React"],
     liveUrl: "https://space-news-ada.vercel.app/",
     repoUrl: "https://github.com/WillianGomes949/space-news-ada",
   },
@@ -94,20 +96,20 @@ const mockProjects: Project[] = [
     description:
       "Um agregador de noticias espaciais, feito com next.js e tailwind.",
     imageUrl: "/images/fipe.webp",
-    tags: ["API Rest", "Next.js", "Tailwind CSS", "Vercel"],
+    tags: ["API Rest", "Next.js", "Tailwind CSS", "Vercel", "React"],
     liveUrl: "https://consulta-tabela-fipe-two.vercel.app//",
     repoUrl: "https://github.com/WillianGomes949/consulta-tabela-fipe",
   },
-  //  {
-  //   id: 9,
-  //   title: "=",
-  //   description:
-  //     "=",
-  //   imageUrl: "/images/",
-  //   tags: [],
-  //   liveUrl: "",
-  //   repoUrl: "",
-  // },
+   {
+    id: 9,
+    title: "Clinica Medica",
+    description:
+      "Um Site de Clinica Medica",
+    imageUrl: "/images/clinica-medica.png",
+    tags: ["WordPress", "elementor", "PHP"],
+    liveUrl: "https://portfolio-wordpress.infinityfreeapp.com/clinica-medica/",
+    repoUrl: "",
+  },
 ];
 
 export default mockProjects;

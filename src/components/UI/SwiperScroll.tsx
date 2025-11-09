@@ -1,10 +1,9 @@
 // src/components/layout/SwiperScroll.tsx
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, FreeMode } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 import {
   SiHtml5,
   SiCss3,
-  SiJavascript,
   SiTypescript,
   SiReact,
   SiNextdotjs,
@@ -12,11 +11,10 @@ import {
   SiAmazon,
   SiWordpress,
   SiAdobephotoshop,
+  SiJavascript,
 } from "react-icons/si";
 import "swiper/css";
-import "swiper/css/free-mode";
 
-// Array de stacks com seus respectivos ícones e cores
 const techStacks = [
   { name: "HTML 5", icon: SiHtml5 },
   { name: "CSS 3", icon: SiCss3 },
@@ -34,7 +32,7 @@ export default function SwiperScroll() {
   return (
     <div className="w-full py-8 mask-x-from-90% mask-x-to-95%">
       <Swiper
-        modules={[Autoplay, FreeMode]}
+        modules={[Autoplay]}
         breakpoints={{
           0: {
             slidesPerView: 4,
@@ -45,30 +43,20 @@ export default function SwiperScroll() {
             spaceBetween: 20,
           },
           1024: {
-            slidesPerView: 6,
+            slidesPerView: 7,
             spaceBetween: 20,
           },
         }}
         centeredSlides={true}
-        freeMode={{
-          enabled: true,
-          momentum: true,
-          momentumBounce: false,
-          momentumVelocityRatio: 0.5,
-          sticky: false,
-          minimumVelocity: 0.01,
-        }}
-        speed={2500}
+        speed={4000}
         autoplay={{
           delay: 0,
-          disableOnInteraction: false,
-          pauseOnMouseEnter: true,
+          disableOnInteraction: true,
+          pauseOnMouseEnter: false, 
           reverseDirection: false,
         }}
-        grabCursor={true}
         loop={true}
-        
-        className="py-4"
+        className="py-4 swiper-marquee"
       >
         {techStacks.map((tech) => (
           <SwiperSlide key={tech.name}>

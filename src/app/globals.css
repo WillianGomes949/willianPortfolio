@@ -5,6 +5,10 @@ body {
   color: white;
 }
 
+.swiper-marquee .swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+
 @theme {
   /* Cores personalizadas */
   --color-will-primary: #f20519;
