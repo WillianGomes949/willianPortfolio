@@ -14,9 +14,9 @@ interface Project {
 const mockProjects: Project[] = [
   {
     id: 1,
-    title: "E-commerce (Conceito)",
+    title: "Loja Infantil - E-commerce Responsivo",
     description:
-      "Um conceito de e-commerce com carrinho de compras, utilizando React e Context API para gerenciamento de estado.",
+      "Plataforma de e-commerce completa para produtos infantis com carrinho de compras, integração de pagamentos e design responsivo. Desenvolvido com React e Context API para gerenciamento de estado eficiente.",
     imageUrl: "/images/loja-ifantil.webp",
     tags: [
       "Next.js",
@@ -32,9 +32,9 @@ const mockProjects: Project[] = [
   },
   {
     id: 2,
-    title: "Oficina de Ar-Veicular",
+    title: "Ar Veicular - Especialista em Ar Automotivo",
     description:
-      "Um site para uma oficina de ar-automotivo, criada com react.js e next.js.",
+      "Site institucional para oficina especializada em ar condicionado automotivo. Apresenta serviços, portfólio e informações de contato com design moderno e otimizado para conversão.",
     imageUrl: "/images/ar-veicular.webp",
     tags: ["Next.js", "Tailwind", "Photoshop", "Vercel", "React"],
     liveUrl: "https://projeto-oficina-pi.vercel.app/",
@@ -42,9 +42,9 @@ const mockProjects: Project[] = [
   },
   {
     id: 3,
-    title: "Emp. de Construção",
+    title: "Construtora Excelência - Site Institucional",
     description:
-      "Site para Empresa de Construção, Totalmente responsivo e leve.",
+      "Website corporativo para empresa de construção civil com catálogo de projetos, serviços e formulário de orçamento. Totalmente responsivo e otimizado para performance.",
     imageUrl: "/images/construcao.webp",
     tags: ["HTML", "CSS", "JavaScript", "Node.js", "Vercel"],
     liveUrl: "https://responsive-construction-website-chi.vercel.app/",
@@ -53,8 +53,9 @@ const mockProjects: Project[] = [
   },
   {
     id: 4,
-    title: "Assistncia",
-    description: "Um Site ^para uma ssistÊncia de computadores",
+    title: "GugaTech - Assistência Técnica em Computadores",
+    description:
+      "Site profissional para assistência técnica especializada em manutenção de computadores e notebooks. Inclui agendamento de serviços e catálogo de soluções técnicas.",
     imageUrl: "/images/gugatech.webp",
     tags: ["Next.js", "Tailwind CSS", "React", "Vercel"],
     liveUrl: "https://gugatech-fortaleza.vercel.app/",
@@ -62,9 +63,9 @@ const mockProjects: Project[] = [
   },
   {
     id: 5,
-    title: "Ônibus de Fortaleza",
+    title: "Ônibus Fortaleza - Consulta de Horários",
     description:
-      "Um mini App utilizando react.js e next.js para consulta gratuita dos Horários de Ônibus de Fortaleza, atualizados.",
+      "Aplicativo PWA para consulta em tempo real dos horários de ônibus de Fortaleza. Interface intuitiva com atualizações automáticas e funcionamento offline.",
     imageUrl: "/images/onibusfortaleza.webp",
     tags: ["API Rest", "Next.js", "Tailwind", "PWA", "Vercel", "React"],
     liveUrl: "https://horarios-onibus-fortaleza.vercel.app/",
@@ -72,9 +73,9 @@ const mockProjects: Project[] = [
   },
   {
     id: 6,
-    title: "Gerenciador de validades",
+    title: "Validade Fácil - Gerenciador de Produtos",
     description:
-      "Um mini App para gerenciamento de produtos, com back-end usando o google sheets, feito com next.js e tailwind.",
+      "Sistema de controle de validade de produtos integrado com Google Sheets. Permite cadastro, consulta e alertas de produtos próximos do vencimento.",
     imageUrl: "/images/gerenciador-validades.webp",
     tags: [
       "API Rest",
@@ -90,9 +91,9 @@ const mockProjects: Project[] = [
   },
   {
     id: 7,
-    title: "Agregador de Notícias",
+    title: "SpaceNews - Agregador de Notícias Espaciais",
     description:
-      "Um agregador de noticias espaciais, feito com next.js e tailwind.",
+      "Plataforma que agrega as últimas notícias e descobertas sobre astronomia e exploração espacial. Interface moderna com filtros por categoria e fonte.",
     imageUrl: "/images/space-news.webp",
     tags: ["API Rest", "Next.js", "Tailwind CSS", "Vercel", "React"],
     liveUrl: "https://space-news-ada.vercel.app/",
@@ -100,9 +101,9 @@ const mockProjects: Project[] = [
   },
   {
     id: 8,
-    title: "Consulta Tabela FIPE",
+    title: "FIPE Fácil - Consulta de Tabela FIPE",
     description:
-      "Um agregador de noticias espaciais, feito com next.js e tailwind.",
+      "Ferramenta para consulta rápida e intuitiva de valores FIPE de veículos. Busca otimizada com histórico de consultas e comparação de preços.",
     imageUrl: "/images/fipe.webp",
     tags: ["API Rest", "Next.js", "Tailwind CSS", "Vercel", "React"],
     liveUrl: "https://consulta-tabela-fipe-two.vercel.app//",
@@ -110,8 +111,9 @@ const mockProjects: Project[] = [
   },
   {
     id: 9,
-    title: "Clinica Medica",
-    description: "Um Site de Clinica Medica",
+    title: "Clínica Saúde Total - Website Médico",
+    description:
+      "Site institucional para clínica médica com informações sobre especialidades, corpo clínico, agendamento online e artigos sobre saúde e bem-estar.",
     imageUrl: "/images/clinica-medica.png",
     tags: ["WordPress", "elementor", "PHP"],
     liveUrl: "https://portfolio-wordpress.infinityfreeapp.com/clinica-medica/",
@@ -119,9 +121,9 @@ const mockProjects: Project[] = [
   },
   {
     id: 10,
-    title: "Consultar CEP",
+    title: "CEP Rápido - Buscador de Códigos Postais",
     description:
-      "Um mini App para consulta gratuita de CEPs com direcionamento para google Maps",
+      "Ferramenta para consulta de CEPs brasileiros com integração ao Google Maps. Mostra endereços completos e permite navegação até a localização.",
     imageUrl: "/images/consulta-cep.webp",
     tags: ["API Rest", "JavaScript", "CSS", "Vercel", "React"],
     liveUrl: "https://bucador-de-ceps.vercel.app/",
