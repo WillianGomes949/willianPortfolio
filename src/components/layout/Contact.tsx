@@ -104,8 +104,8 @@ export default function Contact() {
             Juntos
           </h2>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
-            Pronto para transformar sua ideia em realidade? Entre em contato e
-            vamos conversar sobre seu projeto.
+            Pronto para ter um site que traz resultados? Me mande uma mensagem.
+            Entre em contato e vamos conversar sobre seu projeto.
           </p>
         </div>
 
