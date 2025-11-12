@@ -56,20 +56,24 @@ export default function About() {
           </div>
 
           {/* Coluna do Texto */}
-          <div className="flex flex-col justify-center space-y-6">
-            <p className="text-lg text-will-light mb-4 leading-relaxed">
-              Olá! Sou Willian Gomes. Minha missão é simples: criar sites
-              rápidos e fáceis de usar que tragam resultados reais para o seu
-              negócio. Seja um site em WordPress para sua clínica ou um portal
-              moderno, eu cuido de tudo para você.
-            </p>
-            <p className="text-lg text-will-light mb-6 leading-relaxed">
-              Minha jornada começou com Wordpress, HTML e CSS, e rapidamente
-              evolui para o ecossistema JavaScript moderno. Hoje, meu foco é
-              construir aplicações web robustas e escaláveis com React, Next.js
-              e TypeScript, utilizando AWS para infraestrutura e Tailwind CSS
-              para interfaces ágeis. Sempra estudando e aprendendo.
-            </p>
+          <div className="flex flex-col space-y-6 justify-between items-start">
+            <div>
+              <p className="text-lg text-will-light mb-4 leading-relaxed">
+                Olá! Sou Willian Gomes. Minha missão é simples: criar sites
+                rápidos e fáceis de usar que tragam resultados reais para o seu
+                negócio. Seja um site em WordPress para sua clínica ou um portal
+                moderno, eu cuido de tudo para você.
+              </p>
+              <p className="text-lg text-will-light mb-6 leading-relaxed">
+                Minha jornada começou com Wordpress, HTML e CSS, e rapidamente
+                evolui para o ecossistema JavaScript moderno. Hoje, meu foco é
+                construir aplicações web robustas e escaláveis com React,
+                Next.js e TypeScript, utilizando AWS para infraestrutura e
+                Tailwind CSS para interfaces ágeis. Sempra estudando e
+                aprendendo.
+              </p>
+            </div>
+
             <div>
               <h3 className="text-2xl font-semibold text-gray-100 mb-6 flex items-center">
                 <span className="w-0.5 h-10 bg-will-primary mr-3"></span>

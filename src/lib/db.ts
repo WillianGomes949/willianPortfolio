@@ -40,7 +40,7 @@ const mockProjects: Project[] = [
       "React",
     ],
     liveUrl: "https://loja-infantil-phi.vercel.app/",
-    repoUrl: "",
+    // repoUrl: "",
   },
   {
     id: 2,
@@ -50,7 +50,7 @@ const mockProjects: Project[] = [
     imageUrl: "/images/ar-veicular.webp",
     tags: ["Next.js", "Tailwind", "Photoshop", "Vercel", "React"],
     liveUrl: "https://projeto-oficina-pi.vercel.app/",
-    repoUrl: "https://github.com/WillianGomes949/projeto-Oficina",
+    // repoUrl: "https://github.com/WillianGomes949/projeto-Oficina",
   },
   {
     id: 3,
@@ -60,8 +60,8 @@ const mockProjects: Project[] = [
     imageUrl: "/images/construcao.webp",
     tags: ["HTML", "CSS", "JavaScript", "Node.js", "Vercel"],
     liveUrl: "https://responsive-construction-website-chi.vercel.app/",
-    repoUrl:
-      "https://github.com/WillianGomes949/responsive_construction_website",
+    // repoUrl:
+    //   "https://github.com/WillianGomes949/responsive_construction_website",
   },
   {
     id: 4,
@@ -71,7 +71,7 @@ const mockProjects: Project[] = [
     imageUrl: "/images/gugatech.webp",
     tags: ["Next.js", "Tailwind CSS", "React", "Vercel"],
     liveUrl: "https://gugatech-fortaleza.vercel.app/",
-    repoUrl: "",
+    // repoUrl: "",
   },
   {
     id: 5,
@@ -81,7 +81,7 @@ const mockProjects: Project[] = [
     imageUrl: "/images/onibusfortaleza.webp",
     tags: ["API Rest", "Next.js", "Tailwind", "PWA", "Vercel", "React"],
     liveUrl: "https://horarios-onibus-fortaleza.vercel.app/",
-    repoUrl: "https://github.com/WillianGomes949/horarios-onibus-fortaleza",
+    // repoUrl: "https://github.com/WillianGomes949/horarios-onibus-fortaleza",
   },
   {
     id: 6,
@@ -99,7 +99,7 @@ const mockProjects: Project[] = [
       "React",
     ],
     liveUrl: "https://horarios-onibus-fortaleza.vercel.app/",
-    repoUrl: "https://github.com/WillianGomes949/horarios-onibus-fortaleza",
+    // repoUrl: "https://github.com/WillianGomes949/horarios-onibus-fortaleza",
   },
   {
     id: 7,
@@ -109,7 +109,7 @@ const mockProjects: Project[] = [
     imageUrl: "/images/space-news.webp",
     tags: ["API Rest", "Next.js", "Tailwind CSS", "Vercel", "React"],
     liveUrl: "https://space-news-ada.vercel.app/",
-    repoUrl: "https://github.com/WillianGomes949/space-news-ada",
+    // repoUrl: "https://github.com/WillianGomes949/space-news-ada",
   },
   {
     id: 8,
@@ -119,7 +119,7 @@ const mockProjects: Project[] = [
     imageUrl: "/images/fipe.webp",
     tags: ["API Rest", "Next.js", "Tailwind CSS", "Vercel", "React"],
     liveUrl: "https://consulta-tabela-fipe-two.vercel.app//",
-    repoUrl: "https://github.com/WillianGomes949/consulta-tabela-fipe",
+    // repoUrl: "https://github.com/WillianGomes949/consulta-tabela-fipe",
   },
   {
     id: 9,
@@ -129,7 +129,7 @@ const mockProjects: Project[] = [
     imageUrl: "/images/clinica-medica.png",
     tags: ["WordPress", "elementor", "PHP"],
     liveUrl: "https://portfolio-wordpress.infinityfreeapp.com/clinica-medica/",
-    repoUrl: "",
+    // repoUrl: "",
   },
   {
     id: 10,
@@ -139,23 +139,23 @@ const mockProjects: Project[] = [
     imageUrl: "/images/consulta-cep.webp",
     tags: ["API Rest", "JavaScript", "CSS", "Vercel", "React"],
     liveUrl: "https://bucador-de-ceps.vercel.app/",
-    repoUrl: "https://github.com/WillianGomes949/Buscador-de-Ceps",
+    // repoUrl: "https://github.com/WillianGomes949/Buscador-de-Ceps",
   },
 ];
 // Mapeamento de cores para tecnologias
 const techColors: { [key: string]: string } = {
-  "HTML": "bg-orange-500/20 text-orange-400 border-orange-500/30",
-  "CSS3": "bg-blue-500/20 text-blue-400 border-blue-500/30",
-  "JavaScript": "bg-yellow-500/20 text-yellow-400 border-yellow-500/30",
-  "TypeScript": "bg-blue-600/20 text-blue-400 border-blue-600/30",
-  "React": "bg-cyan-500/20 text-cyan-400 border-cyan-500/30",
+  HTML: "bg-orange-500/20 text-orange-400 border-orange-500/30",
+  CSS3: "bg-blue-500/20 text-blue-400 border-blue-500/30",
+  JavaScript: "bg-yellow-500/20 text-yellow-400 border-yellow-500/30",
+  TypeScript: "bg-blue-600/20 text-blue-400 border-blue-600/30",
+  React: "bg-cyan-500/20 text-cyan-400 border-cyan-500/30",
   "Next.js": "bg-white/20 text-white border-white/30",
   "Tailwind CSS": "bg-teal-500/20 text-teal-400 border-teal-500/30",
-  "AWS": "bg-orange-400/20 text-orange-300 border-orange-400/30",
-  "WordPress": "bg-blue-900/20 text-blue-300 border-blue-900/30",
-  "Photoshop": "bg-blue-500/20 text-blue-400 border-blue-500/30",
-  "Vercel": "bg-green-500/20 text-green-400 border-green-500/30",
-  "default": "bg-gray-500/20 text-gray-400 border-gray-500/30",
+  AWS: "bg-orange-400/20 text-orange-300 border-orange-400/30",
+  WordPress: "bg-blue-900/20 text-blue-300 border-blue-900/30",
+  Photoshop: "bg-blue-500/20 text-blue-400 border-blue-500/30",
+  Vercel: "bg-green-500/20 text-green-400 border-green-500/30",
+  default: "bg-gray-500/20 text-gray-400 border-gray-500/30",
 };
 const techStacks = [
   { name: "HTML5", icon: SiHtml5 },
@@ -170,24 +170,24 @@ const techStacks = [
   { name: "Photoshop", icon: SiAdobephotoshop },
 ];
 const socialLinks = [
-    {
-      name: "WhatsApp",
-      href: "https://wa.me/5585988954195?text=Olá! Gostaria de conversar sobre um projeto...",
-      icon: FaWhatsapp,
-      color: "hover:text-lime-400",
-    },
-    {
-      name: "GitHub",
-      href: "https://github.com/williangomes949",
-      icon: FaGithub,
-      color: "hover:text-will-primary",
-    },
-    {
-      name: "LinkedIn",
-      href: "https://linkedin.com/in/williangomes949",
-      icon: FaLinkedin,
-      color: "hover:text-will-primary",
-    },
-  ];
+  {
+    name: "WhatsApp",
+    href: "https://wa.me/5585988954195?text=Olá! Gostaria de conversar sobre um projeto...",
+    icon: FaWhatsapp,
+    color: "hover:text-lime-400",
+  },
+  {
+    name: "GitHub",
+    href: "https://github.com/williangomes949",
+    icon: FaGithub,
+    color: "hover:text-will-primary",
+  },
+  {
+    name: "LinkedIn",
+    href: "https://linkedin.com/in/williangomes949",
+    icon: FaLinkedin,
+    color: "hover:text-will-primary",
+  },
+];
 
-export { techColors, techStacks, mockProjects, socialLinks};
+export { techColors, techStacks, mockProjects, socialLinks };
