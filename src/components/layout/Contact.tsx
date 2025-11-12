@@ -1,10 +1,15 @@
 "use client";
 
-// MODIFICADO: Adicionado useEffect
 import { useState, useEffect } from "react";
-import { FaEnvelope, FaLinkedin, FaGithub, FaWhatsapp } from "react-icons/fa";
+import {
+  FaEnvelope,
+  FaLinkedin,
+  FaGithub,
+  FaWhatsapp,
+  FaMapMarkerAlt,
+} from "react-icons/fa";
 import MyButton from "../UI/MyButton";
-import emailjs from 'emailjs-com';
+import emailjs from "emailjs-com";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -13,14 +18,11 @@ export default function Contact() {
     message: "",
   });
   const [isLoading, setIsLoading] = useState(false);
-  
-  // NOVO: Estado para controlar a mensagem de feedback (sucesso ou erro)
   const [statusMessage, setStatusMessage] = useState({ type: "", message: "" });
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    // NOVO: Limpa a mensagem de erro assim que o usuário começa a digitar novamente
     if (statusMessage.type === "error") {
       setStatusMessage({ type: "", message: "" });
     }
@@ -28,32 +30,28 @@ export default function Contact() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  // NOVO: Este efeito limpa a mensagem de SUCESSO após 5 segundos
   useEffect(() => {
-    if (statusMessage.type === 'success') {
+    if (statusMessage.type === "success") {
       const timer = setTimeout(() => {
         setStatusMessage({ type: "", message: "" });
-      }, 5000); // 5 segundos
-      
-      // Limpa o timer se o componente for desmontado
+      }, 5000);
       return () => clearTimeout(timer);
     }
-  }, [statusMessage]); // Roda sempre que statusMessage mudar
+  }, [statusMessage]);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    
-    // NOVO: Limpa qualquer mensagem de status antiga antes de enviar
     setStatusMessage({ type: "", message: "" });
-    
+
     const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
     const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
     const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
 
     if (!serviceId || !templateId || !publicKey) {
-      console.error('Variáveis de ambiente do EmailJS não configuradas');
-      // MODIFICADO: Substitui o 'alert' pelo 'setStatusMessage'
-      setStatusMessage({ type: "error", message: "Erro de configuração. Contate um administrador." });
+      setStatusMessage({
+        type: "error",
+        message: "Erro de configuração. Contate um administrador.",
+      });
       return;
     }
 
@@ -66,178 +64,232 @@ export default function Contact() {
         {
           from_name: formData.name,
           from_email: formData.email,
-          to_email: 'williangomes949@gmail.com',
+          to_email: "williangomes949@gmail.com",
           message: formData.message,
-          date: new Date().toLocaleDateString('pt-BR')
+          date: new Date().toLocaleDateString("pt-BR"),
         },
         publicKey
       );
 
-      console.log('Email enviado com sucesso:', result);
-      // MODIFICADO: Substitui o 'alert' pelo 'setStatusMessage'
-      setStatusMessage({ type: "success", message: "Mensagem enviada com sucesso!" });
+      console.log("Email enviado com sucesso:", result);
+      setStatusMessage({
+        type: "success",
+        message: "Mensagem enviada com sucesso! Retornarei em breve.",
+      });
       setFormData({ name: "", email: "", message: "" });
     } catch (error) {
       console.error("Erro ao enviar mensagem:", error);
-      // MODIFICADO: Substitui o 'alert' pelo 'setStatusMessage'
-      setStatusMessage({ type: "error", message: "Erro ao enviar mensagem. Tente novamente." });
+      setStatusMessage({
+        type: "error",
+        message:
+          "Erro ao enviar mensagem. Tente novamente ou use outro método.",
+      });
     } finally {
       setIsLoading(false);
     }
   };
 
   return (
-    <section id="contact" className="md:py-24 md:p-14 bg-gray-900 text-white">
+    <section id="contact" className="py-12 md:py-24 bg-gray-900 text-white">
       <div className="container mx-auto max-w-6xl px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-4">
-          Vamos Conversar
-        </h2>
-        <p className="text-lg text-center text-gray-400 mb-12 max-w-2xl mx-auto">
-          Estou aberto a novas oportunidades e colaborações. Sinta-se à vontade
-          para entrar em contato através do formulário ou pelas minhas redes.
-        </p>
+        <div className="text-center mb-16">
+          {/* Badge de Destaque */}
+          <div className="mb-6">
+            <span className="inline-flex items-center px-4 py-2 rounded-full bg-will-accent/10 border border-will-accent/20 text-will-accent text-sm font-medium">
+              Contato
+            </span>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            Vamos Criar Algo <span className="text-will-primary">Incrível</span>{" "}
+            Juntos
+          </h2>
+          <p className="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
+            Pronto para transformar sua ideia em realidade? Entre em contato e
+            vamos conversar sobre seu projeto.
+          </p>
+        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
-          {/* Informações de Contato (sem alteração) */}
-          <div className="flex flex-col gap-8">
-            {/* ... (Seu código de ícones de contato aqui) ... */}
-            <div className="flex items-center gap-4">
-              <div className="bg-gray-800 p-4 rounded-full">
-                <FaWhatsapp className="text-lime-500 text-2xl" />
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          {/* Informações de Contato */}
+          <div className="space-y-8 px-1">
+            <div>
+              <h3 className="text-2xl font-semibold text-white mb-6 flex items-center">
+                <span className="w-6 h-0.5 bg-will-primary mr-3"></span>
+                Vamos Conversar
+              </h3>
+              <p className="text-gray-300 mb-8">
+                Estou disponível para novos projetos, oportunidades de
+                colaboração ou apenas para trocar ideias sobre tecnologia.
+              </p>
+            </div>
+
+            <div className="space-y-6">
+              <div className="flex items-start gap-4 group cursor-pointer ">
+                <div className="bg-gray-800 p-3 rounded-xl hover:bg-will-primary/20 hover:scale-110 transition-all duration-300">
+                  <FaWhatsapp className="text-white text-xl" />
+                </div>
+                <div className="flex-1">
+                  <h4 className="text-lg font-semibold text-white mb-1">
+                    WhatsApp
+                  </h4>
+                  <a
+                    href="https://wa.me/5585988954195?text=Olá! Gostaria de conversar sobre um projeto..."
+                    className="text-gray-300 hover:text-lime-400 transition-colors block"
+                  >
+                    (85) 98895-4195
+                  </a>
+                  <span className="text-sm text-gray-500">Resposta rápida</span>
+                </div>
               </div>
-              <div>
-                <h4 className="text-xl font-semibold">WhatsApp</h4>
-                <a
-                  href="https://wa.me/5585988954195?text=Quero%20saber%20mais%20sobre%20seus%20servi%C3%A7os..."
-                  className="text-gray-300 hover:text-lime-500 transition-colors"
-                >
-                  (85) 988954195
-                </a>
+
+              <div className="flex items-start gap-4 group cursor-pointer ">
+                <div className="bg-gray-800 p-3 rounded-xl hover:bg-will-primary/20 hover:scale-110 transition-all duration-300">
+                  <FaEnvelope className="text-white text-xl" />
+                </div>
+                <div className="flex-1">
+                  <h4 className="text-lg font-semibold text-white mb-1">
+                    Email
+                  </h4>
+                  <a
+                    href="mailto:williangomes949@gmail.com"
+                    className="text-gray-300 hover:text-lime-400 transition-colors block"
+                  >
+                    williangomes949@gmail.com
+                  </a>
+                  <span className="text-sm text-gray-500">Resposta em 24h</span>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4 group cursor-pointer ">
+                <div className="bg-gray-800 p-3 rounded-xl hover:bg-will-primary/20 hover:scale-110 transition-all duration-300">
+                  <FaMapMarkerAlt className="text-white text-xl" />
+                </div>
+                <div className="flex-1">
+                  <h4 className="text-lg font-semibold text-white mb-1">
+                    Localização
+                  </h4>
+                  <p className="text-gray-300">Fortaleza, CE</p>
+                  <span className="text-sm text-gray-500">Brasil</span>
+                </div>
               </div>
             </div>
-            <div className="flex items-center gap-4">
-              <div className="bg-gray-800 p-4 rounded-full">
-                <FaEnvelope className="text-lime-500 text-2xl" />
-              </div>
-              <div>
-                <h4 className="text-xl font-semibold">Email</h4>
-                <a
-                  href="mailto:williangomes949949@gmail.com"
-                  className="text-gray-300 hover:text-lime-500 transition-colors"
-                >
-                  williangomes949@gmail.com
-                </a>
-              </div>
-            </div>
-            <div className="flex items-center gap-4">
-              <div className="bg-gray-800 p-4 rounded-full">
-                <FaLinkedin className="text-lime-500 text-2xl" />
-              </div>
-              <div>
-                <h4 className="text-xl font-semibold">LinkedIn</h4>
+
+            {/* Redes Sociais */}
+            <div className="pt-6">
+              <h4 className="text-lg font-semibold text-white mb-4">
+                Redes Sociais
+              </h4>
+              <div className="flex space-x-4">
                 <a
                   href="https://linkedin.com/in/williangomes949"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-300 hover:text-lime-500 transition-colors"
+                  className="bg-gray-800 p-3 rounded-xl hover:bg-will-primary/20 hover:scale-110 transition-all duration-300"
+                  aria-label="LinkedIn"
                 >
-                  linkedin.com/in/williangomes949
+                  <FaLinkedin className="text-xl text-gray-300 hover:text-will-primary" />
                 </a>
-              </div>
-            </div>
-            <div className="flex items-center gap-4">
-              <div className="bg-gray-800 p-4 rounded-full">
-                <FaGithub className="text-lime-500 text-2xl" />
-              </div>
-              <div>
-                <h4 className="text-xl font-semibold">GitHub</h4>
                 <a
                   href="https://github.com/williangomes949"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-300 hover:text-lime-500 transition-colors"
+                  className="bg-gray-800 p-3 rounded-xl hover:bg-will-primary/20 hover:scale-110 transition-all duration-300"
+                  aria-label="GitHub"
                 >
-                  github.com/williangomes949
+                  <FaGithub className="text-xl text-gray-300 hover:text-will-primary" />
                 </a>
               </div>
             </div>
           </div>
 
           {/* Formulário de Contato */}
-          <form onSubmit={handleSubmit} className="flex flex-col gap-6">
-            <div>
-              <label
-                htmlFor="name"
-                className="block text-sm font-medium text-gray-300 mb-2"
-              >
-                Nome
-              </label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                required
-                className="w-full px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 text-gray-200 focus:outline-none focus:ring-2 focus:ring-lime-500"
-              />
+          <form onSubmit={handleSubmit} className="space-y-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div>
+                <label
+                  htmlFor="name"
+                  className="block text-sm font-medium text-gray-300 mb-2"
+                >
+                  Nome *
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-4 py-3 rounded-xl bg-gray-800 border border-gray-700 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-will-primary focus:border-transparent transition-all duration-300"
+                  placeholder="Seu nome completo"
+                />
+              </div>
+              <div>
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium text-gray-300 mb-2"
+                >
+                  Email *
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-4 py-3 rounded-xl bg-gray-800 border border-gray-700 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-will-primary focus:border-transparent transition-all duration-300"
+                  placeholder="seu@email.com"
+                />
+              </div>
             </div>
-            <div>
-              <label
-                htmlFor="email"
-                className="block text-sm font-medium text-gray-300 mb-2"
-              >
-                Email
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-                className="w-full px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 text-gray-200 focus:outline-none focus:ring-2 focus:ring-lime-500"
-              />
-            </div>
+
             <div>
               <label
                 htmlFor="message"
                 className="block text-sm font-medium text-gray-300 mb-2"
               >
-                Mensagem
+                Mensagem *
               </label>
               <textarea
                 id="message"
                 name="message"
-                rows={5}
+                rows={6}
                 value={formData.message}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 text-gray-200 focus:outline-none focus:ring-2 focus:ring-lime-500"
+                className="w-full px-4 py-3 rounded-xl bg-gray-800 border border-gray-700 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-will-primary focus:border-transparent transition-all duration-300 resize-none"
+                placeholder="Conte-me sobre seu projeto, ideia ou oportunidade..."
               />
             </div>
+
             <MyButton
               type="submit"
               variant="primary"
-              className="w-full"
+              className="w-full py-4 text-lg font-semibold"
               disabled={isLoading}
               aria-label="Enviar Mensagem"
             >
-              {isLoading ? "Enviando..." : "Enviar Mensagem"}
+              {isLoading ? (
+                <span className="flex items-center justify-center">
+                  <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-2"></div>
+                  Enviando...
+                </span>
+              ) : (
+                "Enviar Mensagem"
+              )}
             </MyButton>
 
-            {/* NOVO: Bloco de mensagem de status */}
             {statusMessage.message && (
-              <p
-                className={`mt-4 text-center font-medium ${
+              <div
+                className={`p-4 rounded-xl border ${
                   statusMessage.type === "success"
-                    ? "text-lime-500" // Cor de sucesso (do seu tema)
-                    : "text-red-500"   // Cor de erro
-                }`}
-                role="alert" // Importante para acessibilidade
+                    ? "bg-lime-500/10 border-lime-500/20 text-lime-400"
+                    : "bg-red-500/10 border-red-500/20 text-red-400"
+                } transition-all duration-300`}
+                role="alert"
               >
                 {statusMessage.message}
-              </p>
+              </div>
             )}
           </form>
         </div>

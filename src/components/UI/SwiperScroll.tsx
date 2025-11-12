@@ -30,7 +30,7 @@ const techStacks = [
 
 export default function SwiperScroll() {
   return (
-    <div className="w-full py-8 mask-x-from-90% mask-x-to-95%">
+    <div className="w-full py-12 md:py-24 mask-x-from-90% mask-x-to-95%">
       <Swiper
         modules={[Autoplay]}
         breakpoints={{
@@ -56,7 +56,7 @@ export default function SwiperScroll() {
           reverseDirection: false,
         }}
         loop={true}
-        className="py-4 swiper-marquee"
+        className="swiper-marquee"
       >
         {techStacks.map((tech) => (
           <SwiperSlide key={tech.name}>

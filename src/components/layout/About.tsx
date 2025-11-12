@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { FaRegCheckCircle } from "react-icons/fa";
 
-export default function About(){
+export default function About() {
   // Lista de suas stacks
   const skills = [
     "HTML 5",
@@ -17,30 +17,46 @@ export default function About(){
   ];
 
   return (
-    <section id="about" className="py-10 md:py-24 ">
+    <section id="about" className="py-12 md:py-24 relative group">
       <div className="container mx-auto max-w-6xl px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+        <div className="text-center mb-16">
+  {/* Badge de Destaque */}
+  <div className="mb-6">
+    <span className="inline-flex items-center px-4 py-2 rounded-full bg-will-accent/10 border border-will-accent/20 text-will-accent text-sm font-medium">
+      Sobre
+    </span>
+  </div>
+
+  <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+    Transformando <span className="text-will-primary">ideias</span> em experiências digitais
+  </h2>
+
+  <p className="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
+    Acredito que cada projeto nasce de uma boa ideia — e meu papel é dar vida a ela no mundo digital. 
+  </p>
+
+</div>
+
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
           {/* Coluna da Imagem */}
-          <div className="p-0 m-0">
+          <div className="rounded-2xl transform group-hover:scale-[1.02] transition-transform duration-500">
             <Image
               src={"/images/willian-gomes.webp"}
               alt="Willian Gomes"
               width={600}
               height={600}
               loading="eager"
-              className="rounded-lg object-cover"
+              className="w-full h-auto object-cover grayscale-0 group-hover:grayscale-0 transition-all duration-500 rounded-2xl"
             />
           </div>
 
           {/* Coluna do Texto */}
-          <div className="flex flex-col justify-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-will-primary">
-              Sobre Mim
-            </h2>
+          <div className="flex flex-col justify-center space-y-6">
             <p className="text-lg text-will-light mb-4 leading-relaxed">
-              Olá! Sou Willian, um desenvolvedor fullstack iniciante um apaixonado
-              por tecnologia e por transformar ideias em soluções digitais
-              funcionais.
+              Olá! Sou Willian, um desenvolvedor fullstack iniciante um
+              apaixonado por tecnologia e por transformar ideias em soluções
+              digitais funcionais.
             </p>
             <p className="text-lg text-will-light mb-6 leading-relaxed">
               Minha jornada começou com HTML e CSS, e rapidamente evolui para o
@@ -49,20 +65,30 @@ export default function About(){
               TypeScript, utilizando AWS para infraestrutura e Tailwind CSS para
               interfaces ágeis. Sempra estudando e aprendendo.
             </p>
-            <h3 className="text-2xl font-semibold text-white mb-4">
-              Minhas Stacks:
-            </h3>
-            <ul className="grid grid-cols-2 gap-x-6 gap-y-2 text-will-light">
-              {skills.map((skill) => (
-                <li key={skill} className="flex items-center">
-                  <FaRegCheckCircle className="w-5 h-5 mr-2 text-lime-500" />
-                  {skill}
-                </li>
-              ))}
-            </ul>
+            <div>
+              <h3 className="text-2xl font-semibold text-white mb-6 flex items-center">
+                <span className="w-8 h-0.5 bg-will-primary mr-3"></span>
+                Tecnologias que Domino
+              </h3>
+
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {skills.map((skill, index) => (
+                  <li
+                    key={skill}
+                    className="flex items-center p-3 rounded-lg bg-gray-800/50 hover:bg-gray-800/80 transition-all duration-300 group hover:translate-x-2"
+                    style={{ animationDelay: `${index * 100}ms` }}
+                  >
+                    <FaRegCheckCircle className="w-5 h-5 mr-3 text-lime-400 shrink-0 group-hover:scale-110 transition-transform" />
+                    <span className="text-gray-300 group-hover:text-white transition-colors">
+                      {skill}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </div>
     </section>
   );
-};
+}

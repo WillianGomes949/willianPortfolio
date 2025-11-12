@@ -7,11 +7,14 @@ interface BaseProps {
   /**
    * @default 'primary'
    */
-  variant?: 'primary' | 'secondary' | 'ghost';
-  size?: 'sm' | 'md' | 'lg';
+  variant?: 'primary' | 'secondary' | 'ghost' | 'danger';
+  size?: 'sm' | 'md' | 'lg' | 'xl';
   className?: string;
   disabled?: boolean;
   loading?: boolean;
+  fullWidth?: boolean;
+  icon?: React.ReactNode;
+  iconPosition?: 'left' | 'right';
 }
 
 type ButtonAsButton = BaseProps &
@@ -33,53 +36,80 @@ export default function MyButton(props: MyButtonProps) {
     className = '',
     disabled = false,
     loading = false,
+    fullWidth = false,
+    icon,
+    iconPosition = 'left',
     children,
     ...rest
   } = props;
 
   // Base styles
   const baseStyle = `
-      rounded-lg font-bold transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 disabled:opacity-50 disabled:cursor-not-allowed transform hover:scale-102 w-70 text-center
+    inline-flex items-center justify-center gap-3
+    rounded-2xl font-semibold transition-all duration-300 ease-out
+    focus:outline-none focus:ring-4 focus:ring-offset-2 focus:ring-offset-gray-900
+    disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none
+    active:scale-95 border-2 backdrop-blur-sm
+    group relative overflow-hidden
   `;
 
   // Size variants
   const sizeStyles = {
-    sm: 'py-2 px-4 text-sm',
-    md: 'py-3 px-6 text-base',
-    lg: 'py-4 px-8 text-lg'
+    sm: 'py-2.5 px-5 text-sm',
+    md: 'py-3.5 px-7 text-base',
+    lg: 'py-4 px-8 text-lg',
+    xl: 'py-5 px-10 text-xl'
   };
 
   // Color variants
   const variantStyles = {
     primary: `
-      bg-will-primary text-white focus:ring-will-primary
-      focus:ring-offset-will-primary
-      shadow-lg hover:shadow-will-primary/25
+      bg-will-primary
+      text-white border-transparent
+      
+      focus:ring-will-primary/50
+      shadow-lg hover:shadow-2xl hover:shadow-will-primary/25
     `,
     secondary: `
-      border-2 border-will-primary text-will-primary hover:bg-will-primary hover:text-white focus:ring-will-primary
-      focus:ring-offset-will-primary
-      shadow-lg hover:shadow-will-primary/25
-      hover:border-will-primary
+      bg-gray-800/50 text-gray-100 border-gray-600
+      hover:bg-gray-700/80 hover:border-gray-500 hover:text-white
+      focus:ring-gray-500/50
+      shadow-lg hover:shadow-2xl hover:shadow-gray-500/20
+      hover:scale-105
     `,
     ghost: `
-      text-lime-500 hover:bg-lime-500/10
-      focus:ring-lime-500 focus:ring-offset-gray-900
-      hover:border-lime-500/30 border-2 border-transparent
+      bg-transparent text-will-primary border-will-primary/30
+      hover:bg-will-primary/10 hover:border-will-primary hover:text-will-p-light
+      focus:ring-will-primary/30
+      hover:scale-105
+    `,
+    danger: `
+      bg-gradient-to-r from-red-500 to-pink-500
+      text-white border-transparent
+      hover:from-red-600 hover:to-pink-600
+      focus:ring-red-500/50
+      shadow-lg hover:shadow-2xl hover:shadow-red-500/25
     `
   };
+
+  const widthStyle = fullWidth ? 'w-full' : 'w-auto';
+  const loadingSize = size === 'xl' ? 'large' : size === 'sm' ? 'small' : 'medium';
 
   const combinedClassName = `
     ${baseStyle}
     ${sizeStyles[size]}
     ${variantStyles[variant]}
+    ${widthStyle}
     ${loading ? 'cursor-wait' : ''}
+    ${!disabled && !loading ? 'hover:scale-105' : ''}
     ${className}
   `.replace(/\s+/g, ' ').trim();
 
-  // Process children - only uppercase strings, preserve other elements
+  // Process children - preserve original text case but add tracking
   const buttonContent = React.Children.map(children, child => 
-    typeof child === 'string' ? child.toUpperCase() : child
+    typeof child === 'string' 
+      ? <span className="tracking-wide">{child}</span>
+      : child
   );
 
   // Common props for both button and link
@@ -91,6 +121,40 @@ export default function MyButton(props: MyButtonProps) {
     ...(disabled && { 'aria-disabled': true })
   };
 
+  // Content with loading state
+  const renderContent = () => (
+    <>
+      {/* Loading overlay */}
+      {loading && (
+        <div className="absolute inset-0 flex items-center justify-center bg-inherit rounded-2xl">
+          <LoadingSpinner size={loadingSize} />
+        </div>
+      )}
+      
+      {/* Icon and text content */}
+      <div className={`flex items-center gap-3 transition-opacity duration-200 ${loading ? 'opacity-0' : 'opacity-100'}`}>
+        {icon && iconPosition === 'left' && (
+          <span className="shrink-0 group-hover:scale-110 transition-transform duration-200">
+            {icon}
+          </span>
+        )}
+        
+        {buttonContent}
+        
+        {icon && iconPosition === 'right' && (
+          <span className="shrink-0 group-hover:scale-110 transition-transform duration-200">
+            {icon}
+          </span>
+        )}
+      </div>
+
+      {/* Ripple effect layer */}
+      <div className="absolute inset-0 overflow-hidden rounded-2xl">
+        <div className="absolute inset-0 bg-linear-to-r from-white/0 via-white/10 to-white/0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out" />
+      </div>
+    </>
+  );
+
   if ('href' in rest && rest.href) {
     const { href, ...linkRest } = rest;
     
@@ -100,10 +164,7 @@ export default function MyButton(props: MyButtonProps) {
         {...commonProps}
         {...linkRest as React.AnchorHTMLAttributes<HTMLAnchorElement>}
       >
-        {loading && <LoadingSpinner />}
-        <span className={loading ? 'invisible' : 'visible'}>
-          {buttonContent}
-        </span>
+        {renderContent()}
       </Link>
     );
   }
@@ -117,10 +178,7 @@ export default function MyButton(props: MyButtonProps) {
       {...commonProps}
       {...buttonRest}
     >
-      {loading && <LoadingSpinner />}
-      <span className={loading ? 'invisible' : 'visible'}>
-        {buttonContent}
-      </span>
+      {renderContent()}
     </button>
   );
 }

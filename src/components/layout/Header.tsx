@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { HiOutlineX } from "react-icons/hi";
 import { IoMdMenu } from "react-icons/io";
@@ -8,13 +8,14 @@ import { FaWhatsapp } from "react-icons/fa";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const icon = <FaWhatsapp size={24} />;
+  const [isScrolled, setIsScrolled] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
 
   const navLinks = [
     {
-      name: "whatsapp",
+      name: "WhatsApp",
       href: "https://wa.me/5585988954195?text=Quero%20saber%20mais%20sobre%20seus%20servi%C3%A7os...",
-      icon: icon,
+      icon: <FaWhatsapp size={18} />,
     },
     { name: "Sobre", href: "#about" },
     { name: "Projetos", href: "#projects" },
@@ -25,26 +26,67 @@ export default function Header() {
     setIsMenuOpen(false);
   };
 
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+
+    if (isMenuOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.body.style.overflow = "unset";
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [isMenuOpen]);
+
   return (
-    <header className="sticky top-0 z-50 w-full bg-gray-900/80 text-white shadow-lg backdrop-blur-md">
-      <nav className="container mx-auto flex max-w-6xl items-center justify-between px-4 py-5">
-        {/* Logo/Nome */}
-        <Link href="/" className="text-2xl font-bold">
+    <header
+      className={`fixed top-0 z-50 w-full transition-all duration-300 ${
+        isScrolled
+          ? "bg-white/90 backdrop-blur-lg shadow-sm py-2"
+          : "bg-transparent py-4"
+      }`}
+    >
+      <nav className="container mx-auto flex max-w-6xl items-center justify-between px-4">
+        {/* Logo */}
+        <Link
+          href="/"
+          className={`text-xl font-bold transition-colors ${
+            isScrolled ? "text-gray-900" : "text-white"
+          }`}
+        >
           Willian
           <span className="text-red-500">.</span>
         </Link>
 
-        {/* Navegação Desktop */}
-        <div className="hidden space-x-8 md:flex">
+        {/* Desktop Navigation */}
+        <div className="hidden items-center space-x-6 md:flex">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               href={link.href}
-              className={`flex justify-center items-center font-medium text-gray-300 transition-colors gap-2
-              ${
-                link.name === "whatsapp"
-                  ? "hover:text-lime-500"
-                  : "hover:text-red-500"
+              className={`flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium transition-all ${
+                isScrolled
+                  ? link.name === "WhatsApp"
+                    ? "text-gray-700 hover:bg-lime-50 hover:text-lime-600"
+                    : "text-gray-700 hover:bg-red-50 hover:text-red-600"
+                  : link.name === "WhatsApp"
+                  ? "text-white/90 hover:bg-lime-500/20 hover:text-lime-300"
+                  : "text-white/90 hover:bg-red-500/20 hover:text-red-300"
               }`}
             >
               {link.icon}
@@ -53,56 +95,59 @@ export default function Header() {
           ))}
         </div>
 
-        {/* Ícone do Menu Mobile */}
-        <div className="md:hidden">
-          <button
-            onClick={() => setIsMenuOpen(true)}
-            aria-label="Abrir menu"
-            className="text-3xl text-gray-300 transition-colors hover:text-red-500"
-          >
-            <IoMdMenu />
-          </button>
-        </div>
+        {/* Mobile Menu Button */}
+        <button
+          onClick={() => setIsMenuOpen(true)}
+          aria-label="Abrir menu"
+          className={`rounded-lg p-2 transition-colors md:hidden ${
+            isScrolled
+              ? "text-gray-700 hover:bg-gray-100"
+              : "text-white hover:bg-white/10"
+          }`}
+        >
+          <IoMdMenu size={24} />
+        </button>
       </nav>
 
-      {/* Overlay do Menu Mobile */}
-      <div
-        className={`h-50 fixed inset-0 z-50 transform border border-gray-700 rounded-2xl bg-gray-800 transition-transform duration-300 ease-in-out mt-5 md:hidden ${
-          isMenuOpen
-            ? "translate-x-0 w-11/12 mx-auto"
-            : "translate-x-full hidden"
-        }`}
-      >
-        {/* Botão de Fechar */}
-        <div className="flex justify-end px-4 py-5">
-          <button
-            onClick={() => setIsMenuOpen(false)}
-            aria-label="Fechar menu"
-            className="text-4xl text-gray-300 transition-colors hover:text-red-500"
+      {/* Mobile Menu Overlay */}
+      {isMenuOpen && (
+        <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm md:hidden">
+          <div
+            ref={menuRef}
+            className="absolute right-4 top-4 w-64 rounded-2xl bg-white/95 p-6 shadow-xl backdrop-blur-md"
           >
-            <HiOutlineX />
-          </button>
-        </div>
+            {/* Close Button */}
+            <div className="flex justify-end">
+              <button
+                onClick={() => setIsMenuOpen(false)}
+                aria-label="Fechar menu"
+                className="rounded-lg p-2 text-gray-500 transition-colors hover:bg-gray-100 hover:text-gray-700"
+              >
+                <HiOutlineX size={24} />
+              </button>
+            </div>
 
-        {/* Links do Menu Mobile */}
-        <div className="flex h-10 flex-col items-center justify-center space-y-4 p-5">
-          {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              href={link.href}
-              onClick={handleLinkClick}
-              className={`text-2xl font-semibold text-white transition-colors  flex items-center gap-2 ${
-                link.name === "whatsapp"
-                  ? "hover:text-lime-500"
-                  : "hover:text-red-500"
-              }`}
-            >
-              {link.icon}
-              {link.name}
-            </Link>
-          ))}
+            {/* Mobile Links */}
+            <div className="flex flex-col space-y-3 py-4">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  onClick={handleLinkClick}
+                  className={`flex items-center gap-3 rounded-lg px-4 py-3 text-base font-medium transition-all ${
+                    link.name === "WhatsApp"
+                      ? "text-gray-700 hover:bg-lime-50 hover:text-lime-600"
+                      : "text-gray-700 hover:bg-red-50 hover:text-red-600"
+                  }`}
+                >
+                  <span className="text-lg">{link.icon}</span>
+                  {link.name}
+                </Link>
+              ))}
+            </div>
+          </div>
         </div>
-      </div>
+      )}
     </header>
   );
 }
