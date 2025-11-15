@@ -25,6 +25,16 @@ interface Project {
 
 const mockProjects: Project[] = [
   {
+    id: 12,
+    title: "Projeto Véritas Advogados",
+    description:
+      "Site de Escritorio de advocacia - Direito Trabalhista. Responsivo, com botão de whatsapp e formulario de contato. Construído com React, Vite, TypeScript e Tailwind CSS.",
+    imageUrl: "/images/veritas-advogados.webp",
+    tags: ["React", "TypeScript", "Tailwind CSS", "Vite"],
+    liveUrl: "https://veritas-advocacia-eta.vercel.app/",
+    repoUrl: "",
+  },
+  {
     id: 11,
     title: "Projeto SorrirPrime (Clínica Demo)",
     description:
