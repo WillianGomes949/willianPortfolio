@@ -197,16 +197,19 @@ const socialLinks = [
     name: "WhatsApp",
     href: "https://wa.me/5585988954195?text=Olá! Gostaria de conversar sobre um projeto...",
     icon: FaWhatsapp,
+    color: "hover:text-lime-400",
   },
   {
     name: "GitHub",
     href: "https://github.com/williangomes949",
     icon: FaGithub,
+    color: "hover:text-will-primary", // (assumindo que 'will-primary' é uma cor customizada)
   },
   {
     name: "LinkedIn",
     href: "https://linkedin.com/in/williangomes949",
     icon: FaLinkedin,
+    color: "hover:text-will-primary",
   },
 ];
 
