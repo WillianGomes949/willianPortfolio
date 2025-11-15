@@ -19,7 +19,7 @@ export default function NotFound() {
 
       {/* Texto Descritivo */}
       <p className="text-gray-400 text-lg md:text-xl max-w-md mb-8">
-        Ops! Parece que a página que você está procurando foi formatada, deletada ou nunca existiu.
+        Ops! Parece que a página que você está procurando foi deletada ou nunca existiu.
       </p>
 
       {/* Botão de Ação */}
