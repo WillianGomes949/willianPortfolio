@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import TopButton from "@/components/UI/TopButton";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,7 +18,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Willian Gomes - Desenvolvedor FullStack",
   description: "Desenvolvendo soluções web inovadoras e de alta qualidade.",
-   manifest: "/manifest.json",
+  manifest: "/manifest.json",
 };
 
 export default function RootLayout({
@@ -30,9 +31,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Header/>
+        <Header />
         {children}
-        <Footer/>
+        <Footer />
+        <TopButton />
       </body>
     </html>
   );

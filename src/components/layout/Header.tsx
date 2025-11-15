@@ -19,9 +19,9 @@ export default function Header() {
       rel: "noopener noreferrer",
       icon: <FaWhatsapp size={18} />,
     },
-    { name: "Sobre", href: "#about" },
-    { name: "Projetos", href: "#projects" },
-    { name: "Contato", href: "#contact" },
+    { name: "Sobre", href: "/#about" },
+    { name: "Projetos", href: "/#projects" },
+    { name: "Contato", href: "/#contact" },
   ];
 
   const handleLinkClick = () => {

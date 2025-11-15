@@ -1,35 +1,35 @@
 // /components/CardProjects.tsx
 "use client";
 
-import { featuredProjects, techColors, techStacks } from "@/lib/db";
+import { allProjects, techColors, techStacks } from "@/lib/db";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import MyButton from "./MyButton";
-import { BsFillStoplightsFill } from "react-icons/bs";
 
-const techTags = ["Todos", "WordPress", "React", "Next.js", "JavaScript"];
-const PROJECTS_PER_PAGE = 9;
+const techTags = ["Todos", "WordPress", "JavaScript", "React", "Next.js"];
+const PROJECTS_PER_PAGE = 12;
 
 export default function CardProjects() {
   const [activeFilter, setActiveFilter] = useState("Todos");
   const [visibleCount, setVisibleCount] = useState(PROJECTS_PER_PAGE);
+  
   const filteredProjects =
     activeFilter === "Todos"
-      ? featuredProjects
-      : featuredProjects.filter((p) => p.tags.includes(activeFilter));
-
+      ? allProjects
+      : allProjects.filter((p) => p.tags.includes(activeFilter));
   const visibleProjects = filteredProjects.slice(0, visibleCount);
-
-  const loadMore = () => {
-    setVisibleCount((prevCount) => prevCount + PROJECTS_PER_PAGE);
-  };
   const handleFilterClick = (tag: string) => {
     setActiveFilter(tag);
     setVisibleCount(PROJECTS_PER_PAGE);
+ 
   };
+   const loadMore = () => {
+    setVisibleCount((prevCount) => prevCount + PROJECTS_PER_PAGE);
+  };
+
   return (
     <section>
       {/* Filtros Modernos */}
@@ -167,29 +167,28 @@ export default function CardProjects() {
         {/* Estado Vazio */}
         {visibleProjects.length === 0 && (
           <div className="text-center py-20">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-will-primary/20 border border-will-primary/80 rounded-3xl mb-6">
-              <div className="text-3xl"><BsFillStoplightsFill /></div>
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-neutral-800 rounded-3xl mb-6">
+              <div className="text-3xl">🔍</div>
             </div>
             <h3 className="text-2xl font-bold text-neutral-300 mb-3">
               Nenhum projeto encontrado
             </h3>
-            <p className="text-neutral-400 max-w-md mx-auto leading-relaxed">
+            <p className="text-neutral-500 max-w-md mx-auto leading-relaxed">
               Não encontramos projetos com esse filtro. Tente selecionar outra
               categoria.
             </p>
           </div>
         )}
+        {/* Botão de Carregar Mais */}
+              {visibleProjects.length < filteredProjects.length && (
+                <div className="text-center">
+                  <MyButton onClick={loadMore} variant="secondary">
+                    Carregar Mais
+                    <HiOutlineArrowNarrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
+                  </MyButton>
+                </div>
+              )}
       </div>
-
-      {/* Botão de Carregar Mais */}
-      {visibleProjects.length < filteredProjects.length && (
-        <div className="text-center">
-          <MyButton onClick={loadMore} variant="secondary">
-            Carregar Mais
-            <HiOutlineArrowNarrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
-          </MyButton>
-        </div>
-      )}
     </section>
   );
 }
