@@ -35,9 +35,7 @@ export default function Hero() {
       </div>
      {/* Redes Sociais */}
       <div className="text-center">
-        <p className="text-gray-400 mb-6 text-sm uppercase tracking-wider">
-          Conecte-se comigo
-        </p>
+        
         <div className="flex space-x-6 text-2xl">
           <a
             href="https://wa.me/5585988954195?text=Olá! Gostaria de conversar sobre um projeto..."
