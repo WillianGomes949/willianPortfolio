@@ -1,9 +1,11 @@
 import Contact from "@/components/layout/Contact";
+import BriefingButton from "./UI/BriefingButton";
+import MyButton from "./UI/MyButton";
 
 export default function PortfolioPricing() {
   return (
     <section className="min-h-screen bg-gray-900 text-gray-100 antialiased">
-      <div className="max-w-6xl mx-auto px-6 py-12">
+      <div className="md:max-w-6xl mx-auto px-2 md:px-6 py-12">
         <section className="mb-16">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
@@ -33,19 +35,14 @@ export default function PortfolioPricing() {
                 </li>
               </ul>
 
-              <div className="mt-8 flex gap-4 justify-center md:justify-start md:gap-8">
-                <a
+              <div className="mt-8 flex flex-col md:flex-row gap-3 w-full">
+                <MyButton
                   href="#precos"
-                  className="inline-flex items-center gap-2 bg-will-primary text-white px-6 py-3 rounded-2xl font-medium shadow-lg shadow-will-primary/25 hover:shadow-will-primary/40 transition-all duration-300 hover:scale-105"
+                  size='lg'
                 >
                   Ver preços
-                </a>
-                <a
-                  href="#contato"
-                  className="inline-flex items-center gap-2 border border-gray-600 text-gray-300 px-6 py-3 rounded-2xl font-medium hover:border-will-primary hover:text-will-primary transition-all duration-300 hover:scale-105"
-                >
-                  Fazer orçamento
-                </a>
+                </MyButton>
+                <BriefingButton />
               </div>
             </div>
 
@@ -84,8 +81,8 @@ export default function PortfolioPricing() {
             Grade de Preços
           </h3>
           <p className="text-sm text-gray-400 mb-8">
-                Preços de Referência, varia conforme complexidade do trabalho.
-              </p>
+            Preços de Referência, varia conforme complexidade do trabalho.
+          </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Landing Page Card */}
@@ -365,7 +362,7 @@ export default function PortfolioPricing() {
           </div>
         </section>
 
-        <section id="contato" className="mb-20">
+        <section id="contato" className="mb-20 p-0">
           <Contact />
           <div className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-3xl shadow-2xl border border-gray-700/50">
             <h4 className="font-bold text-gray-100 mb-4">Observações</h4>

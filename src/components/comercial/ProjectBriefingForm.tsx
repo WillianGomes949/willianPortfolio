@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import emailjs from "emailjs-com";
 import MyButton from "../UI/MyButton";
+import useLocalStorage from "@/hook/useLocalStorage";
 
 export interface BriefingFormData {
   clientName: string;
@@ -28,7 +29,7 @@ export interface BriefingFormData {
 
 export default function ProjectBriefingForm() {
   const router = useRouter();
-  const [formData, setFormData] = useState<BriefingFormData>({
+  const [formData, setFormData] = useLocalStorage<BriefingFormData>("briefingForm",{
     clientName: "",
     companyProfession: "",
     phoneWhatsApp: "",
@@ -169,33 +170,30 @@ export default function ProjectBriefingForm() {
     try {
       // Formatar os dados para o email
       const emailData = {
-        from_name: formData.clientName,
-        from_email: formData.email,
-        to_email: "williangomes949@gmail.com",
-        phone: formData.phoneWhatsApp,
-        company: formData.companyProfession,
-        location: formData.address,
-        
-        // Informações do negócio
-        business_description: formData.businessDescription,
-        target_audience: formData.targetAudience,
-        competitors: formData.mainCompetitors,
-        competitive_advantages: formData.competitiveAdvantages,
-        
-        // Informações do projeto
-        service_type: formData.serviceType,
-        business_objective: formData.businessObjective,
-        required_features: formData.requiredFeatures.join(", "),
-        provided_materials: formData.providedMaterials.join(", "),
-        references: formData.references.filter(ref => ref.trim() !== "").join("\n"),
-        
-        // Cronograma e observações
-        ideal_launch_date: formData.idealLaunchDate,
-        critical_dates: formData.criticalDates,
-        additional_notes: formData.additionalNotes,
-        
+        from_name: formData.clientName || "Não informado",
+        from_email: formData.email || "Não informado",
+        phone: formData.phoneWhatsApp || "Não informado",
+        company: formData.companyProfession || "Não informado",
+        location: formData.address || "Não informado",
+        business_description: formData.businessDescription || "Não informado",
+        target_audience: formData.targetAudience || "Não informado",
+        competitors: formData.mainCompetitors || "Não informado",
+        competitive_advantages:
+          formData.competitiveAdvantages || "Não informado",
+        service_type: formData.serviceType || "Não informado",
+        business_objective: formData.businessObjective || "Não informado",
+        required_features:
+          formData.requiredFeatures.join(", ") || "Nenhuma selecionada",
+        provided_materials:
+          formData.providedMaterials.join(", ") || "Nenhum selecionado",
+        references:
+          formData.references.filter((ref) => ref.trim() !== "").join("\n") ||
+          "Nenhuma referência",
+        ideal_launch_date: formData.idealLaunchDate || "Não definida",
+        critical_dates: formData.criticalDates || "Nenhuma data crítica",
+        additional_notes:
+          formData.additionalNotes || "Nenhuma observação adicional",
         date: new Date().toLocaleDateString("pt-BR"),
-        time: new Date().toLocaleTimeString("pt-BR"),
       };
 
       const result = await emailjs.send(
@@ -208,9 +206,10 @@ export default function ProjectBriefingForm() {
       console.log("Briefing enviado com sucesso:", result);
       setStatusMessage({
         type: "success",
-        message: "Briefing enviado com sucesso! Analisarei suas informações e retornarei em breve.",
+        message:
+          "Briefing enviado com sucesso! Analisarei suas informações e retornarei em breve.",
       });
-      
+
       // Limpar formulário após sucesso
       setFormData({
         clientName: "",
@@ -235,7 +234,8 @@ export default function ProjectBriefingForm() {
       console.error("Erro ao enviar briefing:", error);
       setStatusMessage({
         type: "error",
-        message: "Erro ao enviar briefing. Tente novamente ou entre em contato diretamente.",
+        message:
+          "Erro ao enviar briefing. Tente novamente ou entre em contato diretamente.",
       });
     } finally {
       setIsLoading(false);
@@ -628,11 +628,7 @@ export default function ProjectBriefingForm() {
 
         {/* Botões de Ação */}
         <div className="flex justify-between pt-6">
-          <MyButton
-            type="button"
-            variant="secondary"
-            onClick={handleCancel}
-          >
+          <MyButton type="button" variant="secondary" onClick={handleCancel}>
             Cancelar
           </MyButton>
           <MyButton

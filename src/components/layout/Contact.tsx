@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+
 import {
   FaEnvelope,
   FaLinkedin,
@@ -11,10 +12,10 @@ import {
 import MyButton from "../UI/MyButton";
 import emailjs from "emailjs-com";
 import { meusDados } from "@/lib/db";
-import BriefingButton from "../UI/BriefingButton";
+import useLocalStorage from "@/hook/useLocalStorage";
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useLocalStorage("contactForm", {
     name: "",
     email: "",
     message: "",
@@ -121,7 +122,7 @@ export default function Contact() {
               </h3>
               <p className="text-gray-300 mb-8">
                 Estou disponível para novos projetos, oportunidades de
-                colaboração ou apenas para trocar ideias sobre tecnologia.
+                colaboração.
               </p>
             </div>
 
@@ -262,8 +263,8 @@ export default function Contact() {
                 placeholder="Conte-me sobre seu projeto, ideia ou oportunidade..."
               />
             </div>
-            <div>
-              <div className="flex flex-col md:flex-row w-full justify-center items-center gap-4">
+            
+              <div className="flex flex-col md:flex-row w-full justify-end items-center gap-4">
                 <MyButton
                   type="submit"
                   variant="primary"
@@ -279,8 +280,8 @@ export default function Contact() {
                     "Enviar Mensagem"
                   )}
                 </MyButton>
-                <BriefingButton />
-              </div>
+              
+           
 
               {statusMessage.message && (
                 <div
