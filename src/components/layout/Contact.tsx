@@ -13,6 +13,7 @@ import MyButton from "../UI/MyButton";
 import emailjs from "emailjs-com";
 import { meusDados } from "@/lib/db";
 import useLocalStorage from "@/hook/useLocalStorage";
+import { SectionTitle } from "../UI/SectionTitle";
 
 export default function Contact() {
   const [formData, setFormData] = useLocalStorage("contactForm", {
@@ -95,23 +96,12 @@ export default function Contact() {
   return (
     <section id="contact" className="py-12 md:py-24 bg-gray-900 text-gray-100">
       <div className="container mx-auto max-w-6xl px-4">
-        <div className="text-center mb-16">
-          {/* Badge de Destaque */}
-          <div className="mb-6">
-            <span className="inline-flex items-center px-4 py-2 rounded-full bg-will-accent/10 border border-will-accent/20 text-will-accent text-sm font-medium">
-              Contato
-            </span>
-          </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-100 mb-4">
-            Vamos Criar Algo <span className="text-will-primary">Incrível</span>{" "}
-            Juntos
-          </h2>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
-            Pronto para ter um site que traz resultados? Me mande uma mensagem.
-            Entre em contato e vamos conversar sobre seu projeto.
-          </p>
-        </div>
-
+        <SectionTitle
+            section="Contato"
+            subtitle="Pronto para ter um site que traz resultados? Me mande uma mensagem. Entre em contato e vamos conversar sobre seu projeto."
+            title="Vamos Criar Algo Incrível Juntos"
+            className="mb-16"
+            />
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Informações de Contato */}
           <div className="space-y-8 px-1">

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { FaRegCheckCircle } from "react-icons/fa";
+import { SectionTitle } from "../UI/SectionTitle";
 
 export default function About() {
   // Lista de suas stacks
@@ -24,22 +25,12 @@ export default function About() {
       <div className="container mx-auto max-w-6xl px-4">
         <div className="text-center mb-16">
           {/* Badge de Destaque */}
-          <div className="mb-6">
-            <span className="inline-flex items-center px-4 py-2 rounded-full bg-will-accent/10 border border-will-accent/20 text-will-accent text-sm font-medium">
-              Sobre
-            </span>
-          </div>
-
-          <h2 className="relative text-4xl md:text-5xl font-bold text-gray-100 mb-4">
-            Eu ajudo  negócios locais a 
-            <span className="text-will-primary"> atrair mais clientes </span>
-           com sites modernos.
-          </h2>
-
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
-            Acredito que cada projeto nasce de uma boa ideia — e meu papel é dar
-            vida a ela no mundo digital.
-          </p>
+          <SectionTitle
+            section="Sobre"
+            subtitle="Acredito que cada projeto nasce de uma boa ideia — e meu papel é dar
+            vida a ela no mundo digital."
+            title="Eu ajudo  negócios locais a atrair mais clientes com sites modernos."
+          />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">

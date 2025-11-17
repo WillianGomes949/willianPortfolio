@@ -10,6 +10,10 @@ body {
 }
 
 @theme {
+  /* fontes personalizadas */
+  --font-google-sans-code: "Google Sans Code", monospace;
+  --font-tajawal: "Tajawal", sans-serif;
+  --font-zen-kaku-gothic-new:  "Zen Kaku Gothic New", sans-serif;
   /* Cores personalizadas */
   --color-will-primary: #f20519;
   --color-will-p-light: #fb2c36;

@@ -2,6 +2,7 @@
 
 import CardProjects from "../UI/CardProjects";
 import MyButton from "../UI/MyButton";
+import { SectionTitle } from "../UI/SectionTitle";
 
 export default function Projects() {
   return (
@@ -11,20 +12,13 @@ export default function Projects() {
     >
       <div className="container mx-auto max-w-7xl">
         {/* Header da Seção */}
-        <div className="text-center mb-16">
-          {/* Badge de Destaque */}
-          <div className="mb-6">
-            <span className="inline-flex items-center px-4 py-2 rounded-full bg-will-accent/10 border border-will-accent/20 text-will-accent text-sm font-medium">
-              Portfólio
-            </span>
-          </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-100 mb-4">
-            Meus <span className="text-will-primary">Projetos</span>
-          </h2>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            Uma coleção dos meus trabalhos mais recentes e desafiadores
-          </p>
-        </div>
+        <SectionTitle
+            section="Portfólio"
+            subtitle="Uma coleção dos meus trabalhos mais recentes e desafiadores."
+            title="Meus Projetos"
+            className="mb-16"
+            />
+        
         {/* Grid de Projetos */}
         <div className="mb-12">
           <CardProjects />

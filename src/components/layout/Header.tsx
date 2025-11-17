@@ -12,6 +12,7 @@ export default function Header() {
   const menuRef = useRef<HTMLDivElement>(null);
 
   const navLinks = [
+    { name: "Início", href: "/" },
     { name: "Sobre", href: "/#about" },
     { name: "Projetos", href: "/#projects" },
     { name: "Contato", href: "/#contact" },
