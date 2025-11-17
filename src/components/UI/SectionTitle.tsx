@@ -1,7 +1,7 @@
 // src/components/ui/SectionTitle.tsx
 
 interface SectionTitleProps {
-  section: string;
+  section?: string;
   subtitle: string;
   title: string;
   className?: string; // Para espaçamento (ex: "mb-12")
