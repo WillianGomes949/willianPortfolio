@@ -26,12 +26,25 @@ interface Project {
   repoUrl?: string;
 }
 
+interface MeusDados {
+  nome: string,
+  phoneNumber: string,
+  email: string,
+  whatsapp:string,
+  localizacao: string,
+  sobreMim: string,
+}
+
 // --- BANCO DE DADOS DE PROJETOS ---
-//
-// MELHORIA ESTRUTURAL:
-// Dividimos os projetos em duas listas:
-// 1. featuredProjects: Seus melhores projetos focados em negócios. (Use na sua Home)
-// 2. allProjects: Todos os projetos, incluindo utilitários. (Use numa página /projetos)
+const meusDados: MeusDados= {
+  nome: "Willian Gomes",
+  phoneNumber: "+55 (85) 9.8895-4195",
+  email: "williangomes949@gmail.com",
+  whatsapp: "https://wa.me/5585988954195?text=Olá! Gostaria de conversar sobre um projeto...",
+  localizacao: "Fortaleza - CE, Brasil",
+  sobreMim: `Sou um desenvolvedor apaixonado por criar soluções digitais que realmente fazem a diferença. Com experiência em, transformo ideias em realidade, focando sempre na experiência do usuário** e na **performance**. Minha jornada é impulsionada pela busca contínua por aprendizado e pela vontade de construir produtos que impactam positivamente.`,
+}
+
 
 const featuredProjects: Project[] = [
   {
@@ -213,4 +226,4 @@ const socialLinks = [
   },
 ];
 
-export { techColors, techStacks, featuredProjects, allProjects, socialLinks };
+export { techColors, techStacks, featuredProjects, allProjects, socialLinks, meusDados };

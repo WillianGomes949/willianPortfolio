@@ -1,4 +1,6 @@
+import Contact from "@/components/layout/Contact";
 import { SectionTitle } from "@/components/UI/SectionTitle";
+import { meusDados } from "@/lib/db";
 
 export default function PortfolioPricing() {
   return (
@@ -120,8 +122,6 @@ export default function PortfolioPricing() {
                   </span>
                 </li>
               </ul>
-
-              
             </article>
 
             {/* Site Institucional Card */}
@@ -372,98 +372,67 @@ export default function PortfolioPricing() {
         </section>
 
         <section id="contato" className="mb-20">
-          <h3 className="text-2xl font-bold mb-8 bg-linear-to-r from-gray-100 to-gray-300 bg-clip-text text-transparent">
-            Contato
-          </h3>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <form className="bg-gray-800/50 backdrop-blur-sm p-8 rounded-3xl shadow-2xl border border-gray-700/50 space-y-6">
-              <div>
-                <label className="text-sm font-medium text-gray-300 block mb-2">
-                  Nome
-                </label>
-                <input
-                  className="w-full bg-gray-700/50 border border-gray-600 rounded-2xl px-4 py-3 text-gray-100 placeholder-gray-500 focus:outline-none focus:border-will-primary focus:ring-1 focus:ring-will-primary transition-all duration-300"
-                  placeholder="Seu nome"
-                />
-              </div>
-              <div>
-                <label className="text-sm font-medium text-gray-300 block mb-2">
-                  Empresa / Profissão
-                </label>
-                <input
-                  className="w-full bg-gray-700/50 border border-gray-600 rounded-2xl px-4 py-3 text-gray-100 placeholder-gray-500 focus:outline-none focus:border-will-primary focus:ring-1 focus:ring-will-primary transition-all duration-300"
-                  placeholder="ex: Fisioterapeuta / Salão"
-                />
-              </div>
-              <div>
-                <label className="text-sm font-medium text-gray-300 block mb-2">
-                  Mensagem
-                </label>
-                <textarea
-                  className="w-full bg-gray-700/50 border border-gray-600 rounded-2xl px-4 py-3 text-gray-100 placeholder-gray-500 focus:outline-none focus:border-will-primary focus:ring-1 focus:ring-will-primary transition-all duration-300 resize-none"
-                  rows={4}
-                  placeholder="Me fale sobre seu projeto"
-                ></textarea>
-              </div>
-
-              <div className="flex items-center justify-between pt-4 border-t border-gray-700/50">
-                <div className="text-sm text-gray-500">
-                  Atendo em Fortaleza e região.
-                </div>
-                <button
-                  type="button"
-                  className="bg-will-primary text-white px-6 py-3 rounded-2xl font-medium shadow-lg shadow-will-primary/25 hover:shadow-will-primary/40 transition-all duration-300 hover:scale-105"
-                >
-                  Enviar
-                </button>
-              </div>
-            </form>
-
-            <div className="space-y-6">
-              <div className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-3xl shadow-2xl border border-gray-700/50">
-                <h4 className="font-bold text-gray-100 mb-4">Informações</h4>
-                <div className="space-y-3 text-sm">
-                  <p className="text-gray-400">
-                    Telefone / WhatsApp:{" "}
-                    <span className="font-medium text-gray-200">
-                      (xx) xxxxx-xxxx
-                    </span>
-                  </p>
-                  <p className="text-gray-400">
-                    E-mail:{" "}
-                    <span className="font-medium text-gray-200">
-                      seu@email.com
-                    </span>
-                  </p>
-                  <p className="text-gray-400">
-                    Local:{" "}
-                    <span className="font-medium text-gray-200">
-                      Fortaleza, CE
-                    </span>
-                  </p>
-                </div>
-              </div>
-
-              <div className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-3xl shadow-2xl border border-gray-700/50">
-                <h4 className="font-bold text-gray-100 mb-4">Observações</h4>
-                <ul className="text-sm text-gray-400 space-y-2">
-                  <li className="flex items-start gap-2">
-                    <span className="text-will-primary mt-1">•</span>
-                    Propostas personalizadas com briefing.
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-will-primary mt-1">•</span>
-                    Valores focados em pequenos negócios.
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-will-primary mt-1">•</span>
-                    Prazo e conteúdo influenciam o preço final.
-                  </li>
-                </ul>
+          {/* <div className="flex flex-col md:grid md:grid-cols-2 gap-8">
+            <div className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-3xl shadow-2xl border border-gray-700/50">
+              <h4 className="font-bold text-gray-100 mb-4">Informações</h4>
+              <div className="space-y-3 text-sm">
+                <p className="text-gray-400">
+                  Telefone / WhatsApp:{" "}
+                  <span className="font-medium text-gray-200">
+                    {meusDados.phoneNumber}
+                  </span>
+                </p>
+                <p className="text-gray-400">
+                  E-mail:{" "}
+                  <span className="font-medium text-gray-200">
+                    {meusDados.email}
+                  </span>
+                </p>
+                <p className="text-gray-400">
+                  Local:{" "}
+                  <span className="font-medium text-gray-200">
+                    {meusDados.localizacao}
+                  </span>
+                </p>
               </div>
             </div>
-          </div>
+
+            <div className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-3xl shadow-2xl border border-gray-700/50">
+              <h4 className="font-bold text-gray-100 mb-4">Observações</h4>
+              <ul className="text-sm text-gray-400 space-y-2">
+                <li className="flex items-start gap-2">
+                  <span className="text-will-primary mt-1">•</span>
+                  Propostas personalizadas com briefing.
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-will-primary mt-1">•</span>
+                  Valores focados em pequenos negócios.
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-will-primary mt-1">•</span>
+                  Prazo e conteúdo influenciam o preço final.
+                </li>
+              </ul>
+            </div>
+          </div> */}
+          <Contact />
+          <div className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-3xl shadow-2xl border border-gray-700/50">
+              <h4 className="font-bold text-gray-100 mb-4">Observações</h4>
+              <ul className="text-sm text-gray-400 space-y-2">
+                <li className="flex items-start gap-2">
+                  <span className="text-will-primary mt-1">•</span>
+                  Propostas personalizadas com briefing.
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-will-primary mt-1">•</span>
+                  Valores focados em pequenos negócios.
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-will-primary mt-1">•</span>
+                  Prazo e conteúdo influenciam o preço final.
+                </li>
+              </ul>
+            </div>
         </section>
       </div>
     </section>
