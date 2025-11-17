@@ -22,6 +22,7 @@ export default function Header() {
     { name: "Sobre", href: "/#about" },
     { name: "Projetos", href: "/#projects" },
     { name: "Contato", href: "/#contact" },
+    { name: "Preço", href: "/preco" },
   ];
 
   const handleLinkClick = () => {
