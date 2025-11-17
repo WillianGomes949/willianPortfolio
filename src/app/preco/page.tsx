@@ -1,14 +1,13 @@
 import Contact from "@/components/layout/Contact";
 import { SectionTitle } from "@/components/UI/SectionTitle";
-import { meusDados } from "@/lib/db";
 
 export default function PortfolioPricing() {
   return (
     <section className="min-h-screen bg-gray-900 text-gray-100 antialiased">
-      <div className="pt-20 bg-gray-900">
+      <div className="bg-gray-900 py-8">
         <SectionTitle
-          subtitle="Grade de Preços"
-          title="Investimento Transparente"
+          subtitle="Nossos Preços"
+          title="Seu Investimento com Transparência e Qualidade"
           className="pt-16 mb-12"
         />
       </div>
@@ -16,13 +15,13 @@ export default function PortfolioPricing() {
         <section className="mb-16">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
-              <h2 className="text-3xl font-extrabold leading-tight bg-linear-to-r from-gray-100 to-gray-300 bg-clip-text text-transparent">
-                Preços justos — resultado real
+              <h2 className="text-center md:text-start text-3xl font-extrabold leading-tight bg-linear-to-r from-gray-100 to-gray-300 bg-clip-text text-transparent">
+                Preços justos e resultados reais
               </h2>
               <p className="mt-4 text-gray-400">
                 Grade de preços pensada para micro, pequenos e médios negócios e
-                profissionais autônomos em Fortaleza. Transparência, qualidade e
-                custos realistas (WordPress / React).
+                profissionais autônomos em Fortaleza e Região. Transparência,
+                qualidade e custos realistas.
               </p>
 
               <ul className="mt-6 space-y-3 text-sm text-gray-300">
@@ -33,7 +32,8 @@ export default function PortfolioPricing() {
                 </li>
                 <li className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-will-primary rounded-full"></div>
-                  Stack: WordPress e React — entregas adaptadas ao cliente.
+                  Espaecialidade: WordPress e React — entregas adaptadas ao
+                  cliente.
                 </li>
                 <li className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-will-primary rounded-full"></div>
@@ -41,7 +41,7 @@ export default function PortfolioPricing() {
                 </li>
               </ul>
 
-              <div className="mt-8 flex gap-4">
+              <div className="mt-8 flex gap-4 justify-center md:justify-start md:gap-8">
                 <a
                   href="#precos"
                   className="inline-flex items-center gap-2 bg-will-primary text-white px-6 py-3 rounded-2xl font-medium shadow-lg shadow-will-primary/25 hover:shadow-will-primary/40 transition-all duration-300 hover:scale-105"
@@ -88,9 +88,12 @@ export default function PortfolioPricing() {
         </section>
 
         <section id="precos" className="mb-16">
-          <h3 className="text-2xl font-bold mb-8 bg-linear-to-r from-gray-100 to-gray-300 bg-clip-text text-transparent">
+          <h3 className="flex justify-center md:justify-start text-2xl font-bold bg-linear-to-r from-gray-100 to-gray-300 bg-clip-text text-transparent">
             Grade de Preços
           </h3>
+          <p className="text-sm text-gray-400 mb-8">
+                Preços de Referência, varia conforme complexidade do trabalho.
+              </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Landing Page Card */}
@@ -183,7 +186,26 @@ export default function PortfolioPricing() {
           <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
             <article className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-3xl shadow-2xl border border-gray-700/50 hover:border-will-primary/30 transition-all duration-300 group">
               <h4 className="text-lg font-bold text-gray-100 mb-3">
-                Banco de Dados (Sanity)
+                SEO / Performance / Otimização
+              </h4>
+              <ul className="space-y-3 text-sm">
+                <li className="flex justify-between text-gray-300">
+                  <span>Otimização de velocidade:</span>
+                  <span className="font-semibold text-will-accent">
+                    R$ 200 — R$ 350
+                  </span>
+                </li>
+                <li className="flex justify-between text-gray-300">
+                  <span>SEO inicial:</span>
+                  <span className="font-semibold text-will-accent">
+                    R$ 250 — R$ 450
+                  </span>
+                </li>
+              </ul>
+            </article>
+            <article className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-3xl shadow-2xl border border-gray-700/50 hover:border-will-primary/30 transition-all duration-300 group">
+              <h4 className="text-lg font-bold text-gray-100 mb-3">
+                Banco de Dados ( MySQL / AWS / Sanity)
               </h4>
               <p className="text-sm text-gray-400 mb-4">
                 Modelagem e integração de conteúdo.
@@ -205,26 +227,6 @@ export default function PortfolioPricing() {
                   <span>Integração completa (React):</span>
                   <span className="font-semibold text-will-accent">
                     R$ 900 — R$ 1.500
-                  </span>
-                </li>
-              </ul>
-            </article>
-
-            <article className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-3xl shadow-2xl border border-gray-700/50 hover:border-will-primary/30 transition-all duration-300 group">
-              <h4 className="text-lg font-bold text-gray-100 mb-3">
-                SEO / Performance / Otimização
-              </h4>
-              <ul className="space-y-3 text-sm">
-                <li className="flex justify-between text-gray-300">
-                  <span>Otimização de velocidade:</span>
-                  <span className="font-semibold text-will-accent">
-                    R$ 200 — R$ 350
-                  </span>
-                </li>
-                <li className="flex justify-between text-gray-300">
-                  <span>SEO inicial:</span>
-                  <span className="font-semibold text-will-accent">
-                    R$ 250 — R$ 450
                   </span>
                 </li>
               </ul>
@@ -372,67 +374,24 @@ export default function PortfolioPricing() {
         </section>
 
         <section id="contato" className="mb-20">
-          {/* <div className="flex flex-col md:grid md:grid-cols-2 gap-8">
-            <div className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-3xl shadow-2xl border border-gray-700/50">
-              <h4 className="font-bold text-gray-100 mb-4">Informações</h4>
-              <div className="space-y-3 text-sm">
-                <p className="text-gray-400">
-                  Telefone / WhatsApp:{" "}
-                  <span className="font-medium text-gray-200">
-                    {meusDados.phoneNumber}
-                  </span>
-                </p>
-                <p className="text-gray-400">
-                  E-mail:{" "}
-                  <span className="font-medium text-gray-200">
-                    {meusDados.email}
-                  </span>
-                </p>
-                <p className="text-gray-400">
-                  Local:{" "}
-                  <span className="font-medium text-gray-200">
-                    {meusDados.localizacao}
-                  </span>
-                </p>
-              </div>
-            </div>
-
-            <div className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-3xl shadow-2xl border border-gray-700/50">
-              <h4 className="font-bold text-gray-100 mb-4">Observações</h4>
-              <ul className="text-sm text-gray-400 space-y-2">
-                <li className="flex items-start gap-2">
-                  <span className="text-will-primary mt-1">•</span>
-                  Propostas personalizadas com briefing.
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-will-primary mt-1">•</span>
-                  Valores focados em pequenos negócios.
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-will-primary mt-1">•</span>
-                  Prazo e conteúdo influenciam o preço final.
-                </li>
-              </ul>
-            </div>
-          </div> */}
           <Contact />
           <div className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-3xl shadow-2xl border border-gray-700/50">
-              <h4 className="font-bold text-gray-100 mb-4">Observações</h4>
-              <ul className="text-sm text-gray-400 space-y-2">
-                <li className="flex items-start gap-2">
-                  <span className="text-will-primary mt-1">•</span>
-                  Propostas personalizadas com briefing.
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-will-primary mt-1">•</span>
-                  Valores focados em pequenos negócios.
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-will-primary mt-1">•</span>
-                  Prazo e conteúdo influenciam o preço final.
-                </li>
-              </ul>
-            </div>
+            <h4 className="font-bold text-gray-100 mb-4">Observações</h4>
+            <ul className="text-sm text-gray-400 space-y-2">
+              <li className="flex items-start gap-2">
+                <span className="text-will-primary mt-1">•</span>
+                Propostas personalizadas com briefing.
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-will-primary mt-1">•</span>
+                Valores focados em pequenos negócios.
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-will-primary mt-1">•</span>
+                Prazo e conteúdo influenciam o preço final.
+              </li>
+            </ul>
+          </div>
         </section>
       </div>
     </section>

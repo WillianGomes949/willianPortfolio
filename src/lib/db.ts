@@ -30,8 +30,11 @@ interface MeusDados {
   nome: string,
   phoneNumber: string,
   email: string,
-  whatsapp:string,
+  whatsappUrl:string,
   localizacao: string,
+  instagram: string,
+  linkedin: string,
+  github: string,
   sobreMim: string,
 }
 
@@ -40,7 +43,10 @@ const meusDados: MeusDados= {
   nome: "Willian Gomes",
   phoneNumber: "+55 (85) 9.8895-4195",
   email: "williangomes949@gmail.com",
-  whatsapp: "https://wa.me/5585988954195?text=Olá! Gostaria de conversar sobre um projeto...",
+  whatsappUrl: "https://wa.me/5585988954195?text=Olá! Gostaria de conversar sobre seus serviços...",
+  instagram: "https://www.instagram.com/williangomes949/",
+  linkedin: "https://www.linkedin.com/in/williangomes949/",
+  github: "https://github.com/williangomes949",
   localizacao: "Fortaleza - CE, Brasil",
   sobreMim: `Sou um desenvolvedor apaixonado por criar soluções digitais que realmente fazem a diferença. Com experiência em, transformo ideias em realidade, focando sempre na experiência do usuário** e na **performance**. Minha jornada é impulsionada pela busca contínua por aprendizado e pela vontade de construir produtos que impactam positivamente.`,
 }

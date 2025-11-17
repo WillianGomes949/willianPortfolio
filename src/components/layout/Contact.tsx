@@ -10,6 +10,7 @@ import {
 } from "react-icons/fa";
 import MyButton from "../UI/MyButton";
 import emailjs from "emailjs-com";
+import { meusDados } from "@/lib/db";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -133,10 +134,10 @@ export default function Contact() {
                     WhatsApp
                   </h4>
                   <a
-                    href="https://wa.me/5585988954195?text=Olá! Gostaria de conversar sobre um projeto..."
+                    href={`${meusDados.whatsappUrl}`}
                     className="text-gray-300 hover:text-lime-400 transition-colors block"
                   >
-                    (85) 98895-4195
+                    {meusDados.phoneNumber}
                   </a>
                   <span className="text-sm text-gray-500">Resposta rápida</span>
                 </div>
@@ -151,10 +152,10 @@ export default function Contact() {
                     Email
                   </h4>
                   <a
-                    href="mailto:williangomes949@gmail.com"
+                    href={`mailto:${meusDados.email}`}
                     className="text-gray-300 hover:text-lime-400 transition-colors block"
                   >
-                    williangomes949@gmail.com
+                    {meusDados.email}
                   </a>
                   <span className="text-sm text-gray-500">Resposta em 24h</span>
                 </div>
@@ -168,8 +169,7 @@ export default function Contact() {
                   <h4 className="text-lg font-semibold text-gray-100 mb-1">
                     Localização
                   </h4>
-                  <p className="text-gray-300">Fortaleza, CE</p>
-                  <span className="text-sm text-gray-500">Brasil</span>
+                  <p className="text-gray-300">{meusDados.localizacao}</p>
                 </div>
               </div>
             </div>
@@ -181,7 +181,7 @@ export default function Contact() {
               </h4>
               <div className="flex space-x-4">
                 <a
-                  href="https://linkedin.com/in/williangomes949"
+                  href={`${meusDados.linkedin}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-gray-800 p-3 rounded-xl hover:bg-will-primary/20 hover:scale-110 transition-all duration-300"
@@ -190,7 +190,7 @@ export default function Contact() {
                   <FaLinkedin className="text-xl text-gray-300 hover:text-will-primary" />
                 </a>
                 <a
-                  href="https://github.com/williangomes949"
+                  href={`${meusDados.github}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-gray-800 p-3 rounded-xl hover:bg-will-primary/20 hover:scale-110 transition-all duration-300"
