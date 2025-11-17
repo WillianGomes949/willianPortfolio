@@ -258,7 +258,7 @@ export default function ProjectBriefingForm() {
       <form onSubmit={handleSubmit} className="space-y-8">
         {/* Seção 1: Informações do Cliente */}
         <section className="border-b border-gray-700/50 pb-8">
-          <h3 className="text-lg font-semibold text-will-primary mb-4">
+          <h3 className="text-lg font-semibold text-will-accent mb-4">
             Informações do Cliente (Contratante)
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -272,7 +272,7 @@ export default function ProjectBriefingForm() {
                 value={formData.clientName}
                 onChange={handleInputChange}
                 required
-                className="w-full bg-gray-700/50 border border-gray-600 rounded-2xl px-4 py-3 text-gray-100 placeholder-gray-500 focus:outline-none focus:border-will-primary focus:ring-1 focus:ring-will-primary transition-all duration-300"
+                className="w-full bg-gray-700/50 border border-gray-600 rounded-2xl px-4 py-3 text-gray-100 placeholder-gray-500 focus:outline-none focus:border-will-accent focus:ring-1 focus:ring-will-accent transition-all duration-300"
                 placeholder="Nome completo ou razão social"
               />
             </div>
@@ -287,7 +287,7 @@ export default function ProjectBriefingForm() {
                 value={formData.companyProfession}
                 onChange={handleInputChange}
                 required
-                className="w-full bg-gray-700/50 border border-gray-600 rounded-2xl px-4 py-3 text-gray-100 placeholder-gray-500 focus:outline-none focus:border-will-primary focus:ring-1 focus:ring-will-primary transition-all duration-300"
+                className="w-full bg-gray-700/50 border border-gray-600 rounded-2xl px-4 py-3 text-gray-100 placeholder-gray-500 focus:outline-none focus:border-will-accent focus:ring-1 focus:ring-will-accent transition-all duration-300"
                 placeholder="Ex: Fisioterapeuta, Salão de Beleza, Consultório"
               />
             </div>
@@ -302,7 +302,7 @@ export default function ProjectBriefingForm() {
                 value={formData.phoneWhatsApp}
                 onChange={handleInputChange}
                 required
-                className="w-full bg-gray-700/50 border border-gray-600 rounded-2xl px-4 py-3 text-gray-100 placeholder-gray-500 focus:outline-none focus:border-will-primary focus:ring-1 focus:ring-will-primary transition-all duration-300"
+                className="w-full bg-gray-700/50 border border-gray-600 rounded-2xl px-4 py-3 text-gray-100 placeholder-gray-500 focus:outline-none focus:border-will-accent focus:ring-1 focus:ring-will-accent transition-all duration-300"
                 placeholder="(85) 99999-9999"
               />
             </div>
@@ -317,7 +317,7 @@ export default function ProjectBriefingForm() {
                 value={formData.email}
                 onChange={handleInputChange}
                 required
-                className="w-full bg-gray-700/50 border border-gray-600 rounded-2xl px-4 py-3 text-gray-100 placeholder-gray-500 focus:outline-none focus:border-will-primary focus:ring-1 focus:ring-will-primary transition-all duration-300"
+                className="w-full bg-gray-700/50 border border-gray-600 rounded-2xl px-4 py-3 text-gray-100 placeholder-gray-500 focus:outline-none focus:border-will-accent focus:ring-1 focus:ring-will-accent transition-all duration-300"
                 placeholder="seu@email.com"
               />
             </div>
@@ -332,7 +332,7 @@ export default function ProjectBriefingForm() {
                 value={formData.address}
                 onChange={handleInputChange}
                 required
-                className="w-full bg-gray-700/50 border border-gray-600 rounded-2xl px-4 py-3 text-gray-100 placeholder-gray-500 focus:outline-none focus:border-will-primary focus:ring-1 focus:ring-will-primary transition-all duration-300"
+                className="w-full bg-gray-700/50 border border-gray-600 rounded-2xl px-4 py-3 text-gray-100 placeholder-gray-500 focus:outline-none focus:border-will-accent focus:ring-1 focus:ring-will-accent transition-all duration-300"
                 placeholder="Fortaleza, CE"
               />
             </div>
@@ -341,7 +341,7 @@ export default function ProjectBriefingForm() {
 
         {/* Seção 2: Sobre o Negócio */}
         <section className="border-b border-gray-700/50 pb-8">
-          <h3 className="text-lg font-semibold text-will-primary mb-4">
+          <h3 className="text-lg font-semibold text-will-accent mb-4">
             Sobre o Negócio
           </h3>
 
@@ -356,7 +356,7 @@ export default function ProjectBriefingForm() {
                 onChange={handleInputChange}
                 required
                 rows={3}
-                className="w-full bg-gray-700/50 border border-gray-600 rounded-2xl px-4 py-3 text-gray-100 placeholder-gray-500 focus:outline-none focus:border-will-primary focus:ring-1 focus:ring-will-primary transition-all duration-300 resize-none"
+                className="w-full bg-gray-700/50 border border-gray-600 rounded-2xl px-4 py-3 text-gray-100 placeholder-gray-500 focus:outline-none focus:border-will-accent focus:ring-1 focus:ring-will-accent transition-all duration-300 resize-none"
                 placeholder="Descreva brevemente o que sua empresa/profissão faz"
               />
             </div>
@@ -371,7 +371,7 @@ export default function ProjectBriefingForm() {
                 onChange={handleInputChange}
                 required
                 rows={2}
-                className="w-full bg-gray-700/50 border border-gray-600 rounded-2xl px-4 py-3 text-gray-100 placeholder-gray-500 focus:outline-none focus:border-will-primary focus:ring-1 focus:ring-will-primary transition-all duration-300 resize-none"
+                className="w-full bg-gray-700/50 border border-gray-600 rounded-2xl px-4 py-3 text-gray-100 placeholder-gray-500 focus:outline-none focus:border-will-accent focus:ring-1 focus:ring-will-accent transition-all duration-300 resize-none"
                 placeholder="Ex: faixa etária, profissão, interesses, localização"
               />
             </div>
@@ -385,7 +385,7 @@ export default function ProjectBriefingForm() {
                 value={formData.mainCompetitors}
                 onChange={handleInputChange}
                 rows={2}
-                className="w-full bg-gray-700/50 border border-gray-600 rounded-2xl px-4 py-3 text-gray-100 placeholder-gray-500 focus:outline-none focus:border-will-primary focus:ring-1 focus:ring-will-primary transition-all duration-300 resize-none"
+                className="w-full bg-gray-700/50 border border-gray-600 rounded-2xl px-4 py-3 text-gray-100 placeholder-gray-500 focus:outline-none focus:border-will-accent focus:ring-1 focus:ring-will-accent transition-all duration-300 resize-none"
                 placeholder="Nome e, se possível, site dos concorrentes"
               />
             </div>
@@ -400,7 +400,7 @@ export default function ProjectBriefingForm() {
                 onChange={handleInputChange}
                 required
                 rows={2}
-                className="w-full bg-gray-700/50 border border-gray-600 rounded-2xl px-4 py-3 text-gray-100 placeholder-gray-500 focus:outline-none focus:border-will-primary focus:ring-1 focus:ring-will-primary transition-all duration-300 resize-none"
+                className="w-full bg-gray-700/50 border border-gray-600 rounded-2xl px-4 py-3 text-gray-100 placeholder-gray-500 focus:outline-none focus:border-will-accent focus:ring-1 focus:ring-will-accent transition-all duration-300 resize-none"
                 placeholder="O que torna seu negócio único? Por que os clientes escolhem você?"
               />
             </div>
@@ -409,12 +409,12 @@ export default function ProjectBriefingForm() {
 
         {/* Seção 3: Sobre o Projeto */}
         <section className="border-b border-gray-700/50 pb-8">
-          <h3 className="text-lg font-semibold text-will-primary mb-4">
+          <h3 className="text-lg font-semibold text-will-accent mb-4">
             Sobre o Projeto
           </h3>
 
           <div className="space-y-6">
-            <div>
+            <div className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-3xl shadow-2xl border border-gray-700/50 hover:border-will-accent/30 transition-all duration-300 group">
               <label className="block text-sm font-medium text-gray-300 mb-3">
                 Tipo de Serviço Desejado *
               </label>
@@ -431,7 +431,7 @@ export default function ProjectBriefingForm() {
                       checked={formData.serviceType === type}
                       onChange={handleInputChange}
                       required
-                      className="text-will-primary focus:ring-will-primary"
+                      className="text-will-accent focus:ring-will-accent"
                     />
                     <span className="text-gray-300 text-sm">{type}</span>
                   </label>
@@ -439,7 +439,7 @@ export default function ProjectBriefingForm() {
               </div>
             </div>
 
-            <div>
+            <div className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-3xl shadow-2xl border border-gray-700/50 hover:border-will-accent/30 transition-all duration-300 group">
               <label className="block text-sm font-medium text-gray-300 mb-3">
                 Objetivo Principal de Negócio *
               </label>
@@ -456,7 +456,7 @@ export default function ProjectBriefingForm() {
                       checked={formData.businessObjective === objective}
                       onChange={handleInputChange}
                       required
-                      className="text-will-primary focus:ring-will-primary"
+                      className="text-will-accent focus:ring-will-accent"
                     />
                     <span className="text-gray-300 text-sm">{objective}</span>
                   </label>
@@ -464,7 +464,7 @@ export default function ProjectBriefingForm() {
               </div>
             </div>
 
-            <div>
+            <div className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-3xl shadow-2xl border border-gray-700/50 hover:border-will-accent/30 transition-all duration-300 group">
               <label className="block text-sm font-medium text-gray-300 mb-3">
                 Funcionalidades Necessárias
               </label>
@@ -480,7 +480,7 @@ export default function ProjectBriefingForm() {
                       onChange={() =>
                         handleCheckboxChange("requiredFeatures", feature)
                       }
-                      className="text-will-primary focus:ring-will-primary rounded"
+                      className="text-will-accent focus:ring-will-accent rounded"
                     />
                     <span className="text-gray-300 text-sm">{feature}</span>
                   </label>
@@ -492,12 +492,12 @@ export default function ProjectBriefingForm() {
 
         {/* Seção 4: Conteúdo e Materiais */}
         <section className="border-b border-gray-700/50 pb-8">
-          <h3 className="text-lg font-semibold text-will-primary mb-4">
+          <h3 className="text-lg font-semibold text-will-accent mb-4">
             Conteúdo e Materiais
           </h3>
 
           <div className="space-y-6">
-            <div>
+            <div className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-3xl shadow-2xl border border-gray-700/50 hover:border-will-accent/30 transition-all duration-300 group">
               <label className="block text-sm font-medium text-gray-300 mb-3">
                 Materiais Fornecidos pelo Cliente
               </label>
@@ -513,7 +513,7 @@ export default function ProjectBriefingForm() {
                       onChange={() =>
                         handleCheckboxChange("providedMaterials", material)
                       }
-                      className="text-will-primary focus:ring-will-primary rounded"
+                      className="text-will-accent focus:ring-will-accent rounded"
                     />
                     <span className="text-gray-300 text-sm">{material}</span>
                   </label>
@@ -534,14 +534,14 @@ export default function ProjectBriefingForm() {
                       onChange={(e) =>
                         handleReferenceChange(index, e.target.value)
                       }
-                      className="flex-1 bg-gray-700/50 border border-gray-600 rounded-2xl px-4 py-2 text-gray-100 placeholder-gray-500 focus:outline-none focus:border-will-primary focus:ring-1 focus:ring-will-primary transition-all duration-300"
+                      className="flex-1 bg-gray-700/50 border border-gray-600 rounded-2xl px-4 py-2 text-gray-100 placeholder-gray-500 focus:outline-none focus:border-will-accent focus:ring-1 focus:ring-will-accent transition-all duration-300"
                       placeholder={`Link de referência ${index + 1}`}
                     />
                     {formData.references.length > 1 && (
                       <button
                         type="button"
                         onClick={() => removeReference(index)}
-                        className="px-3 py-2 bg-red-500/20 text-red-400 rounded-2xl hover:bg-red-500/30 transition-all duration-300"
+                        className="px-3 py-2 bg-red-500/20 text-red-400 hover:text-red-100 rounded-2xl hover:bg-red-500/70 transition-all duration-300"
                       >
                         Remover
                       </button>
@@ -551,7 +551,7 @@ export default function ProjectBriefingForm() {
                 <button
                   type="button"
                   onClick={addReference}
-                  className="text-will-primary hover:text-will-accent transition-colors duration-300 text-sm font-medium"
+                  className="text-will-accent hover:text-will-accent transition-colors duration-300 text-sm font-medium"
                 >
                   + Adicionar outra referência
                 </button>
@@ -562,7 +562,7 @@ export default function ProjectBriefingForm() {
 
         {/* Seção 5: Cronograma */}
         <section className="border-b border-gray-700/50 pb-8">
-          <h3 className="text-lg font-semibold text-will-primary mb-4">
+          <h3 className="text-lg font-semibold text-will-accent mb-4">
             Cronograma
           </h3>
 
@@ -576,7 +576,7 @@ export default function ProjectBriefingForm() {
                 name="idealLaunchDate"
                 value={formData.idealLaunchDate}
                 onChange={handleInputChange}
-                className="w-full bg-gray-700/50 border border-gray-600 rounded-2xl px-4 py-3 text-gray-100 placeholder-gray-500 focus:outline-none focus:border-will-primary focus:ring-1 focus:ring-will-primary transition-all duration-300"
+                className="w-full bg-gray-700/50 border border-gray-600 rounded-2xl px-4 py-3 text-gray-100 placeholder-gray-500 focus:outline-none focus:border-will-accent focus:ring-1 focus:ring-will-accent transition-all duration-300"
               />
             </div>
 
@@ -589,7 +589,7 @@ export default function ProjectBriefingForm() {
                 name="criticalDates"
                 value={formData.criticalDates}
                 onChange={handleInputChange}
-                className="w-full bg-gray-700/50 border border-gray-600 rounded-2xl px-4 py-3 text-gray-100 placeholder-gray-500 focus:outline-none focus:border-will-primary focus:ring-1 focus:ring-will-primary transition-all duration-300"
+                className="w-full bg-gray-700/50 border border-gray-600 rounded-2xl px-4 py-3 text-gray-100 placeholder-gray-500 focus:outline-none focus:border-will-accent focus:ring-1 focus:ring-will-accent transition-all duration-300"
                 placeholder="Ex: Lançamento de produto, Black Friday, etc."
               />
             </div>
@@ -598,7 +598,7 @@ export default function ProjectBriefingForm() {
 
         {/* Seção 6: Observações Adicionais */}
         <section>
-          <h3 className="text-lg font-semibold text-will-primary mb-4">
+          <h3 className="text-lg font-semibold text-will-accent mb-4">
             Observações Adicionais
           </h3>
 
@@ -607,7 +607,7 @@ export default function ProjectBriefingForm() {
             value={formData.additionalNotes}
             onChange={handleInputChange}
             rows={4}
-            className="w-full bg-gray-700/50 border border-gray-600 rounded-2xl px-4 py-3 text-gray-100 placeholder-gray-500 focus:outline-none focus:border-will-primary focus:ring-1 focus:ring-will-primary transition-all duration-300 resize-none"
+            className="w-full bg-gray-700/50 border border-gray-600 rounded-2xl px-4 py-3 text-gray-100 placeholder-gray-500 focus:outline-none focus:border-will-accent focus:ring-1 focus:ring-will-accent transition-all duration-300 resize-none"
             placeholder="Alguma informação adicional que considere importante para o projeto..."
           />
         </section>

@@ -68,9 +68,10 @@ export default function MyButton(props: MyButtonProps) {
     primary: `
       bg-will-primary
       text-gray-100 border-transparent
-      
+      hover:bg-will-accent/70
+      hover:border-will-accent
       focus:ring-will-primary/50
-      shadow-lg hover:shadow-2xl hover:shadow-will-primary/25
+      shadow-lg hover:shadow-2xl hover:shadow-will-accent/25
     `,
     secondary: `
       bg-gray-800/50 text-gray-100 border-gray-600

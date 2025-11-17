@@ -1,6 +1,5 @@
 // src/pages/preco.tsx
 import PortfolioPricing from "@/components/PortfolioPricing";
-import BriefingButton from "@/components/UI/BriefingButton";
 import { SectionTitle } from "@/components/UI/SectionTitle";
 
 export default function PPrecoGrade() {
@@ -15,7 +14,6 @@ export default function PPrecoGrade() {
       </div>
       <div className="container mx-auto px-4 pb-16">
         <PortfolioPricing />
-        <BriefingButton />
       </div>
     </div>
   );

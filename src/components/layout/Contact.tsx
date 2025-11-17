@@ -11,6 +11,7 @@ import {
 import MyButton from "../UI/MyButton";
 import emailjs from "emailjs-com";
 import { meusDados } from "@/lib/db";
+import BriefingButton from "../UI/BriefingButton";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -261,36 +262,39 @@ export default function Contact() {
                 placeholder="Conte-me sobre seu projeto, ideia ou oportunidade..."
               />
             </div>
-
-            <MyButton
-              type="submit"
-              variant="primary"
-              className="w-full py-4 text-lg font-semibold"
-              disabled={isLoading}
-              aria-label="Enviar Mensagem"
-            >
-              {isLoading ? (
-                <span className="flex items-center justify-center">
-                  <div className="w-5 h-5 border-2 border-gray-100 border-t-transparent rounded-full animate-spin mr-2"></div>
-                  Enviando...
-                </span>
-              ) : (
-                "Enviar Mensagem"
-              )}
-            </MyButton>
-
-            {statusMessage.message && (
-              <div
-                className={`p-4 rounded-xl border ${
-                  statusMessage.type === "success"
-                    ? "bg-lime-500/10 border-lime-500/20 text-lime-400"
-                    : "bg-red-500/10 border-red-500/20 text-red-400"
-                } transition-all duration-300`}
-                role="alert"
-              >
-                {statusMessage.message}
+            <div>
+              <div className="flex flex-col md:flex-row w-full justify-center items-center gap-4">
+                <MyButton
+                  type="submit"
+                  variant="primary"
+                  disabled={isLoading}
+                  aria-label="Enviar Mensagem"
+                >
+                  {isLoading ? (
+                    <span className="flex items-center justify-center">
+                      <div className="w-5 h-5 border-2 border-gray-100 border-t-transparent rounded-full animate-spin mr-2"></div>
+                      Enviando...
+                    </span>
+                  ) : (
+                    "Enviar Mensagem"
+                  )}
+                </MyButton>
+                <BriefingButton />
               </div>
-            )}
+
+              {statusMessage.message && (
+                <div
+                  className={`p-4 rounded-xl border ${
+                    statusMessage.type === "success"
+                      ? "bg-lime-500/10 border-lime-500/20 text-lime-400"
+                      : "bg-red-500/10 border-red-500/20 text-red-400"
+                  } transition-all duration-300`}
+                  role="alert"
+                >
+                  {statusMessage.message}
+                </div>
+              )}
+            </div>
           </form>
         </div>
       </div>
