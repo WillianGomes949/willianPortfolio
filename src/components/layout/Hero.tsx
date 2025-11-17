@@ -1,5 +1,5 @@
 // src/components/layout/Hero.tsx
-import { FaGithub, FaLinkedin, FaWhatsapp} from "react-icons/fa"; // Para os ícones
+import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa"; // Para os ícones
 import MyButton from "@/components/UI/MyButton";
 
 export default function Hero() {
@@ -14,18 +14,17 @@ export default function Hero() {
       <h1 className="text-5xl md:text-1xl lg:text-7xl  font-bold text-center mt-8 mb-8 bg-size-[200%_200%] animate-gradient-flow bg-linear-to-r from-will-primary via-will-p-light to-will-accent bg-clip-text text-transparent flex flex-col items-center justify-center md:flex-row gap-2">
         <div>
           <p className="text-gray-100">
-            Willian Gomes<span className="text-will-p-light p-0 m-0">.{" "}</span>
+            Willian<span className="text-will-p-light p-0 m-0">. </span>
           </p>
         </div>
-        <p>Desenvolvedor</p>
+        <p>Desenvolvedor Web</p>
       </h1>
-      <p className="text-xl text-center mb-8 leading-relaxedtext-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
-        Desenvolvedor Fullstack com paixão por criar experiências web incríveis.
-        Dominando HTML5, CSS3, JavaScript (TypeScript), React, Next.js, Tailwind
-        CSS, AWS, WordPress e Photoshop.
+      <p className="text-xl text-center mb-8 leading-relaxedtext-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
+        Eu ajudo sua empresa a ter uma presença digital profissional. Crio
+        desde sites gerenciáveis em WordPress (ideais para clínicas, escritórios
+        e lojas) até aplicações web de alta performance com React.
       </p>
       <div className="flex flex-col gap-4 w-full md:flex-row items-center justify-center mb-8">
-       
         <MyButton variant="primary" href="#projects">
           Ver Projetos
         </MyButton>
@@ -33,9 +32,8 @@ export default function Hero() {
           Entrar em Contato
         </MyButton>
       </div>
-     {/* Redes Sociais */}
+      {/* Redes Sociais */}
       <div className="text-center">
-        
         <div className="flex space-x-6 text-2xl">
           <a
             href="https://wa.me/5585988954195?text=Olá! Gostaria de conversar sobre um projeto..."

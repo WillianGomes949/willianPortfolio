@@ -15,6 +15,8 @@ interface BaseProps {
   fullWidth?: boolean;
   icon?: React.ReactNode;
   iconPosition?: 'left' | 'right';
+  href?: string;
+  scroll?: boolean;
 }
 
 type ButtonAsButton = BaseProps &

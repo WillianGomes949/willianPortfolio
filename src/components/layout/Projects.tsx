@@ -2,6 +2,7 @@
 
 import CardProjects from "../UI/CardProjects";
 import MyButton from "../UI/MyButton";
+
 export default function Projects() {
   return (
     <section
@@ -29,12 +30,14 @@ export default function Projects() {
           <CardProjects />
         </div>
         <div className="mx-auto text-center">
-        <MyButton variant="primary" href="/projetos" >
-          Ver mais Projetos
-        </MyButton>
+          <MyButton
+            variant="primary"
+            href="/projetos"
+          >
+            Ver mais Projetos
+          </MyButton>
+        </div>
       </div>
-      </div>
-      
     </section>
   );
 }
