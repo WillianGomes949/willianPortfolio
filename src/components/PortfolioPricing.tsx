@@ -50,9 +50,9 @@ export default function PortfolioPricing() {
               <h3 className="text-xl font-bold text-gray-100 mb-4">Destaque</h3>
               <p className="text-gray-300 leading-relaxed">
                 Landing pages a partir de{" "}
-                <span className="font-semibold text-will-p-light">R$ 600</span>.
+                <span className="font-semibold text-will-accent">R$ 600</span>.
                 Sites institucionais a partir de{" "}
-                <span className="font-semibold text-will-p-light">
+                <span className="font-semibold text-will-accent">
                   R$ 1.200
                 </span>
                 . Pacotes de posts e manutenção mensais disponíveis.
@@ -86,7 +86,7 @@ export default function PortfolioPricing() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Landing Page Card */}
-            <article className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-3xl shadow-2xl border border-gray-700/50 hover:border-will-primary/30 transition-all duration-300 group">
+            <article className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-3xl shadow-2xl border border-gray-700/50 hover:border-will-accent/30 transition-all duration-300 group">
               <h4 className="text-lg font-bold text-gray-100 mb-3">
                 Landing Page
               </h4>
@@ -117,7 +117,7 @@ export default function PortfolioPricing() {
             </article>
 
             {/* Site Institucional Card */}
-            <article className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-3xl shadow-2xl border border-gray-700/50 hover:border-will-primary/30 transition-all duration-300 group">
+            <article className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-3xl shadow-2xl border border-gray-700/50 hover:border-will-accent/30 transition-all duration-300 group">
               <h4 className="text-lg font-bold text-gray-100 mb-3">
                 Site Institucional (WordPress)
               </h4>
@@ -148,7 +148,7 @@ export default function PortfolioPricing() {
             </article>
 
             {/* Páginas Extras Card */}
-            <article className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-3xl shadow-2xl border border-gray-700/50 hover:border-will-primary/30 transition-all duration-300 group">
+            <article className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-3xl shadow-2xl border border-gray-700/50 hover:border-will-accent/30 transition-all duration-300 group">
               <h4 className="text-lg font-bold text-gray-100 mb-3">
                 Páginas Extras (por página)
               </h4>
@@ -173,7 +173,7 @@ export default function PortfolioPricing() {
           </div>
 
           <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
-            <article className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-3xl shadow-2xl border border-gray-700/50 hover:border-will-primary/30 transition-all duration-300 group">
+            <article className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-3xl shadow-2xl border border-gray-700/50 hover:border-will-accent/30 transition-all duration-300 group">
               <h4 className="text-lg font-bold text-gray-100 mb-3">
                 SEO / Performance / Otimização
               </h4>
@@ -192,7 +192,7 @@ export default function PortfolioPricing() {
                 </li>
               </ul>
             </article>
-            <article className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-3xl shadow-2xl border border-gray-700/50 hover:border-will-primary/30 transition-all duration-300 group">
+            <article className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-3xl shadow-2xl border border-gray-700/50 hover:border-will-accent/30 transition-all duration-300 group">
               <h4 className="text-lg font-bold text-gray-100 mb-3">
                 Banco de Dados ( MySQL / AWS / Sanity)
               </h4>
@@ -229,7 +229,7 @@ export default function PortfolioPricing() {
           </h3>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <article className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-3xl shadow-2xl border border-gray-700/50 hover:border-will-primary/30 transition-all duration-300 group">
+            <article className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-3xl shadow-2xl border border-gray-700/50 hover:border-will-accent/30 transition-all duration-300 group">
               <h5 className="font-bold text-gray-100 mb-3">
                 Blog (post com SEO)
               </h5>
@@ -264,7 +264,7 @@ export default function PortfolioPricing() {
               </ul>
             </article>
 
-            <article className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-3xl shadow-2xl border border-gray-700/50 hover:border-will-primary/30 transition-all duration-300 group">
+            <article className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-3xl shadow-2xl border border-gray-700/50 hover:border-will-accent/30 transition-all duration-300 group">
               <h5 className="font-bold text-gray-100 mb-3">
                 Instagram — Posts estáticos
               </h5>
@@ -290,7 +290,7 @@ export default function PortfolioPricing() {
               </ul>
             </article>
 
-            <article className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-3xl shadow-2xl border border-gray-700/50 hover:border-will-primary/30 transition-all duration-300 group">
+            <article className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-3xl shadow-2xl border border-gray-700/50 hover:border-will-accent/30 transition-all duration-300 group">
               <h5 className="font-bold text-gray-100 mb-3">
                 Carrossel / Reels
               </h5>
@@ -325,7 +325,7 @@ export default function PortfolioPricing() {
           </h3>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-3xl shadow-2xl border border-gray-700/50 hover:border-will-primary/30 transition-all duration-300 group text-center">
+            <div className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-3xl shadow-2xl border border-gray-700/50 hover:border-will-accent/30 transition-all duration-300 group text-center">
               <div className="text-sm text-gray-400 mb-2">Básico</div>
               <div className="mt-2 font-bold text-xl text-will-primary">
                 R$ 70 — R$ 120 / mês
@@ -350,7 +350,7 @@ export default function PortfolioPricing() {
               </p>
             </div>
 
-            <div className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-3xl shadow-2xl border border-gray-700/50 hover:border-will-primary/30 transition-all duration-300 group text-center">
+            <div className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-3xl shadow-2xl border border-gray-700/50 hover:border-will-accent/30 transition-all duration-300 group text-center">
               <div className="text-sm text-gray-400 mb-2">Premium</div>
               <div className="mt-2 font-bold text-xl text-will-primary">
                 R$ 250 — R$ 350 / mês
