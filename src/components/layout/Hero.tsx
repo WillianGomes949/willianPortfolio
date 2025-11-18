@@ -4,7 +4,7 @@ import MyButton from "@/components/UI/MyButton";
 
 export default function Hero() {
   return (
-    <section className="flex flex-col items-center justify-center min-h-screen px-6 py-12 md:py-24">
+    <section className="flex flex-col items-center justify-center min-h-screen px-6 py-12 md:py-24  group relative overflow-hidden">
       {/* Badge de Destaque */}
       <div className="mb-6 mt-6">
         <span className="inline-flex items-center px-4 py-2 rounded-full bg-will-accent/10 border border-will-accent/20 text-will-accent text-sm font-medium">
