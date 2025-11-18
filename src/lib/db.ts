@@ -48,7 +48,7 @@ const meusDados: MeusDados= {
   linkedin: "https://www.linkedin.com/in/williangomes949/",
   github: "https://github.com/williangomes949",
   localizacao: "Fortaleza - CE, Brasil",
-  sobreMim: `Sou um desenvolvedor apaixonado por criar soluções digitais que realmente fazem a diferença. Com experiência em, transformo ideias em realidade, focando sempre na experiência do usuário** e na **performance**. Minha jornada é impulsionada pela busca contínua por aprendizado e pela vontade de construir produtos que impactam positivamente.`,
+  sobreMim: `Sou um desenvolvedor apaixonado por criar soluções digitais que realmente fazem a diferença. Com experiência em, transformo ideias em realidade, focando sempre na experiência do usuário e na performance. Minha jornada é impulsionada pela busca contínua por aprendizado e pela vontade de construir produtos que impactam positivamente.`,
 }
 
 
@@ -57,7 +57,7 @@ const featuredProjects: Project[] = [
     id: 12,
     title: "Véritas Advogados",
     description:
-      "Site institucional para um escritório de advocacia focado em **transmitir credibilidade** e **capturar leads**. O design limpo e o formulário de contato direto ajudam a converter visitantes em clientes.",
+      "Site institucional para um escritório de advocacia focado em transmitir credibilidade e capturar leads. O design limpo e o formulário de contato direto ajudam a converter visitantes em clientes.",
     imageUrl: "/images/veritas-advogados.webp",
     tags: ["React", "TypeScript", "Tailwind CSS", "Next.js", "Vercel"],
     liveUrl: "https://veritas-advocacia-eta.vercel.app/",
@@ -67,7 +67,7 @@ const featuredProjects: Project[] = [
     id: 11,
     title: "SorrirPrime (Clínica Demo)",
     description:
-      "Conceito premium para clínicas, focado em UI/UX e performance. Inclui um **sistema de agendamento dinâmico** (com API fake) e um **painel de admin** para gerenciar as solicitações.",
+      "Conceito premium para clínicas, focado em UI/UX e performance. Inclui um sistema de agendamento dinâmico (com API fake) e um painel de admin para gerenciar as solicitações.",
     imageUrl: "/images/sorrir-prime.webp",
     tags: ["React", "TypeScript", "Tailwind CSS", "Vite"],
     liveUrl: "https://projeto-sorrir-prime.vercel.app/",
@@ -77,7 +77,7 @@ const featuredProjects: Project[] = [
     id: 10,
     title: "GugaTech - Assistência Técnica",
     description:
-      "Plataforma de serviços para assistência técnica. O foco foi no **agendamento online** e um catálogo claro de soluções, reduzindo o atrito para o cliente que precisa de um reparo urgente.",
+      "Plataforma de serviços para assistência técnica. O foco foi no agendamento online e um catálogo claro de soluções, reduzindo o atrito para o cliente que precisa de um reparo urgente.",
     imageUrl: "/images/gugatech.webp",
     tags: ["Next.js", "Tailwind CSS", "React", "Vercel"],
     liveUrl: "https://gugatech-fortaleza.vercel.app/",
@@ -86,7 +86,7 @@ const featuredProjects: Project[] = [
     id: 9,
     title: "Clínica Saúde Total (WordPress)",
     description:
-      "Demonstração de site para a área de saúde **construído em WordPress**. Focado em uma solução profissional que pode ser **facilmente gerenciada pelo cliente** usando Elementor.",
+      "Demonstração de site para a área de saúde construído em WordPress. Focado em uma solução profissional que pode ser facilmente gerenciada pelo cliente usando Elementor.",
     imageUrl: "/images/clinica-medica.png",
     tags: ["WordPress", "Elementor", "PHP"],
     liveUrl: "https://portfolio-wordpress.infinityfreeapp.com/clinica-medica/",
@@ -95,7 +95,7 @@ const featuredProjects: Project[] = [
     id: 8,
     title: "Loja Infantil (E-commerce Demo)",
     description:
-      "Demonstração de e-commerce completo. A solução inclui um **carrinho de compras funcional** e um layout 100% responsivo, focado na **experiência de compra** em dispositivos móveis.",
+      "Demonstração de e-commerce completo. A solução inclui um carrinho de compras funcional e um layout 100% responsivo, focado na experiência de compra em dispositivos móveis.",
     imageUrl: "/images/loja-ifantil.webp",
     tags: ["Next.js", "Tailwind CSS", "Context API", "React"],
     liveUrl: "https://loja-infantil-phi.vercel.app/",
@@ -104,7 +104,7 @@ const featuredProjects: Project[] = [
     id: 7,
     title: "Ar Veicular - Oficina",
     description:
-      "Site institucional para oficina especializada em ar condicionado automotivo, otimizado para **conversão rápida** via WhatsApp e apresentação clara de serviços.",
+      "Site institucional para oficina especializada em ar condicionado automotivo, otimizado para conversão rápida via WhatsApp e apresentação clara de serviços.",
     imageUrl: "/images/ar-veicular.webp",
     tags: ["Next.js", "Tailwind", "Photoshop", "Vercel", "React"],
     liveUrl: "https://projeto-oficina-pi.vercel.app/",
@@ -113,7 +113,7 @@ const featuredProjects: Project[] = [
     id: 6,
     title: "Site Estático: Construtora",
     description:
-      "Website corporativo focado em demonstrar a **base do desenvolvimento web** (HTML, CSS, JS puros). Totalmente responsivo e otimizado para performance.",
+      "Website corporativo focado em demonstrar a base do desenvolvimento web (HTML, CSS, JS puros). Totalmente responsivo e otimizado para performance.",
     imageUrl: "/images/construcao.webp",
     tags: ["HTML", "CSS", "JavaScript", "Vercel"],
     liveUrl: "https://responsive-construction-website-chi.vercel.app/",
@@ -128,7 +128,7 @@ const allProjects: Project[] = [
     id: 5,
     title: "PWA: Ônibus Fortaleza",
     description:
-      "Aplicativo PWA para consulta em tempo real dos horários de ônibus de Fortaleza. Demonstração de **integração com APIs de dados públicos** e performance mobile.",
+      "Aplicativo PWA para consulta em tempo real dos horários de ônibus de Fortaleza. Demonstração de integração com APIs de dados públicos e performance mobile.",
     imageUrl: "/images/onibusfortaleza.webp",
     tags: ["API Rest", "Next.js", "Tailwind", "PWA", "React"],
     liveUrl: "https://horarios-onibus-fortaleza.vercel.app/",
@@ -137,7 +137,7 @@ const allProjects: Project[] = [
     id: 4,
     title: "PWA: FIPE Fácil",
     description:
-      "Ferramenta PWA que **consome uma API pública** da FIPE. Otimizado para **buscas rápidas** e performance mobile, mostrando a integração de dados em tempo real.",
+      "Ferramenta PWA que consome uma API pública da FIPE. Otimizado para buscas rápidas e performance mobile, mostrando a integração de dados em tempo real.",
     imageUrl: "/images/fipe.webp",
     tags: ["API Rest", "Next.js", "Tailwind CSS", "Vercel", "React"],
     liveUrl: "https://consulta-tabela-fipe-two.vercel.app//",
@@ -146,7 +146,7 @@ const allProjects: Project[] = [
     id: 3,
     title: "Sistema: Validade Fácil",
     description:
-      "Sistema de controle de validade de produtos com **integração com Google Sheets**. Permite cadastro, consulta e alertas, resolvendo um problema de logística interna.",
+      "Sistema de controle de validade de produtos com integração com Google Sheets. Permite cadastro, consulta e alertas, resolvendo um problema de logística interna.",
     imageUrl: "/images/gerenciador-validades.webp",
     tags: ["API Rest", "Next.js", "Google Scripts", "React"],
     liveUrl: "https://gerenciador-de-validades-sigma.vercel.app/", // Live URL parece estar errada, verificar
@@ -155,7 +155,7 @@ const allProjects: Project[] = [
     id: 2,
     title: "Ferramenta: CEP Rápido",
     description:
-      "Aplicação prática que **integra a API da ViaCEP com o Google Maps**. Uma ferramenta de utilidade que demonstra o uso de múltiplas APIs para resolver um problema do dia a dia.",
+      "Aplicação prática que integra a API da ViaCEP com o Google Maps. Uma ferramenta de utilidade que demonstra o uso de múltiplas APIs para resolver um problema do dia a dia.",
     imageUrl: "/images/consulta-cep.webp",
     tags: ["API Rest", "JavaScript", "CSS", "Vercel", "React"],
     liveUrl: "https://bucador-de-ceps.vercel.app/",
@@ -164,7 +164,7 @@ const allProjects: Project[] = [
     id: 1,
     title: "Portal: SpaceNews",
     description:
-      "Plataforma que agrega as últimas notícias sobre astronomia e exploração espacial, consumindo uma **API de notícias** em tempo real.",
+      "Plataforma que agrega as últimas notícias sobre astronomia e exploração espacial, consumindo uma API de notícias em tempo real.",
     imageUrl: "/images/space-news.webp",
     tags: ["API Rest", "Next.js", "Tailwind CSS", "Vercel", "React"],
     liveUrl: "https://space-news-ada.vercel.app/",
