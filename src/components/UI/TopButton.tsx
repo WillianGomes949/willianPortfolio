@@ -39,10 +39,8 @@ export default function TopButton() {
             type="button"
             // Classes de estilo do botão
             className="flex justify-center items-center w-12 h-12 transition-all duration-300 ease-in-out hover:scale-110 active:scale-95 z-50 animate-fade-in p-3 rounded-full 
-            bg-will-primary/70
+            bg-will-primary
             text-gray-100 border-transparent
-            hover:bg-will-primary
-            focus:ring-will-primary/50
             shadow-lg hover:shadow-2xl hover:shadow-will-accent/25
                   "
             onClick={scrollToTop}
