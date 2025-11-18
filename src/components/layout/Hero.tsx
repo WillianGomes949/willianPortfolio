@@ -11,7 +11,7 @@ export default function Hero() {
           Disponível para novos projetos
         </span>
       </div>
-      <h1 className="text-5xl md:text-1xl lg:text-7xl text-center mt-8 mb-8 bg-size-[200%_200%] animate-gradient-flow bg-linear-to-r from-will-primary via-will-p-light to-will-accent bg-clip-text text-transparent flex flex-col items-center justify-center md:flex-row gap-2 font-google-sans-code leading-relaxed">
+      <h1 className="text-5xl md:text-1xl lg:text-7xl  mt-8 mb-8 bg-size-[200%_200%] animate-gradient-flow bg-linear-to-r from-will-primary via-will-p-light to-will-accent bg-clip-text text-transparent flex flex-col items-center justify-center md:flex-row gap-2 leading-relaxed font-bold text-center">
         <div>
           <p className="text-gray-100">
             Willian<span className="text-will-p-light p-0 m-0">. </span>
