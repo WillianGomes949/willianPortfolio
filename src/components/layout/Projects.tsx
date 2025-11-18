@@ -14,16 +14,15 @@ export default function Projects() {
         {/* Header da Seção */}
         <SectionTitle
             section="Portfólio"
-            subtitle="Uma coleção dos meus trabalhos mais recentes e desafiadores."
+            subtitle="Uma coleção dos meus trabalhos mais recentes."
             title="Meus Projetos"
             className="mb-16"
             />
         
         {/* Grid de Projetos */}
-        <div className="mb-12">
+        <div className="mb-12 bg-gray-800/50 backdrop-blur-sm p-6 rounded-3xl shadow-2xl border border-gray-700/50 hover:border-will-accent/30 transition-all duration-300">
           <CardProjects />
-        </div>
-        <div className="mx-auto text-center">
+          <div className="mx-auto text-center">
           <MyButton
             variant="primary"
             href="/projetos"
@@ -31,6 +30,8 @@ export default function Projects() {
             Ver mais Projetos
           </MyButton>
         </div>
+        </div>
+        
       </div>
     </section>
   );
