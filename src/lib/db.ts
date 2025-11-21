@@ -87,7 +87,7 @@ const featuredProjects: Project[] = [
     title: "Clínica Saúde Total (WordPress)",
     description:
       "Demonstração de site para a área de saúde construído em WordPress. Focado em uma solução profissional que pode ser facilmente gerenciada pelo cliente usando Elementor.",
-    imageUrl: "/images/clinica-medica.png",
+    imageUrl: "/images/clinica-medica.webp",
     tags: ["WordPress", "Elementor", "PHP"],
     liveUrl: "https://portfolio-wordpress.infinityfreeapp.com/clinica-medica/",
   },
