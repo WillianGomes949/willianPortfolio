@@ -37,8 +37,8 @@ export default function StackMarquee() {
   ];
 
   return (
-    <div className="-translate-y-8 w-full h-15 md:py-30 flex justify-center items-center group overflow-hidden">
-      <div className="w-4/5 md:max-w-7xl mx-auto px-4 mask-x-from-90% mask-x-to-95%">
+    <div className="-translate-y-8 w-full h-15 py-34 flex justify-center items-center group overflow-hidden">
+      <div className="w-11/12 md:max-w-7xl mx-auto px-4 mask-x-from-90% mask-x-to-95%">
         <div className="overflow-hidden">
           <div className="flex space-x-12 animate-scroll">
             {duplicatedStack.map((item, index) => (
@@ -47,7 +47,7 @@ export default function StackMarquee() {
                 className="shrink-0 flex items-center justify-center space-x-12"
               >
                 {/* Renderiza o ícone */}
-                <item.icon className="ml-8 text-5xl text-gray-600 hover:text-will-accent transition-colors duration-300" />
+                <item.icon className="md:ml-8 text-5xl text-gray-600 hover:text-will-accent transition-colors duration-300" />
               </div>
             ))}
           </div>
