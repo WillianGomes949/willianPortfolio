@@ -53,16 +53,15 @@ const meusDados: MeusDados = {
 
 
 const featuredProjects: Project[] = [
-  //   {
-  //   id: 13,
-  //   title: "Véritas Advogados",
-  //   description:
-  //     "Site institucional para um escritório de advocacia focado em transmitir credibilidade e capturar leads. O design limpo e o formulário de contato direto ajudam a converter visitantes em clientes.",
-  //   imageUrl: "/images/veritas-advogados.webp",
-  //   tags: ["React", "TypeScript", "Tailwind CSS", "Next.js", "Vercel"],
-  //   liveUrl: "https://veritas-advocacia-eta.vercel.app/",
-  //   repoUrl: "",
-  // },
+    {
+    id: 13,
+    title: "Churros Gourmet - Landing Page",
+    description: "Landing page moderna e responsiva desenvolvida para uma doceria artesanal. O projeto foca em uma UI 'apetitosa', utilizando uma paleta de cores quentes e tipografia lúdica para maximizar o apelo visual. Conta com vitrine de produtos, galeria interativa e integração direta para pedidos via WhatsApp.",
+    imageUrl: "/images/churros.webp",
+    tags: ["React", "TypeScript", "Tailwind CSS", "Next.js", "Vercel"],
+    liveUrl: "https://churros-pearl.vercel.app/",
+    repoUrl: "",
+},
   {
     id: 12,
     title: "Véritas Advogados",
