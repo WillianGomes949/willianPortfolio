@@ -48,7 +48,6 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body
         className={`${zenKakuGothicNew.variable} ${tajawal.variable} ${googleSansCode.variable} 
-        
          font-sansantialiased`}
       >
         <Header />

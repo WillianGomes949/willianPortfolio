@@ -4,7 +4,7 @@ import MyButton from "@/components/UI/MyButton";
 
 export default function Hero() {
   return (
-    <section className="flex flex-col items-center justify-center min-h-screen px-6 py-12 md:py-24  group relative overflow-hidden">
+    <section className="flex flex-col items-center justify-center px-6 py-12 md:py-24  group relative overflow-hidden">
       {/* Badge de Destaque */}
       <div className="mb-6 mt-6">
         <span className="inline-flex items-center px-4 py-2 rounded-full bg-will-accent/10 border border-will-accent/20 text-will-accent text-sm font-medium">
@@ -17,7 +17,7 @@ export default function Hero() {
         </p>{" "}
         <p>Desenvolvedor Web</p>
       </h1>
-      <p className="text-xl text-center mb-8 leading-relaxedtext-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
+      <p className="text-xl text-center mb-8 text-gray-400 max-w-3xl mx-auto leading-relaxed">
         Eu ajudo sua empresa a ter uma presença digital profissional. Crio desde
         sites gerenciáveis em WordPress (ideais para clínicas, escritórios e
         lojas) até aplicações web de alta performance com React.
