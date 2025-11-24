@@ -431,7 +431,7 @@ export default function ProjectBriefingForm() {
                       checked={formData.serviceType === type}
                       onChange={handleInputChange}
                       required
-                      className="text-will-accent focus:ring-will-accent"
+                      className="text-will-accent focus:ring-will-accent accent-will-accent"
                     />
                     <span className="text-gray-300 text-sm">{type}</span>
                   </label>
@@ -456,7 +456,7 @@ export default function ProjectBriefingForm() {
                       checked={formData.businessObjective === objective}
                       onChange={handleInputChange}
                       required
-                      className="text-will-accent focus:ring-will-accent"
+                      className="text-will-accent focus:ring-will-accent accent-will-accent"
                     />
                     <span className="text-gray-300 text-sm">{objective}</span>
                   </label>
@@ -480,7 +480,7 @@ export default function ProjectBriefingForm() {
                       onChange={() =>
                         handleCheckboxChange("requiredFeatures", feature)
                       }
-                      className="text-will-accent focus:ring-will-accent rounded"
+                      className="text-will-accent focus:ring-will-accent rounded accent-will-accent"
                     />
                     <span className="text-gray-300 text-sm">{feature}</span>
                   </label>
@@ -513,7 +513,7 @@ export default function ProjectBriefingForm() {
                       onChange={() =>
                         handleCheckboxChange("providedMaterials", material)
                       }
-                      className="text-will-accent focus:ring-will-accent rounded"
+                      className="text-will-accent focus:ring-will-accent rounded accent-will-accent"
                     />
                     <span className="text-gray-300 text-sm">{material}</span>
                   </label>
