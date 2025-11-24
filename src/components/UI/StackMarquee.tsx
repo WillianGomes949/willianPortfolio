@@ -44,7 +44,7 @@ export default function StackMarquee() {
             {duplicatedStack.map((item, index) => (
               <div
                 key={`${item.name}-${index}`}
-                className="shrink-0 flex items-center justify-center space-x-12"
+                className="shrink-0 flex items-center justify-center space-x-12 p-8"
               >
                 {/* Renderiza o ícone */}
                 <item.icon className="md:ml-8 text-5xl text-gray-600 hover:text-will-accent transition-colors duration-300" />

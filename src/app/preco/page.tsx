@@ -1,5 +1,5 @@
 // src/pages/preco.tsx
-import PortfolioPricing from "@/components/PortfolioPricing";
+import PortfolioPricing from "@/components/layout/PortfolioPricing";
 import { SectionTitle } from "@/components/UI/SectionTitle";
 
 export default function PPrecoGrade() {

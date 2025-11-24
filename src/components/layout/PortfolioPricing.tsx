@@ -1,6 +1,6 @@
 import Contact from "@/components/layout/Contact";
-import BriefingButton from "./UI/BriefingButton";
-import MyButton from "./UI/MyButton";
+import BriefingButton from "../UI/BriefingButton";
+import MyButton from "../UI/MyButton";
 
 export default function PortfolioPricing() {
   return (
