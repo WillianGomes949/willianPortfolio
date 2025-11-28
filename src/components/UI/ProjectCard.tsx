@@ -181,7 +181,7 @@ export default function CardProjects() {
         )}
         {/* Botão de Carregar Mais */}
               {visibleProjects.length < filteredProjects.length && (
-                <div className="text-center">
+                <div className="text-center mt-8">
                   <MyButton onClick={loadMore} variant="secondary">
                     Carregar Mais
                     <HiOutlineArrowNarrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
