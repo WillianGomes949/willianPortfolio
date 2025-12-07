@@ -55,7 +55,7 @@ const meusDados: MeusDados = {
 const featuredProjects: Project[] = [
   {
     id: 15,
-    title: "Modern Architecture",
+    title: "Arquitetura Moderna",
     description: "Website completo para escritório de arquitetura com showcase de projetos, agendamento de consultorias virtuais, galeria interativa. Interface moderna com animações suaves e otimizada para dispositivos móveis.",
     imageUrl: "/images/architecture.webp",
     tags: ["React 18", "TypeScript", "Tailwind CSS", "Next.js", "Vercel"],
@@ -82,6 +82,7 @@ const featuredProjects: Project[] = [
     liveUrl: "https://churros-pearl.vercel.app/",
     repoUrl: "",
   },
+
   {
     id: 12,
     title: "Véritas Advogados",
