@@ -54,6 +54,15 @@ const meusDados: MeusDados = {
 
 const featuredProjects: Project[] = [
   {
+    id: 15,
+    title: "Modern Architecture",
+    description: "Website completo para escritório de arquitetura com showcase de projetos, agendamento de consultorias virtuais, galeria interativa. Interface moderna com animações suaves e otimizada para dispositivos móveis.",
+    imageUrl: "/images/architecture.webp",
+    tags: ["React 18", "TypeScript", "Tailwind CSS", "Next.js", "Vercel"],
+    liveUrl: "https://arquitetura-iota.vercel.app/",
+    repoUrl: "",
+  },
+  {
     id: 14,
     title: "Website de Barbearia",
     description:
