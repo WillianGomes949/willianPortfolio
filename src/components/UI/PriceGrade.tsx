@@ -4,7 +4,7 @@ import { BsQrCode } from "react-icons/bs";
 
 export default function PriceGrade (){
     return(
-        <section className="mb-16">
+        <section className="container mx-auto mb-16">
                   <div className="bg-gray-800/80 backdrop-blur-md p-8 rounded-3xl border border-gray-700 shadow-2xl">
                     <div className="grid grid-cols-1 gap-8 items-center">
                       <div>

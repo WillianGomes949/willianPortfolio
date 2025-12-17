@@ -6,18 +6,9 @@ export default function About() {
   // Lista de suas stacks
   const skills = [
     "Sites Institucionais (WordPress)",
-    "Design para Redes Sociais",
+    "Lojas Virtuais e E-commerce",
     "Landing Pages de Alta Conversão",
-    // "HTML 5",
-    // "CSS 3",
-    // "JavaScript (ES6+)",
-    // "TypeScript",
-    // "React",
-    // "Next.js",
-    // "Tailwind CSS",
-    // "AWS",
-    // "WordPress",
-    // "Photoshop",
+    "Design para Redes Sociais",
   ];
 
   return (
@@ -27,9 +18,8 @@ export default function About() {
           {/* Badge de Destaque */}
           <SectionTitle
             section="Sobre"
-            subtitle="Acredito que cada projeto nasce de uma boa ideia — e meu papel é dar
-            vida a ela no mundo digital."
-            title="Eu ajudo  negócios locais a atrair mais clientes com sites modernos."
+            title="Transformo cliques em clientes para negócios locais."
+            subtitle="Não basta apenas estar online. Crio estratégias digitais rápidas e eficientes focadas no crescimento real da sua empresa."
           />
         </div>
 
@@ -39,31 +29,27 @@ export default function About() {
             <Image
               src={"/images/willian-gomes.webp"}
               alt="Willian Gomes"
-              width={500}
-              height={500}
+              width={400}
+              height={400}
               loading="lazy"
               className="w-full object-cover grayscale-0 group-hover:grayscale-0 transition-all duration-500 rounded-2xl"
             />
           </div>
 
           {/* Coluna do Texto */}
-          <div className="flex flex-col space-y-6 justify-between items-start">
+          <div className="flex flex-col space-y-8 justify-between items-start">
             <div>
               <p className="text-lg text-will-light mb-4 leading-relaxed">
-                Olá! Sou Willian Gomes. Minha missão é simples: criar sites
-                rápidos e fáceis de usar que tragam resultados reais para o seu
-                negócio. Seja um site em WordPress para sua clínica ou um portal
-                moderno, eu cuido de tudo para você.
+                Sou Willian Gomes, desenvolvedor focado em performance e
+                resultados.
               </p>
               <p className="text-lg text-will-light mb-6 leading-relaxed">
-                Minha jornada começou no WordPress, onde aprendi a criar sites
-                que resolvem problemas de negócios. Hoje, levo essa mentalidade
-                para o ecossistema JavaScript moderno. Meu foco é construir
-                soluções web — de sites institucionais a aplicações complexas —
-                que sejam rápidas, seguras e fáceis de usar. Para isso, utilizo
-                as melhores ferramentas: React, Next.js e TypeScript para
-                performance, Tailwind CSS para um design ágil e AWS para uma
-                infraestrutura confiável.
+                Unindo a versatilidade do WordPress à potência do ecossistema
+                moderno (Next.js, React e AWS), crio soluções web rápidas,
+                seguras e escaláveis. Seja um site institucional ou uma
+                aplicação complexa, meu objetivo é garantir que a tecnologia
+                impulsione o crescimento do seu negócio, enquanto você foca no
+                que realmente importa.
               </p>
             </div>
 

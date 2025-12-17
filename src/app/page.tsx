@@ -6,6 +6,7 @@ import Projects from "@/components/layout/Projects"; // Vamos criar este
 import Contact from "@/components/layout/Contact";
 
 import StackMarquee from "@/components/UI/StackMarquee";
+import PriceGrade from "@/components/UI/PriceGrade";
 
 export default function Home() {
   return (
@@ -13,8 +14,10 @@ export default function Home() {
       <Hero />
       <StackMarquee />
       <About />
+       <StackMarquee />
       <Projects />
       <Contact />
+      <PriceGrade/>
     </main>
   );
 }
