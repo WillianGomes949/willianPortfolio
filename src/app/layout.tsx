@@ -3,8 +3,8 @@ import { Montserrat, Boldonse } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import TopButton from "@/components/UI/TopButton";
 import { SimpleWhatsAppButton } from "@/components/UI/WhatsAppButton";
+import BotoesInf from "@/components/UI/BotoesInf";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -38,8 +38,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
-        <TopButton />
-        <SimpleWhatsAppButton position="bottom-left" />
+        <BotoesInf/>
       </body>
     </html>
   );
