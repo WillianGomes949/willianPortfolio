@@ -168,7 +168,9 @@ export default function CardProjects() {
         {visibleProjects.length === 0 && (
           <div className="text-center py-20">
             <div className="inline-flex items-center justify-center w-20 h-20 bg-will-primary/20 border border-will-primary/80 rounded-3xl mb-6">
-              <div className="text-3xl"><BsFillStoplightsFill /></div>
+              <div className="text-3xl">
+                <BsFillStoplightsFill />
+              </div>
             </div>
             <h3 className="text-2xl font-bold text-neutral-300 mb-3">
               Nenhum projeto encontrado
@@ -180,16 +182,25 @@ export default function CardProjects() {
           </div>
         )}
       </div>
-
-      {/* Botão de Carregar Mais */}
-      {visibleProjects.length < filteredProjects.length && (
-        <div className="text-center">
-          <MyButton onClick={loadMore} variant="secondary">
-            Carregar Mais
-            <HiOutlineArrowNarrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
+      {/* Botão desktop */}
+      <div className="flex flex-col md:flex-row justify-center items-center gap-2 md:gap-6">
+        {/* Botão de Carregar Mais*/}
+        <div className="w-full md:w-auto">
+          <MyButton variant="primary" href="/projetos">
+            Todos os Projetos
           </MyButton>
         </div>
-      )}
+        {/* Botão de Carregar Mais */}
+        {visibleProjects.length < filteredProjects.length && (
+          <div className="w-full md:w-auto">
+            <MyButton onClick={loadMore} variant="secondary">
+             Mais Cards
+              <HiOutlineArrowNarrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
+            </MyButton>
+          </div>
+        )}
+      </div>
     </section>
   );
 }
+ 
