@@ -73,11 +73,11 @@ export default function About() {
                 Minhas Soluções para Você:
               </h3>
 
-              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <ul className="grid grid-cols-1 gap-3">
                 {skills.map((skill, index) => (
                   <li
                     key={skill}
-                    className="flex items-center p-3 rounded-lg bg-gray-800/50 hover:bg-gray-800/80 transition-all duration-300 group hover:translate-x-2"
+                    className="flex p-3 rounded-lg bg-gray-800/50 hover:bg-gray-800/80 transition-all duration-300 group hover:translate-x-2 w-90"
                     style={{ animationDelay: `${index * 100}ms` }}
                   >
                     <FaRegCheckCircle className="w-5 h-5 mr-3 text-lime-400 shrink-0 group-hover:scale-110 transition-transform" />

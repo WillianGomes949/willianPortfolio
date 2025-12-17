@@ -44,7 +44,7 @@ const meusDados: MeusDados = {
   phoneNumber: "+55 (85) 9.8895-4195",
   email: "williangomes949@gmail.com",
   whatsappUrl:
-    "https://wa.me/5585988954195?text=Olá! Gostaria de conversar sobre seus serviços...",
+    "https://wa.me/5585988954195",
   instagram: "https://www.instagram.com/williangomes949/",
   linkedin: "https://www.linkedin.com/in/williangomes949/",
   github: "https://github.com/williangomes949",

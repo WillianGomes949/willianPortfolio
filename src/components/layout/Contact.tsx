@@ -11,7 +11,7 @@ import {
 } from "react-icons/fa";
 import MyButton from "../UI/MyButton";
 import emailjs from "emailjs-com";
-import { meusDados } from "@/lib/db";
+import { meusDados } from "@/data/db";
 import useLocalStorage from "@/hook/useLocalStorage";
 import { SectionTitle } from "../UI/SectionTitle";
 

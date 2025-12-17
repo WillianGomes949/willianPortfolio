@@ -627,7 +627,7 @@ export default function ProjectBriefingForm() {
         )}
 
         {/* Botões de Ação */}
-        <div className="flex justify-between pt-6">
+        <div className="flex flex-col-reverse md:flex-row justify-between pt-6 gap-6">
           <MyButton type="button" variant="secondary" onClick={handleCancel}>
             Cancelar
           </MyButton>

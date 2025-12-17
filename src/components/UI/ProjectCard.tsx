@@ -1,7 +1,7 @@
 // /components/CardProjects.tsx
 "use client";
 
-import { allProjects, techColors, techStacks } from "@/lib/db";
+import { allProjects, techColors, techStacks } from "@/data/db";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";

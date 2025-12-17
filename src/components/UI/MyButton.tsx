@@ -45,14 +45,14 @@ export default function MyButton(props: MyButtonProps) {
     ...rest
   } = props;
 
-  // Base styles
+  // Base styles: Estrutura comum a todos
   const baseStyle = `
     inline-flex items-center justify-center gap-3
     rounded-2xl font-semibold transition-all duration-300 ease-out
     focus:outline-none focus:ring-4 focus:ring-offset-2 focus:ring-offset-gray-900
     disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none
-    active:scale-95 border-2 backdrop-blur-sm
-    group relative overflow-hidden w-full md:w-auto
+    active:scale-95 border border-transparent backdrop-blur-sm
+    group relative overflow-hidden
   `;
 
   // Size variants
@@ -66,10 +66,8 @@ export default function MyButton(props: MyButtonProps) {
   // Color variants
   const variantStyles = {
     primary: `
-      bg-will-primary
-      text-gray-100 border-transparent
-      hover:bg-will-accent/70
-      hover:border-will-accent
+      bg-will-primary text-gray-100
+      hover:bg-will-accent/70 hover:border-will-accent
       focus:ring-will-primary/50
       shadow-lg hover:shadow-2xl hover:shadow-will-accent/25
     `,
@@ -78,26 +76,25 @@ export default function MyButton(props: MyButtonProps) {
       hover:bg-gray-700/80 hover:border-gray-500 hover:text-gray-100
       focus:ring-gray-500/50
       shadow-lg hover:shadow-2xl hover:shadow-gray-500/20
-      hover:scale-105
     `,
     ghost: `
-      bg-transparent text-will-primary border-will-primary/30
-      hover:bg-will-primary/10 hover:border-will-primary hover:text-will-p-light
-      focus:ring-will-primary/30
-      hover:scale-105
+      border-will-light/20 bg-transparent text-will-light
+      hover:border-will-accent hover:bg-will-accent/10 hover:text-white
+      hover:shadow-[0_0_20px_var(--color-will-accent)]/40
+      active:bg-will-accent/20
     `,
     danger: `
-      bg-gradient-to-r from-red-500 to-pink-500
-      text-gray-100 border-transparent
+      bg-linear-to-r from-red-500 to-pink-500 text-gray-100
       hover:from-red-600 hover:to-pink-600
       focus:ring-red-500/50
       shadow-lg hover:shadow-2xl hover:shadow-red-500/25
     `
   };
 
-  const widthStyle = fullWidth ? 'w-full' : 'w-auto';
+  const widthStyle = fullWidth ? 'w-full' : 'w-auto md:w-auto';
   const loadingSize = size === 'xl' ? 'large' : size === 'sm' ? 'small' : 'medium';
 
+  // Montagem final das classes
   const combinedClassName = `
     ${baseStyle}
     ${sizeStyles[size]}
@@ -108,14 +105,14 @@ export default function MyButton(props: MyButtonProps) {
     ${className}
   `.replace(/\s+/g, ' ').trim();
 
-  // Process children - preserve original text case but add tracking
+  // Process children - tracking melhorado para leitura
   const buttonContent = React.Children.map(children, child => 
     typeof child === 'string' 
       ? <span className="tracking-wide">{child}</span>
       : child
   );
 
-  // Common props for both button and link
+  // Common props
   const commonProps = {
     className: combinedClassName,
     'data-variant': variant,
@@ -124,12 +121,12 @@ export default function MyButton(props: MyButtonProps) {
     ...(disabled && { 'aria-disabled': true })
   };
 
-  // Content with loading state
+  // Content render
   const renderContent = () => (
     <>
       {/* Loading overlay */}
       {loading && (
-        <div className="absolute inset-0 flex items-center justify-center bg-inherit rounded-2xl">
+        <div className="absolute inset-0 flex items-center justify-center bg-inherit rounded-2xl z-10">
           <LoadingSpinner size={loadingSize} />
         </div>
       )}
@@ -151,16 +148,18 @@ export default function MyButton(props: MyButtonProps) {
         )}
       </div>
 
-      {/* Ripple effect layer */}
-      <div className="absolute inset-0 overflow-hidden rounded-2xl">
-        <div className="absolute inset-0 bg-linear-to-r from-gray-100/0 via-gray-100/10 to-gray-100/0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out" />
-      </div>
+      {/* Ripple/Shine effect layer */}
+      {variant !== 'ghost' && (
+        <div className="absolute inset-0 overflow-hidden rounded-2xl pointer-events-none">
+          <div className="absolute inset-0 bg-linear-to-r from-white/0 via-white/10 to-white/0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out" />
+        </div>
+      )}
     </>
   );
 
+  // Render as Link
   if ('href' in rest && rest.href) {
     const { href, ...linkRest } = rest;
-    
     return (
       <Link 
         href={href}
@@ -172,6 +171,7 @@ export default function MyButton(props: MyButtonProps) {
     );
   }
 
+  // Render as Button
   const { type = 'button', ...buttonRest } = rest as React.ButtonHTMLAttributes<HTMLButtonElement>;
 
   return (

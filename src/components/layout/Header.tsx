@@ -19,7 +19,7 @@ export default function Header() {
     { name: "Preço", href: "/preco" },
     {
       name: "WhatsApp",
-      href: "https://wa.me/5585988954195?text=Quero%20saber%20mais%20sobre%20seus%20servi%C3%A7os...",
+      href: "https://wa.me/5585988954195",
       target: "_blank",
       rel: "noopener noreferrer",
       icon: <FaWhatsapp size={18} />,

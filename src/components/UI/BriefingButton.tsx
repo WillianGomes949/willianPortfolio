@@ -8,7 +8,7 @@ export default function BriefingButton() {
   const router = useRouter();
 
   return (
-    <MyButton variant="secondary" onClick={() => router.push("/briefing")}>
+    <MyButton variant="primary" size="lg" onClick={() => router.push("/briefing")}>
       Solicitar Orçamento Personalizado
     </MyButton>
   );

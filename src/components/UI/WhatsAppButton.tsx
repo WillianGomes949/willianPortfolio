@@ -1,7 +1,7 @@
 // src/components/ui/WhatsAppButton.tsx
 "use client";
 
-import { meusDados } from "@/lib/db";
+import { meusDados } from "@/data/db";
 import Link from "next/link";
 // import { useState } from "react";
 import { FaWhatsapp } from "react-icons/fa";

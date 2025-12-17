@@ -22,7 +22,7 @@ export default function Hero() {
         sites gerenciáveis em WordPress (ideais para clínicas, escritórios e
         lojas) até aplicações web de alta performance com React.
       </p>
-      <div className="flex flex-col gap-4 w-full md:flex-row items-center justify-center mb-8">
+      <div className="flex flex-col gap-4 w-full md:flex-row md:items-center md:justify-center mb-8">
         <MyButton variant="primary" href="#projects">
           Ver Projetos
         </MyButton>

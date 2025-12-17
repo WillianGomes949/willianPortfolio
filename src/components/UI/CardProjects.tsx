@@ -1,7 +1,7 @@
 // /components/CardProjects.tsx
 "use client";
 
-import { featuredProjects, techColors, techStacks } from "@/lib/db";
+import { featuredProjects, techColors, techStacks } from "@/data/db";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -183,17 +183,17 @@ export default function CardProjects() {
         )}
       </div>
       {/* Botão desktop */}
-      <div className="flex flex-col md:flex-row justify-center items-center gap-2 md:gap-6">
+      <div className="flex flex-col md:flex-row gap-2 md:gap-6 w-full md:w-auto mx-auto md:justify-center">
         {/* Botão de Carregar Mais*/}
-        <div className="w-full md:w-auto">
-          <MyButton variant="primary" href="/projetos">
+        <div >
+          <MyButton variant="primary" href="/projetos" fullWidth={true}>
             Todos os Projetos
           </MyButton>
         </div>
         {/* Botão de Carregar Mais */}
         {visibleProjects.length < filteredProjects.length && (
-          <div className="w-full md:w-auto">
-            <MyButton onClick={loadMore} variant="secondary">
+          <div>
+            <MyButton onClick={loadMore} variant="secondary" fullWidth={true}>
              Mais Cards
               <HiOutlineArrowNarrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
             </MyButton>
