@@ -114,15 +114,6 @@ const featuredProjects: Project[] = [
     liveUrl: "https://gugatech-fortaleza.vercel.app/",
   },
   {
-    id: 9,
-    title: "Clínica Saúde Total (WordPress)",
-    description:
-      "Demonstração de site para a área de saúde construído em WordPress. Focado em uma solução profissional que pode ser facilmente gerenciada pelo cliente usando Elementor.",
-    imageUrl: "/images/clinica-medica.webp",
-    tags: ["WordPress", "Elementor", "PHP"],
-    liveUrl: "https://portfolio-wordpress.infinityfreeapp.com/clinica-medica/",
-  },
-  {
     id: 8,
     title: "Loja Infantil (E-commerce Demo)",
     description:
@@ -149,6 +140,48 @@ const featuredProjects: Project[] = [
     tags: ["HTML", "CSS", "JavaScript", "Vercel"],
     liveUrl: "https://responsive-construction-website-chi.vercel.app/",
   },
+   {
+    id: 9,
+    title: "Clínica Saúde Total (WordPress)",
+    description:
+      "Demonstração de site para a área de saúde construído em WordPress. Focado em uma solução profissional que pode ser facilmente gerenciada pelo cliente usando Elementor.",
+    imageUrl: "/images/clinica-medica.webp",
+    tags: ["WordPress", "Elementor", "PHP"],
+    liveUrl: "https://portfolio-wordpress.infinityfreeapp.com/clinica-medica/",
+  },
+   {
+    id: 19,
+    title: "Ninja Shop - E-commerce de Moda (WordPress)",
+    description: "Loja virtual moderna com categorias de moda feminina e masculina, carrinho de compras e área de promoções.",
+    imageUrl: "/images/loja-wordpress.webp",
+    tags: ["WordPress", "Elementor", "PHP"],
+    liveUrl: "https://lojavirtual.williangomesdev.com/",
+  },
+  {
+    id: 18,
+    title: "GymFit - Landing Page Academia (WordPress)",
+    description: "Site para academia com foco em conversão, apresentando modalidades, planos e botão para agendar aula grátis.",
+    imageUrl: "/images/academia-wordpress.webp",
+    tags: ["WordPress", "Elementor", "PHP"],
+    liveUrl: "https://gymfit.williangomesdev.com/",
+  },
+  {
+    id: 17,
+    title: "Clínica Saúde Center (WordPress)",
+    description: "Site institucional para área da saúde, com apresentação de doutores, departamentos e funcionalidade de agendamento.",
+    imageUrl: "/images/clinica-wordpress.webp",
+    tags: ["WordPress", "Elementor", "PHP"],
+    liveUrl: "https://clinica.williangomesdev.com/",
+  },
+  {
+    id: 16,
+    title: "ImobNinja - Portal Imobiliário (WordPress)",
+    description: "Plataforma para imobiliária com sistema de busca avançada de imóveis, login de usuários e cadastro de propriedades.",
+    imageUrl: "/images/imobiliaria-wordpress.webp",
+    tags: ["WordPress", "Elementor", "PHP"],
+    liveUrl: "https://imobiliaria.williangomesdev.com/",
+  },
+  
 ];
 
 const allProjects: Project[] = [
