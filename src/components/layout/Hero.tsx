@@ -39,7 +39,7 @@ export default function Hero() {
         </MyButton>
         <MyButton
           variant="secondary"
-          href="https://wa.me/5585988954195?text=Olá Willian! Vi seu site e quero impulsionar meu negócio."
+          href="/briefing"
           target="_blank"
         >
           Iniciar Projeto

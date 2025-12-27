@@ -34,9 +34,28 @@ export default function ScrollProgress() {
     <div className="fixed bottom-0 left-0 w-full h-1 z-50 bg-transparent">
       {/* A barra colorida que cresce */}
       <div 
-        className="h-full bg-will-primary transition-all duration-150 ease-out rounded-4xl"
+        className="h-full bg-will-primary transition-all duration-150 ease-out rounded-4xl animate-gradient-flow bg-linear-to-r from-will-primary via-will-p-light to-will-accent "
         style={{ width: `${width}%` }}
       />
+      <style jsx>{`
+        /* Gradiente do texto do hero!: */
+        @keyframes gradient-flow {
+          0% {
+            background-position: 0% 50%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
+          100% {
+            background-position: 0% 50%;
+          }
+        }
+        .animate-gradient-flow {
+          animation: gradient-flow 5s ease infinite;
+          background-size: 200% 200%;
+        }
+      `}</style>
     </div>
+    
   );
 }

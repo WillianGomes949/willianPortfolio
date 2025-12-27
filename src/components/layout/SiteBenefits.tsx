@@ -104,25 +104,25 @@ export default function SiteBenefits() {
         {/* Stats Bar */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
           <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 text-center border border-gray-700 hover:border-will-primary transition-all duration-300">
-            <div className="text-4xl font-bold font-montserrat text-will-primary mb-2">
+            <div className="text-4xl font-bold font-montserrat mb-2">
               +80%
             </div>
             <div className="text-will-light">Credibilidade da marca</div>
           </div>
           <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 text-center border border-gray-700 hover:border-will-accent transition-all duration-300">
-            <div className="text-4xl font-bold font-montserrat text-will-accent mb-2">
+            <div className="text-4xl font-bold font-montserrat mb-2">
               24/7
             </div>
             <div className="text-will-light">Vendas e contatos</div>
           </div>
           <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 text-center border border-gray-700 hover:border-will-secondary transition-all duration-300">
-            <div className="text-4xl font-bold font-montserrat text-will-secondary mb-2">
+            <div className="text-4xl font-bold font-montserrat mb-2">
               -40%
             </div>
             <div className="text-will-light">Custos de marketing</div>
           </div>
           <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 text-center border border-gray-700 hover:border-will-p-light transition-all duration-300">
-            <div className="text-4xl font-bold font-montserrat text-will-p-light mb-2">
+            <div className="text-4xl font-bold font-montserrat mb-2">
               5x
             </div>
             <div className="text-will-light">Mais conversões</div>
@@ -153,8 +153,8 @@ export default function SiteBenefits() {
               </h3>
               <p className="text-will-text-light">{benefit.description}</p>
 
-              {/* Animated underline on hover */}
-              <div className="absolute bottom-0 left-0 w-0 h-1 bg-linear-to-r from-will-primary to-will-accent group-hover:w-full transition-all duration-500"></div>
+              {/* Animated underline on hover
+              <div className="absolute bottom-0 left-0 w-0 h-1 bg-linear-to-r from-will-primary to-will-accent group-hover:w-full transition-all duration-500"></div> */}
             </div>
           ))}
         </div>
