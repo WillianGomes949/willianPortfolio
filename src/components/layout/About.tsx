@@ -12,7 +12,10 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="container mx-auto py-24 md:py-34 relative group">
+    <section
+      id="about"
+      className="container mx-auto py-24 md:py-34 relative group"
+    >
       <div className="container mx-auto px-4">
         <div className="text-center">
           {/* Badge de Destaque */}
@@ -23,7 +26,7 @@ export default function About() {
           />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+        <div className="relative grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
           {/* Coluna da Imagem */}
           <div className="rounded-2xl transform group-hover:scale-[1.02] transition-transform duration-500">
             <Image
@@ -40,16 +43,14 @@ export default function About() {
           <div className="flex flex-col space-y-8 justify-between items-start">
             <div>
               <p className="text-lg text-will-light mb-4 leading-relaxed">
-                Desenvolvimento web focado em performance e
-                resultados.
+                Desenvolvimento web focado em performance e resultados.
               </p>
               <p className="text-lg text-will-light mb-6 leading-relaxed">
-                Do WordPress à potência do ecossistema
-                moderno, criamos soluções web rápidas,
-                seguras e escaláveis. Seja um site institucional ou uma
-                aplicação complexa, nosso objetivo é garantir que a tecnologia
-                impulsione o crescimento do seu negócio, enquanto você foca no
-                que realmente importa.
+                Do WordPress à potência do ecossistema moderno, criamos soluções
+                web rápidas, seguras e escaláveis. Seja um site institucional ou
+                uma aplicação complexa, nosso objetivo é garantir que a
+                tecnologia impulsione o crescimento do seu negócio, enquanto
+                você foca no que realmente importa.
               </p>
             </div>
 
