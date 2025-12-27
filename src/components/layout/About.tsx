@@ -18,8 +18,8 @@ export default function About() {
           {/* Badge de Destaque */}
           <SectionTitle
             section="Sobre"
-            title="Transformo cliques em clientes para negócios locais."
-            subtitle="Não basta apenas estar online. Crio estratégias digitais rápidas e eficientes focadas no crescimento real da sua empresa."
+            title="Transformando cliques em clientes para o seu negócio."
+            subtitle="Não basta apenas estar online. Criamos estratégias digitais rápidas e eficientes focadas no crescimento real da sua marca."
           />
         </div>
 
@@ -40,14 +40,14 @@ export default function About() {
           <div className="flex flex-col space-y-8 justify-between items-start">
             <div>
               <p className="text-lg text-will-light mb-4 leading-relaxed">
-                Sou Willian Gomes, desenvolvedor focado em performance e
+                Willian Gomes, desenvolvimento web focado em performance e
                 resultados.
               </p>
               <p className="text-lg text-will-light mb-6 leading-relaxed">
                 Do WordPress à potência do ecossistema
-                moderno, crio soluções web rápidas,
+                moderno, criamos soluções web rápidas,
                 seguras e escaláveis. Seja um site institucional ou uma
-                aplicação complexa, meu objetivo é garantir que a tecnologia
+                aplicação complexa, nosso objetivo é garantir que a tecnologia
                 impulsione o crescimento do seu negócio, enquanto você foca no
                 que realmente importa.
               </p>
@@ -56,7 +56,7 @@ export default function About() {
             <div>
               <h3 className="text-2xl font-semibold text-gray-100 mb-6 flex items-center">
                 <span className="w-0.5 h-10 bg-will-primary mr-3"></span>
-                Minhas Soluções para Você:
+                Soluções para Você:
               </h3>
 
               <ul className="grid grid-cols-1 gap-3">
