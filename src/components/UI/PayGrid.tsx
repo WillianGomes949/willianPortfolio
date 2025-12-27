@@ -5,7 +5,7 @@ import { BsQrCode } from "react-icons/bs";
 export default function PayGrid (){
     return(
         <section className="container mx-auto mb-16">
-                  <div className="bg-gray-800/80 backdrop-blur-md p-8 rounded-3xl border border-gray-700 shadow-2xl max-w-7xl mx-auto relative overflow-hidden">
+                  <div className="bg-gray-800/80 backdrop-blur-md p-8 rounded-3xl border border-gray-700 shadow-2xl mx-auto relative overflow-hidden">
                     <div className="grid grid-cols-1 gap-8 items-center">
                       <div>
                         <h3 className="text-2xl font-bold text-gray-100 mb-4">

@@ -1,13 +1,14 @@
 // src/components/layout/Hero.tsx
-import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa"; // Para os ícones
+import { FaGithub, FaInstagram, FaLinkedin, FaWhatsapp } from "react-icons/fa"; // Para os ícones
 import MyButton from "@/components/UI/MyButton";
+import { meusDados } from "@/data/db";
 
 export default function Hero() {
   return (
-    <section className="flex flex-col items-center justify-center px-6 py-24 md:py-34 group relative overflow-hidden">
+    <section className="flex flex-col items-center justify-center px-6 py-24 md:py-34 group relative overflow-hidden gap-4 md:gap-8">
       {/* Badge de Destaque */}
       <div className="mb-6 mt-6">
-        <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-will-accent/10 border border-will-accent/20 text-will-accent text-sm font-medium animate-fade-in-up">
+        <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-will-accent/10 border border-will-accent/20 text-will-accent text-sm font-medium animate-fade-in-up tracking-wide">
           <span className="relative flex h-2 w-2">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-will-accent opacity-75"></span>
             <span className="relative inline-flex rounded-full h-2 w-2 bg-will-accent"></span>
@@ -46,10 +47,10 @@ export default function Hero() {
       </div>
 
       {/* Redes Sociais */}
-      <div className="text-center">
+      <div className="text-center  transition-opacity duration-300">
         <div className="flex space-x-6 text-2xl">
           <a
-            href="https://wa.me/5585988954195?text=Olá! Gostaria de conversar sobre um projeto..."
+            href={meusDados.whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="p-3 rounded-full bg-lime-500/10 text-lime-400 hover:bg-lime-500/20 hover:text-lime-300 transition-all duration-300 hover:scale-110"
@@ -58,19 +59,28 @@ export default function Hero() {
             <FaWhatsapp />
           </a>
           <a
-            href="https://github.com/williangomes949"
+            href={meusDados.instagram}
             target="_blank"
             rel="noopener noreferrer"
-            className="p-3 rounded-full bg-will-primary/10 text-will-primary hover:bg-will-primary/20 hover:text-will-p-light transition-all duration-300 hover:scale-110"
+            className="p-3 rounded-full bg-will-light/10 text-will-light hover:bg-will-primary/20 hover:text-will-p-light transition-all duration-300 hover:scale-110 opacity-40 hover:opacity-100"
+            aria-label="Instagram"
+          >
+            <FaInstagram />
+          </a>
+          <a
+            href={meusDados.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-3 rounded-full bg-will-light/10 text-will-light hover:bg-will-primary/20 hover:text-will-p-light transition-all duration-300 hover:scale-110 opacity-40 hover:opacity-100"
             aria-label="GitHub"
           >
             <FaGithub />
           </a>
           <a
-            href="https://linkedin.com/in/williangomes949"
+            href={meusDados.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="p-3 rounded-full bg-will-primary/10 text-will-primary hover:bg-will-primary/20 hover:text-will-p-light transition-all duration-300 hover:scale-110"
+            className="p-3 rounded-full bg-will-light/10 text-will-light hover:bg-will-primary/20 hover:text-will-p-light transition-all duration-300 hover:scale-110 opacity-40 hover:opacity-100"
             aria-label="LinkedIn"
           >
             <FaLinkedin />

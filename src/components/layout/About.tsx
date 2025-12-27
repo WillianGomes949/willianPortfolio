@@ -12,7 +12,7 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="py-12 md:py-24 relative group">
+    <section id="about" className="py-24 md:py-34 relative group">
       <div className="container mx-auto max-w-7xl px-4">
         <div className="text-center mb-16">
           {/* Badge de Destaque */}

@@ -1,4 +1,5 @@
 // src/pages/ProjectsPage.tsx
+import PayGrid from "@/components/UI/PayGrid";
 import ProjectCard from "@/components/UI/ProjectCard";
 import { SectionTitle } from "@/components/UI/SectionTitle";
 
@@ -15,6 +16,7 @@ export default function ProjectsPage() {
       <div className="container mx-auto px-4 pb-16">
         <ProjectCard />
       </div>
+      <PayGrid/>
     </div>
   );
 }
