@@ -63,7 +63,7 @@ export default function About() {
                 {skills.map((skill, index) => (
                   <li
                     key={skill}
-                    className="flex p-3 rounded-lg bg-gray-800/50 hover:bg-gray-800/80 transition-all duration-300 group hover:translate-x-2 w-90"
+                    className="flex p-3 rounded-lg bg-gray-800/50 hover:bg-gray-800/80 transition-all duration-300 group hover:translate-x-2 w-99"
                     style={{ animationDelay: `${index * 100}ms` }}
                   >
                     <FaRegCheckCircle className="w-5 h-5 mr-3 text-lime-400 shrink-0 group-hover:scale-110 transition-transform" />

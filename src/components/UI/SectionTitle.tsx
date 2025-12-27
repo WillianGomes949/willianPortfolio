@@ -2,15 +2,15 @@
 
 interface SectionTitleProps {
   section?: string;
-  subtitle?: string;
   title?: string;
+  subtitle?: string;
   className?: string; // Para espaçamento (ex: "mb-12")
 }
 
 export function SectionTitle({
   section,
   title,
-   subtitle,
+  subtitle,
   className = "",
 }: SectionTitleProps) {
   return (

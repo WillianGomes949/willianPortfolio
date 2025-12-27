@@ -31,7 +31,7 @@ export default function CardProjects() {
     setVisibleCount(PROJECTS_PER_PAGE);
   };
   return (
-    <section>
+    <section className="group">
       {/* Filtros Modernos */}
       <div className="flex justify-center flex-wrap gap-3 mb-12">
         {techTags.map((tag) => {
@@ -70,8 +70,7 @@ export default function CardProjects() {
             <div
               key={project.id}
               className="
-                group 
-                flex flex-col relative group bg-gray-800/50 rounded-3xl shadow-2xl overflow-hidden border border-gray-700/50 transition-all duration-500 hover:scale-[1.02] backdrop-blur-sm hover:shadow-2xl hover:shadow-will-primary/10"
+                 group/prime flex flex-col relative bg-gray-800/50 rounded-3xl shadow-2xl overflow-hidden border border-gray-700/50 transition-all duration-500 hover:scale-[1.02] backdrop-blur-sm hover:shadow-2xl hover:shadow-will-primary/10"
               style={{
                 animation: `${index * 100}ms fadeInUp 0.6s ease-out forwards`,
               }}
@@ -82,7 +81,7 @@ export default function CardProjects() {
                   <Image
                     src={project.imageUrl}
                     alt={project.title}
-                    className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110"
+                    className="w-full h-full object-cover object-top transition-transform duration-700 group-hover/prime:scale-110"
                     width={300}
                     height={200}
                     loading="lazy"
@@ -158,7 +157,7 @@ export default function CardProjects() {
                   </div>
                 </div>
                 {/* Progress bar sutil no hover (Mantido, é um ótimo toque!) */}
-                <div className="absolute bottom-0 left-0 w-0 h-1 bg-linear-to-r from-will-primary to-will-accent group-hover:w-full transition-all duration-500 ease-out" />
+                <div className="absolute bottom-0 left-0 w-0 h-1 bg-linear-to-r from-will-primary to-will-accent group-hover/prime:w-full transition-all duration-500 ease-out" />
               </div>
             </div>
           ))}
@@ -185,7 +184,7 @@ export default function CardProjects() {
       {/* Botão desktop */}
       <div className="flex flex-col md:flex-row gap-2 md:gap-6 w-full md:w-auto mx-auto md:justify-center">
         {/* Botão de Carregar Mais*/}
-        <div >
+        <div>
           <MyButton variant="primary" href="/projetos" fullWidth={true}>
             Todos os Projetos
           </MyButton>
@@ -194,7 +193,7 @@ export default function CardProjects() {
         {visibleProjects.length < filteredProjects.length && (
           <div>
             <MyButton onClick={loadMore} variant="secondary" fullWidth={true}>
-             Mais Cards
+              Mais Cards
               <HiOutlineArrowNarrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
             </MyButton>
           </div>
@@ -203,4 +202,3 @@ export default function CardProjects() {
     </section>
   );
 }
- 
