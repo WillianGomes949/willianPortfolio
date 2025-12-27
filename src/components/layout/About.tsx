@@ -40,7 +40,7 @@ export default function About() {
           <div className="flex flex-col space-y-8 justify-between items-start">
             <div>
               <p className="text-lg text-will-light mb-4 leading-relaxed">
-                Willian Gomes, desenvolvimento web focado em performance e
+                Desenvolvimento web focado em performance e
                 resultados.
               </p>
               <p className="text-lg text-will-light mb-6 leading-relaxed">

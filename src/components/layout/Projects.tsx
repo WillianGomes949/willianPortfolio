@@ -12,8 +12,8 @@ export default function Projects() {
       {/* Header da Seção */}
       <SectionTitle
         section="Portfólio"
-        title="Nossos Projetos"
-        subtitle="Uma coleção dos meus trabalhos mais recentes."
+        title="Sites de qualidade e rapidez"
+        subtitle="Uma amostra de como seu site pode ser rápido e responsivo, com foco em resultados."
       />
 
       {/* Grid de Projetos */}

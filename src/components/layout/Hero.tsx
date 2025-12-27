@@ -29,20 +29,17 @@ export default function Hero() {
       </h1>
 
       <p className="text-lg text-center mb-8 text-will-light max-w-4xl mx-auto leading-relaxed">
-        Do WordPress a aplicações React.js, entrego a tecnologia para o seu
-        negócio crescer e se destacar.
+        Entregamos soluções tecnológicas sob medida para acelerar o crescimento
+        de negócios. Do planejamento à execução, criamos soluções digitais que
+        geram valor real.
       </p>
 
       <div className="flex flex-col gap-4 w-full md:flex-row md:items-center md:justify-center mb-8">
-        <MyButton variant="primary" href="#projects">
-          Conhecer Portfólio
-        </MyButton>
-        <MyButton
-          variant="secondary"
-          href="/briefing"
-          target="_blank"
-        >
+        <MyButton variant="primary" href="/briefing" target="_blank">
           Iniciar Projeto
+        </MyButton>
+        <MyButton variant="secondary" href="#projects">
+          Ver Projetos
         </MyButton>
       </div>
 
