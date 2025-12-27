@@ -51,23 +51,3 @@ body {
 *::-webkit-scrollbar-thumb:active {
   background-color: #f20519;
 }
-
-/* Gradiente do texto do hero!: */
-@keyframes gradient-flow {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-.animate-gradient-flow {
-  animation: gradient-flow 6s ease infinite;
-  background-size: 200% 200%;
-}

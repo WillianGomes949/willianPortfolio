@@ -29,8 +29,8 @@ export default function Hero() {
       </h1>
 
       <p className="text-lg text-center mb-8 text-will-light max-w-4xl mx-auto leading-relaxed">
-        Do WordPress a aplicações React.js, entrego
-        a tecnologia para o seu negócio crescer e se destacar.
+        Do WordPress a aplicações React.js, entrego a tecnologia para o seu
+        negócio crescer e se destacar.
       </p>
 
       <div className="flex flex-col gap-4 w-full md:flex-row md:items-center md:justify-center mb-8">
@@ -87,6 +87,24 @@ export default function Hero() {
           </a>
         </div>
       </div>
+      <style jsx>{`
+        /* Gradiente do texto do hero!: */
+        @keyframes gradient-flow {
+          0% {
+            background-position: 0% 50%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
+          100% {
+            background-position: 0% 50%;
+          }
+        }
+        .animate-gradient-flow {
+          animation: gradient-flow 5s ease infinite;
+          background-size: 200% 200%;
+        }
+      `}</style>
     </section>
   );
 }
