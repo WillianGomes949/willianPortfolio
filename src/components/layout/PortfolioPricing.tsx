@@ -101,7 +101,7 @@ export default function PortfolioPricing() {
            ========================================= */}
         <section id="precos" className="mb-16">
           <div className="mb-8">
-            <h3 className="flex justify-center md:justify-start text-2xl font-bold bg-linear-to-r from-gray-100 to-gray-300 bg-clip-text text-transparent">
+            <h3 className="flex justify-center md:justify-start text-2xl font-bold bg-linear-to-r from-gray-300 to-gray-300 bg-clip-text text-transparent">
               Grade de Preços
             </h3>
             <p className="text-sm text-gray-400 mt-2">
@@ -114,7 +114,7 @@ export default function PortfolioPricing() {
           <h4 className="text-lg font-semibold text-gray-300 mb-6 border-b border-gray-800 pb-2">
             Sites & Institucional
           </h4>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
             {pricingData.mainServices.map((service, index) => (
               <PricingCard key={index} data={service} />
             ))}
@@ -127,7 +127,7 @@ export default function PortfolioPricing() {
               Alta Procura
             </span>
           </h4>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
             {pricingData.ecommerceServices?.map((service, index) => (
               <PricingCard key={index} data={service} />
             ))}
@@ -137,7 +137,7 @@ export default function PortfolioPricing() {
           <h4 className="text-lg font-semibold text-gray-300 mb-6 border-b border-gray-800 pb-2">
             Técnico & Infraestrutura
           </h4>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
             {pricingData.technicalServices.map((service, index) => (
               <PricingCard key={index} data={service} />
             ))}
@@ -148,11 +148,11 @@ export default function PortfolioPricing() {
             POSTS & CONTEÚDO (ID: servicos)
            ========================================= */}
         <section id="servicos" className="mb-16">
-          <h3 className="text-2xl font-bold mb-8 bg-linear-to-r from-gray-100 to-gray-300 bg-clip-text text-transparent">
+          <h3 className="text-lg font-semibold text-gray-300 mb-6 border-b border-gray-800 pb-2">
             Posts & Conteúdo
           </h3>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
             {pricingData.contentServices.map((service, index) => (
               <PricingCard key={index} data={service} isContentCard />
             ))}
@@ -163,11 +163,11 @@ export default function PortfolioPricing() {
             PLANOS DE MANUTENÇÃO
            ========================================= */}
         <section className="mb-16">
-          <h3 className="text-2xl font-bold mb-8 bg-linear-to-r from-gray-100 to-gray-300 bg-clip-text text-transparent">
+          <h3 className="text-lg font-semibold text-gray-300 mb-6 border-b border-gray-800 pb-2">
             Planos de Manutenção (WordPress/Lojas)
           </h3>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
             {pricingData.maintenancePlans.map((plan, index) => (
               <MaintenanceCard key={index} plan={plan} />
             ))}
