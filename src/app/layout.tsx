@@ -41,7 +41,8 @@ export const metadata: Metadata = {
   
   description: "Desenvolvedor FullStack especializado em Wordpress, React, TypeScript e soluções web de alta performance. Transforme suas ideias em realidade digital.",
   
-  keywords: [
+keywords: [
+  "gordo",
     "contratar",
     "Desenvolvedor Web", 
     "FullStack", 
@@ -55,7 +56,22 @@ export const metadata: Metadata = {
     "Ceará", 
     "Programador",
     "wordpress",
-    "criar site em wordpress"
+    "criar site em wordpress",
+    "Desenvolvedor JavaScript",
+    "Freelance React Developer",
+    "Especialista em Next.js",
+    "Desenvolvedor Node.js",
+    "Criação de Landing Pages",
+    "Manutenção de sites WordPress",
+    "Loja virtual WooCommerce",
+    "Desenvolvedor de sites em Fortaleza",
+    "Programador freelancer Fortaleza",
+    "Criação de sites profissionais CE",
+    "Orçamento criação de site",
+    "Contratar programador por projeto",
+    "Desenvolvedor Web sob medida",
+    "gordo dev",
+    "gordodev"
   ],
 
   authors: [{ name: "Willian Gomes", url: "https://www.williangomesdev.com" }],
