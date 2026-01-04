@@ -42,6 +42,7 @@ export const metadata: Metadata = {
   description: "Desenvolvedor FullStack especializado em Wordpress, React, TypeScript e soluções web de alta performance. Transforme suas ideias em realidade digital.",
   
   keywords: [
+    "contratar",
     "Desenvolvedor Web", 
     "FullStack", 
     "Front-end", 
@@ -52,7 +53,9 @@ export const metadata: Metadata = {
     "Tailwind CSS", 
     "Fortaleza", 
     "Ceará", 
-    "Programador"
+    "Programador",
+    "wordpress",
+    "criar site em wordpress"
   ],
 
   authors: [{ name: "Willian Gomes", url: "https://www.williangomesdev.com" }],
