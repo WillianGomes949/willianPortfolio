@@ -1,12 +1,12 @@
 import type { Metadata, Viewport } from "next";
 import { Montserrat } from "next/font/google";
-
-import { Boldonse } from "next/font/google"; 
+import { Boldonse } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import BotoesInf from "@/components/UI/BotoesInf";
 import ScrollProgress from "@/components/UI/ScrollProgress";
+import JsonLd from "./JsonLd";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -14,7 +14,6 @@ const montserrat = Montserrat({
   weight: ["300", "400", "500", "700"],
 });
 
-// Verifique se esta fonte está correta
 const boldonse = Boldonse({
   variable: "--font-boldonse",
   subsets: ["latin"],
@@ -33,27 +32,29 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   // Define a URL base para resolver caminhos de imagens (CRUCIAL para o WhatsApp funcionar)
   metadataBase: new URL("https://www.williangomesdev.com"),
-  
+
   title: {
-    default: "Willian Gomes - Desenvolvedor FullStack",
-    template: "%s | Willian Gomes", // Permite títulos dinâmicos em outras páginas
+    default: "Willian Gomes | Desenvolvedor Web em Fortaleza (FullStack & WP)",
+    template: "%s | Willian Gomes Dev",
   },
-  
-  description: "Desenvolvedor FullStack especializado em Wordpress, React, TypeScript e soluções web de alta performance. Transforme suas ideias em realidade digital.",
-  
-keywords: [
-  "gordo",
+
+  description:
+    "Criação de sites profissionais em Fortaleza e Ceará. Especialista em Next.js, React, WordPress e Lojas Virtuais. Solicite um orçamento para seu projeto web.",
+
+  keywords: [
+    "gordo",
     "contratar",
-    "Desenvolvedor Web", 
-    "FullStack", 
-    "Front-end", 
-    "Back-end", 
-    "Next.js", 
-    "React", 
-    "TypeScript", 
-    "Tailwind CSS", 
-    "Fortaleza", 
-    "Ceará", 
+    "Desenvolvedor Web",
+    "Web",
+    "FullStack",
+    "Front-end",
+    "Back-end",
+    "Next.js",
+    "React",
+    "TypeScript",
+    "Tailwind CSS",
+    "Fortaleza",
+    "Ceará",
     "Programador",
     "wordpress",
     "criar site em wordpress",
@@ -71,12 +72,12 @@ keywords: [
     "Contratar programador por projeto",
     "Desenvolvedor Web sob medida",
     "gordo dev",
-    "gordodev"
+    "gordodev",
   ],
 
   authors: [{ name: "Willian Gomes", url: "https://www.williangomesdev.com" }],
   creator: "Willian Gomes",
-  
+
   // Configuração para Robôs de busca (Google)
   robots: {
     index: true,
@@ -95,8 +96,9 @@ keywords: [
     type: "website",
     locale: "pt_BR",
     url: "https://www.williangomesdev.com",
-    title: "Willian Gomes - Desenvolvedor FullStack",
-    description: "Criação de sites modernos, e-commerce e aplicações web. Confira meu portfólio.",
+    title: "Willian Gomes - Desenvolvedor Web",
+    description:
+      "Criação de sites modernos, e-commerce e aplicações web. Confira meu portfólio.",
     siteName: "Willian Gomes Portfolio",
     images: [
       {
@@ -111,8 +113,8 @@ keywords: [
   // Twitter Card (X)
   twitter: {
     card: "summary_large_image",
-    title: "Willian Gomes - Desenvolvedor FullStack",
-    description: "Desenvolvedor FullStack especializado em Next.js e React.",
+    title: "Willian Gomes - Desenvolvedor Web",
+    description: "Desenvolvedor Web especializado em Next.js e React.",
     images: ["/og-image.png"], // Mesma imagem
     // creator: "@seu_usuario", // Adicione se tiver twitter
   },
@@ -123,9 +125,12 @@ keywords: [
   },
 
   manifest: "/manifest.json",
-  
+
   alternates: {
-    canonical: "./",
+    canonical: "/",
+    languages: {
+      "pt-BR": "/",
+    },
   },
 };
 
@@ -144,6 +149,7 @@ export default function RootLayout({
         {children}
         <Footer />
         <BotoesInf />
+        <JsonLd />
       </body>
     </html>
   );
