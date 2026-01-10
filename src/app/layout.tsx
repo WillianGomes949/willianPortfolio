@@ -62,6 +62,8 @@ export const metadata: Metadata = {
     "web designer fortaleza",
     "agência de sites fortaleza",
     "desenvolvedor web ceará",
+    "criação de sites em ceará",
+
     // --- Por bairros/regiões (alto valor) ---
     "desenvolvedor web aldeota",
     "criação de site meireles",
