@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Montserrat } from "next/font/google";
-import { Boldonse } from "next/font/google";
+import { Montserrat, Boldonse } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
