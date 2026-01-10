@@ -20,22 +20,22 @@ export default function Hero() {
       <h1 className="text-3xl md:text-5xl lg:text-6xl mt-6 mb-6 bg-size-[200%_200%] animate-gradient-flow bg-linear-to-r from-will-primary via-will-p-light to-will-accent bg-clip-text text-transparent flex flex-col items-center justify-center md:flex-row gap-2 leading-relaxed font-bold text-center max-w-6xl font-boldonse">
         <div>
           <div>
-            <span className="text-gray-100">Desenvolvimento,</span>
+            <span className="text-gray-100">Criação de Sites, </span>
           </div>
           <div>
-            <span>Estratégia & Performance</span>
+            <span>de Fortaleza para o Mundo.</span>
           </div>
         </div>
       </h1>
 
       <p className="text-lg text-center mb-8 text-will-light max-w-4xl mx-auto leading-relaxed">
-        Entregamos soluções tecnológicas sob medida para acelerar o crescimento
-        de negócios. Do planejamento à execução, criamos soluções digitais que
-        geram valor real.
+        Desenvolvedor Web Especialista. Transforme sua empresa com um
+        <strong> site profissional, rápido e otimizado para o Google</strong>.
+        Atendimento personalizado para pequenos e médios negócios.
       </p>
 
       <div className="flex flex-col gap-4 w-full md:flex-row md:items-center md:justify-center mb-8">
-        <MyButton variant="primary" href="/briefing" target="_blank">
+        <MyButton variant="primary" href="/briefing">
           Iniciar Projeto
         </MyButton>
         <MyButton variant="secondary" href="#projects">

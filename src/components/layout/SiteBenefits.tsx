@@ -23,71 +23,71 @@ export default function SiteBenefits() {
   const benefits: BenefitItem[] = [
     {
       icon: <MdDevices className="text-3xl" />,
-      title: "Design Responsivo",
+      title: "Perfeito no Celular", // Mudou de "Design Responsivo"
       description:
-        "Seu site perfeito em qualquer dispositivo - celular, tablet ou desktop, garantindo a melhor experiência para seus clientes.",
+        "Seu cliente está no celular. Entregue uma experiência incrível em qualquer tela (iPhone ou Android) sem travar.",
       color: "from-will-primary to-will-p-light",
     },
     {
       icon: <MdSpeed className="text-3xl" />,
-      title: "Alta Performance",
+      title: "Carregamento Instantâneo", // Mudou de "Alta Performance"
       description:
-        "Carregamento ultrarrápido que reduz a taxa de rejeição e aumenta a conversão, otimizado para SEO.",
+        "Ninguém gosta de esperar. Sites ultrarrápidos que seguram o cliente e melhoram sua nota no Google.",
       color: "from-will-secondary to-yellow-500",
     },
     {
       icon: <MdTrendingUp className="text-3xl" />,
-      title: "Conversão Otimizada",
+      title: "Focado em Vendas", // Mudou de "Conversão Otimizada"
       description:
-        "Layouts pensados para guiar o visitante até a ação desejada, aumentando vendas e contatos.",
+        "Botões de WhatsApp estratégicos e layout desenhado para transformar visitantes em pedidos de orçamento.",
       color: "from-will-accent to-green-400",
     },
     {
       icon: <MdSearch className="text-3xl" />,
-      title: "SEO Avançado",
+      title: "Topo do Google em Fortaleza", // AQUI ESTÁ O OURO DO SEO
       description:
-        "Estrutura técnica otimizada para ranqueamento no Google, atraindo clientes qualificados organicamente.",
+        "Não basta ser bonito. Otimizamos seu site para você ser encontrado por clientes da sua região.",
       color: "from-blue-500 to-cyan-400",
     },
     {
       icon: <MdSecurity className="text-3xl" />,
-      title: "Segurança Robustecida",
+      title: "Segurança Total",
       description:
-        "Proteção contra ameaças, SSL, backups automáticos e conformidade com LGPD para tranquilidade total.",
+        "Proteção contra invasões e certificado SSL (cadeado verde) incluso para passar confiança ao seu cliente.",
       color: "from-purple-600 to-pink-500",
     },
     {
       icon: <MdBarChart className="text-3xl" />,
-      title: "Análises de Dados",
+      title: "Google Analytics 4",
       description:
-        "Integração com Google Analytics para entender seu público e tomar decisões baseadas em dados.",
+        "Saiba exatamente quantas pessoas de Fortaleza acessaram seu site e de onde elas vieram.",
       color: "from-orange-500 to-red-500",
     },
     {
       icon: <MdGroup className="text-3xl" />,
-      title: "Experiência do Usuário",
+      title: "Navegação Intuitiva",
       description:
-        "Interface intuitiva que encanta visitantes e aumenta o tempo de permanência no site.",
+        "Seu cliente acha o que procura em 3 cliques. Facilidade que gera satisfação e fidelidade.",
       color: "from-teal-500 to-emerald-400",
     },
     {
       icon: <MdCheckCircle className="text-3xl" />,
-      title: "Manutenção Contínua",
+      title: "Suporte Especializado",
       description:
-        "Suporte técnico, atualizações de segurança e melhorias para seu site sempre atualizado.",
+        "Você cuida do seu negócio, eu cuido do site. Manutenção e atualizações técnicas garantidas.",
       color: "from-will-primary to-pink-500",
     },
   ];
 
   const keyBenefits = [
-    "Aumento de credibilidade e profissionalismo",
-    "Presença digital 24/7 para seu negócio",
-    "Atração de novos clientes qualificados",
-    "Redução de custos com marketing tradicional",
-    "Escalabilidade para crescimento futuro",
-    "Integração com redes sociais e ferramentas",
-    "Design único que diferencia sua marca",
-    "Retorno mensurável sobre o investimento",
+    "Sua empresa aberta 24h por dia",
+    "Passe mais credibilidade que a concorrência",
+    "Receba orçamentos direto no WhatsApp",
+    "Pare de depender só do Instagram", // Dor muito comum hoje em dia
+    "Site preparado para anúncios (Tráfego Pago)",
+    "Integração com Google Maps e Redes Sociais",
+    "Design exclusivo (nada de templates prontos)",
+    "Investimento único com retorno duradouro",
   ];
 
   return (
@@ -104,27 +104,19 @@ export default function SiteBenefits() {
         {/* Stats Bar */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
           <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 text-center border border-gray-700 hover:border-will-primary transition-all duration-300">
-            <div className="text-4xl font-bold font-montserrat mb-2">
-              +80%
-            </div>
+            <div className="text-4xl font-bold font-montserrat mb-2">+80%</div>
             <div className="text-will-light">Credibilidade da marca</div>
           </div>
           <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 text-center border border-gray-700 hover:border-will-accent transition-all duration-300">
-            <div className="text-4xl font-bold font-montserrat mb-2">
-              24/7
-            </div>
+            <div className="text-4xl font-bold font-montserrat mb-2">24/7</div>
             <div className="text-will-light">Vendas e contatos</div>
           </div>
           <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 text-center border border-gray-700 hover:border-will-secondary transition-all duration-300">
-            <div className="text-4xl font-bold font-montserrat mb-2">
-              -40%
-            </div>
+            <div className="text-4xl font-bold font-montserrat mb-2">-40%</div>
             <div className="text-will-light">Custos de marketing</div>
           </div>
           <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 text-center border border-gray-700 hover:border-will-p-light transition-all duration-300">
-            <div className="text-4xl font-bold font-montserrat mb-2">
-              5x
-            </div>
+            <div className="text-4xl font-bold font-montserrat mb-2">5x</div>
             <div className="text-will-light">Mais conversões</div>
           </div>
         </div>

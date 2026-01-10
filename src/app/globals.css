@@ -3,6 +3,16 @@
 body {
   background-color: var(--color-will-bg-dark);
   color: white;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+/* PERMITIR seleção apenas onde importa (ex: telefone e email) */
+.allow-copy {
+  -webkit-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
 }
 
 @theme {

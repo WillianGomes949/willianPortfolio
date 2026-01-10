@@ -6,6 +6,7 @@ import Footer from "@/components/layout/Footer";
 import BotoesInf from "@/components/UI/BotoesInf";
 import ScrollProgress from "@/components/UI/ScrollProgress";
 import JsonLd from "./JsonLd";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -41,37 +42,75 @@ export const metadata: Metadata = {
     "Criação de sites profissionais em Fortaleza e Ceará. Especialista em Next.js, React, WordPress e Lojas Virtuais. Solicite um orçamento para seu projeto web.",
 
   keywords: [
-    "gordo",
-    "contratar",
-    "Desenvolvedor Web",
-    "Web",
-    "FullStack",
-    "Front-end",
-    "Back-end",
-    "Next.js",
-    "React",
-    "TypeScript",
-    "Tailwind CSS",
-    "Fortaleza",
-    "Ceará",
-    "Programador",
-    "wordpress",
-    "criar site em wordpress",
-    "Desenvolvedor JavaScript",
-    "Freelance React Developer",
-    "Especialista em Next.js",
-    "Desenvolvedor Node.js",
-    "Criação de Landing Pages",
-    "Manutenção de sites WordPress",
-    "Loja virtual WooCommerce",
-    "Desenvolvedor de sites em Fortaleza",
-    "Programador freelancer Fortaleza",
-    "Criação de sites profissionais CE",
-    "Orçamento criação de site",
-    "Contratar programador por projeto",
-    "Desenvolvedor Web sob medida",
-    "gordo dev",
-    "gordodev",
+    // ========== SUA MARCA (Essencial) ==========
+    "Willian Gomes",
+    "Willian Gomes Dev",
+    "Gordo Dev",
+    "Willian Gomes Fortaleza",
+
+    // ========== INTENÇÃO DE COMPRA FORTE (Cliente pronto) ==========
+    "orçamento criação de site",
+    "preço site profissional",
+    "quanto custa fazer um site",
+    "contratar desenvolvedor de sites",
+    "desenvolvedor web freelance fortaleza",
+    "fazer site urgente",
+
+    // ========== FOQUE GEOGRÁFICO (Sua Vantagem) ==========
+    "desenvolvedor web fortaleza",
+    "criação de sites em fortaleza",
+    "web designer fortaleza",
+    "agência de sites fortaleza",
+    "desenvolvedor web ceará",
+    // --- Por bairros/regiões (alto valor) ---
+    "desenvolvedor web aldeota",
+    "criação de site meireles",
+    "agência digital montese",
+    "desenvolvedor de sites benfica",
+
+    // ========== NICHOS ESPECÍFICOS (Dinheiro Rápido) ==========
+    "site para advogados fortaleza",
+    "site para cabeleireiro fortaleza",
+    "site para dentista fortaleza",
+    "site para farmácia fortaleza",
+    "site para salão de beleza",
+    "site para clínica médica",
+    "site para restaurante fortaleza",
+    "site para imobiliária ceará",
+    "site para academia fortaleza",
+    "site para pequenas empresas fortaleza",
+    "criação de site profissional autônomo",
+
+    // ========== SOLUÇÃO DE PROBLEMAS (Cliente Sofrendo) ==========
+    "meu site não aparece no google",
+    "reformular site antigo",
+    "site desatualizado",
+    "site não funciona no celular",
+    "site muito lento",
+    "preciso atualizar meu site",
+
+    // ========== TIPO DE PROJETO (O que o cliente pede) ==========
+    "criação de loja virtual fortaleza",
+    "loja virtual woocommerce",
+    "landing page alta conversão",
+    "site institucional",
+    "site one page",
+    "blog profissional",
+
+    // ========== TECNOLOGIAS (Como o cliente busca) ==========
+    "site em wordpress",
+    "site responsivo",
+    "site que aparece no google",
+    "site otimizado para busca",
+    "site rápido",
+    "suporte para site wordpress",
+
+    // ========== DIFERENCIAIS (O que te separa) ==========
+    "desenvolvedor dedicado fortaleza",
+    "desenvolvedor web próximo a mim",
+    "criação de site com suporte",
+    "site com manutenção mensal",
+    "desenvolvedor wordpress fortaleza",
   ],
 
   authors: [{ name: "Willian Gomes", url: "https://www.williangomesdev.com" }],
@@ -140,6 +179,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" className="scroll-smooth">
+      <GoogleTagManager gtmId="GTM-P2NWJKVZ" />
       <body
         className={`${montserrat.variable} ${boldonse.variable} antialiased`}
       >

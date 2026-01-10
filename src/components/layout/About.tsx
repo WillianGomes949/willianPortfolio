@@ -5,10 +5,10 @@ import { SectionTitle } from "../UI/SectionTitle";
 export default function About() {
   // Lista de suas stacks
   const skills = [
-    "Sites Institucionais (WordPress)",
-    "Lojas Virtuais e E-commerce",
+    "Sites para Advogados e Clínicas",
+    "Lojas Virtuais (WooCommerce)",
+    "Otimização para Google (SEO Local)",
     "Landing Pages de Alta Conversão",
-    "Design para Redes Sociais",
   ];
 
   return (
@@ -43,14 +43,16 @@ export default function About() {
           <div className="flex flex-col space-y-8 justify-between items-start">
             <div>
               <p className="text-lg text-will-light mb-4 leading-relaxed">
-                Desenvolvimento web focado em performance e resultados.
+                Sou o Willian Gomes, desenvolvedor web focado em ajudar empresas
+                de
+                <strong> Fortaleza</strong> a venderem mais.
               </p>
               <p className="text-lg text-will-light mb-6 leading-relaxed">
-                Do WordPress à potência do ecossistema moderno, criamos soluções
-                web rápidas, seguras e escaláveis. Seja um site institucional ou
-                uma aplicação complexa, nosso objetivo é garantir que a
-                tecnologia impulsione o crescimento do seu negócio, enquanto
-                você foca no que realmente importa.
+                Não basta apenas estar online. Crio sites rápidos e modernos
+                para negócios na Aldeota, Meireles, e toda região metropolitana.
+                Se você precisa de um
+                <strong> orçamento para site profissional</strong> que funciona
+                no celular e aparece no Google, você está no lugar certo.
               </p>
             </div>
 
